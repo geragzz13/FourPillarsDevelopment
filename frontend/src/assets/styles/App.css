@@ -1,61 +1,58 @@
+/* src/assets/styles/App.css */
+
 .App {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-.content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  padding-top: 56px;
-}
-
-.footer {
-  background-color: #282c34;
-  color: white;
-  padding: 10px 0;
-  text-align: center;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .App-header {
+    position: relative; /* Ensure position is relative for video and content stacking */
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
   }
-  to {
-    transform: rotate(360deg);
+  
+  .video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire viewport */
+    z-index: -1; /* Ensure it's behind other content */
   }
-}
+  
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    padding-top: 56px; /* Adjust padding as needed */
+  }
+  
+  /* Additional styles for Navbar and Footer as needed */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays on top of other content */
+    background-color: transparent !important; /* Make the navbar transparent */
+    /* Add more styles as per your design */
+  }
+  
+  .footer {
+    background-color: #282c34; /* Change to match desired footer background color */
+    color: white; /* Text color for footer */
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    /* Add more styles as per your design */
+  }
+  

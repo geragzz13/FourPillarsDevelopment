@@ -1,8 +1,19 @@
 import React from 'react';
 
-export default function Footer() {
+const Footer = () => {
+  const footerStyle = {
+    backgroundColor: '#C4A484',
+    color: '#282c34',
+    padding: '10px 0',
+    textAlign: 'center',
+    width: '100%',
+    position: 'fixed',
+    bottom: 0,
+    zIndex: 1000 // Ensure the footer is above other content
+  };
+
   return (
-    <footer className="footer bg-light text-center">
+    <footer style={footerStyle}>
       <div className="container">
         <ul className="list-inline">
           <li className="list-inline-item"><a href="/">Home</a></li>
@@ -16,8 +27,10 @@ export default function Footer() {
           <a href="#"><i className="bi bi-linkedin"></i></a>
           <a href="#"><i className="bi bi-instagram"></i></a>
         </div>
-        <p>&copy; 2024 Your Company. All rights reserved.</p>
+        <p>&copy; 2024 Four Pillars Development. All rights reserved.</p>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;
