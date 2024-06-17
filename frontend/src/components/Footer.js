@@ -33,7 +33,7 @@ const Footer = () => {
       <div className="container">
         <ul className="list-inline">
           <li className="list-inline-item"><a href="/"><FaHome /> Home</a></li>
-          <li className="list-inline-item"><a href="/about"><FaUser /> About</a></li>
+          <li className="list-inline-item"><a href="/about-us"><FaUser /> About</a></li>
           <li className="list-inline-item"><a href="/services"><FaBriefcase /> Services</a></li>
           <li className="list-inline-item"><a href="/contact-us"><FaEnvelope /> Contact</a></li>
         </ul>
@@ -43,7 +43,7 @@ const Footer = () => {
           <a href="#"><BiLogoLinkedin /></a> {/* Placeholder LinkedIn link */}
           <a href="https://www.instagram.com/fourpillarsdevelopment/"><BiLogoInstagram /></a> {/* Actual Instagram link */}
         </div>
-        <p>&copy; 2024 Four Pillars Development. All rights reserved.</p>
+        <p>&copy; 2024 Four Pillars Development. Designed by <code>Gonzalez Software</code>.</p>
       </div>
     </footer>
   );

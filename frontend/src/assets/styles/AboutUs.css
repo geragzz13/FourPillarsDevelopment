@@ -1,0 +1,64 @@
+/* AboutUs.css */
+
+.about-us-container {
+    min-height: calc(100vh - 250px); /* Adjust based on your footer height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #E6D5BA; /* Adjust background color as needed */
+    color: #333;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 100; /* Ensure this container is above other content */
+    width: 100%;
+    margin: 0;
+    padding-bottom: 200px; /* Additional padding below content */
+}
+
+.about-us-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-us-container p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.about-us-container .section-content {
+    padding-bottom: 100px; /* Adjust padding bottom based on your footer height */
+}
+
+.team-member-card {
+    border: 1px solid #ccc; /* Border around the card */
+    border-radius: 5px; /* Rounded corners */
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px; /* Adjust margin bottom as needed */
+    width: 100%; /* Ensure cards take full width of container */
+}
+
+.team-member-card:hover {
+    transform: scale(1.05); /* Example: Scale up on hover */
+}
+
+.team-member-card .card-img-top {
+    height: 200px; /* Adjust height of the image */
+    object-fit: cover; /* Ensure the image covers the whole space */
+}
+
+.team-member-card .card-body {
+    padding: 15px;
+}
+
+.team-member-card .card-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.team-member-card .card-text {
+    font-size: 1rem;
+}
