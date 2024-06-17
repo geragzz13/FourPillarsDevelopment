@@ -1,0 +1,28 @@
+.home-container {
+    min-height: calc(100vh - 250px); /* Adjust 250px based on your footer height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #E6D5BA; /* Adjust to match your design */
+    color: #333; /* Adjust text color for contrast */
+    padding: 20px;
+  }
+  
+  
+  .home-container h2 {
+    font-size: 2rem; /* Example: Adjust heading font size */
+    margin-bottom: 20px;
+  }
+  
+  .home-container p {
+    font-size: 1.2rem; /* Example: Adjust paragraph font size */
+    line-height: 1.6; /* Example: Adjust line height */
+    margin-bottom: 10px;
+  }
+  
+  .section-content {
+    padding-bottom: 100px; /* Adjust to match your footer height */
+  }
+  
+  /* Additional styles as needed */

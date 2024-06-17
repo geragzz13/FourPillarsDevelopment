@@ -1,4 +1,4 @@
-/*
+
 // frontend/src/components/Header.js
 import React from 'react';
 import '../assets/styles/App.css'; // Ensure correct path to CSS 
@@ -10,4 +10,3 @@ export default function Header() {
     </div>
   );
 }
-*/

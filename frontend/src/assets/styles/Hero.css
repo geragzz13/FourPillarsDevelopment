@@ -1,15 +1,7 @@
-/* src/assets/styles/Hero.css */
 .hero {
   height: 90vh;
   width: 200%;
-  /* background-image: url('../images/fourpillarslogo.png'); /* Ensure the correct path */
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #101214;
-  text-align: center;
+  /* background-image: url('../images/fourpillarslogo.png'); Ensure the correct path */
 }
 
 .hero-content {
@@ -17,10 +9,13 @@
   text-align: center; /* Center text content */
   position: absolute; /* Position relative to its nearest positioned ancestor */
   left: 50%; /* Move 50% from the left */
-  top: 15%; /* Move 50% from the top */
+  top: 80%; /* Move 50% from the top */
   transform: translate(-50%, -50%); /* Move 50% left and top */
   width: 90%; /* 90% of the parent container */
-  color: rgb(31, 29, 29);
+  color: #D2B48C;
+  margin: 30px;
+  font-family: 'Titillium Web', sans-serif; /* Apply the same font-family as in Navbar */
+  font-weight: 700; /* Apply the same font-weight as in Navbar */
 }
 
 .hero h1 {
@@ -45,6 +40,18 @@
 
 .hero-button:hover {
   background-color: #0056b3;
+}
+
+.hero-text-box {
+  background-color: #E6D5BA; /* Changed color to #E6D5BA */
+  padding: 10px; /* Adjusted padding */
+  border-radius: 10px;
+  width: fit-content; /* Adjusted width to fit content */
+  margin: 0 auto; /* Center horizontally */
+}
+
+.hero-text-box h1 {
+  color: black; /* Set text color to black */
 }
 
 .video-background {

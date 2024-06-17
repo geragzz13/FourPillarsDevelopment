@@ -1,17 +1,55 @@
-/* src/components/Navbar.css */
+/* src/assets/styles/Navbar.css */
 
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000; /* Ensure it stays on top of other content */
-  background-color: transparent; /* Make the background transparent */
+  height: 150;
+  z-index: 2000;
+  background-color: rgba(165, 42, 45, 0.98); /* Increase the alpha value for more opacity */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Darker box shadow for more prominent effect */
+  display: flex;
+  align-items: center;
+  padding: 0; /* Remove padding */
 }
 
-.navbar-brand, .nav-link {
-  color: white !important; /* Adjust text color */
+.navbar-brand {
+  color: #ffffff !important; 
+  margin-right: auto !important; /* Ensure the margin-right is applied */
+  margin-left: 0 !important; /* Remove any left margin */
+  padding-left: 0; /* Remove any left padding */
+  font-family: 'Titillium Web', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 20px; /* Adjust font size for navbar brand */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center vertically */
+}
+
+.navbar-icon {
+  font-size: 1.5rem;
+  margin-right: 10px;
 }
 
 .navbar-brand:hover, .nav-link:hover {
-  color: #ccc !important; /* Adjust hover color */
+  color: #ccc !important;
+}
+
+.nav-link {
+  color: rgba(246, 246, 246, 1) !important;
+  font-family: 'Titillium Web', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 20px; /* Adjust font size for navbar links */
+}
+
+.navbar-brand img {
+  width: 300; /* Adjust this value to make the image wider */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Space between image and text */
+}
+
+.large-favicon {
+  width: 100px !important;
+  height: 100px !important;
+  object-fit: cover; 
+  clip-path: inset(10%);
 }

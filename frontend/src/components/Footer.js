@@ -1,31 +1,47 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import '../assets/styles/Footer.css';
+import { BiLogoFacebook, BiLogoTwitter, BiLogoLinkedin, BiLogoInstagram } from 'react-icons/bi'; // Importing icons from Boxicons
+import { FaHome, FaUser, FaBriefcase, FaEnvelope } from 'react-icons/fa'; // Importing icons from Font Awesome
 
 const Footer = () => {
-  const footerStyle = {
-    backgroundColor: '#C4A484',
-    color: '#282c34',
-    padding: '10px 0',
-    textAlign: 'center',
-    width: '100%',
-    position: 'fixed',
-    bottom: 0,
-    zIndex: 1000 // Ensure the footer is above other content
-  };
+  const [showFooter, setShowFooter] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const scrollPosition = window.scrollY + windowHeight;
+      const scrollTrigger = documentHeight - windowHeight * 0.1; // Adjusted scroll trigger to activate earlier
+
+      setShowFooter(scrollPosition >= scrollTrigger);
+    };
+
+    // Add event listener for scrolling
+    window.addEventListener('scroll', handleScroll);
+    
+    // Initial check on mount
+    handleScroll();
+
+    // Clean up the event listener
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <footer style={footerStyle}>
+    <footer className={`footer ${showFooter ? 'show' : ''}`}>
       <div className="container">
         <ul className="list-inline">
-          <li className="list-inline-item"><a href="/">Home</a></li>
-          <li className="list-inline-item"><a href="/about">About</a></li>
-          <li className="list-inline-item"><a href="/services">Services</a></li>
-          <li className="list-inline-item"><a href="/contact">Contact</a></li>
+          <li className="list-inline-item"><a href="/"><FaHome /> Home</a></li>
+          <li className="list-inline-item"><a href="/about"><FaUser /> About</a></li>
+          <li className="list-inline-item"><a href="/services"><FaBriefcase /> Services</a></li>
+          <li className="list-inline-item"><a href="/contact-us"><FaEnvelope /> Contact</a></li>
         </ul>
         <div className="social-icons">
-          <a href="#"><i className="bi bi-facebook"></i></a>
-          <a href="#"><i className="bi bi-twitter"></i></a>
-          <a href="#"><i className="bi bi-linkedin"></i></a>
-          <a href="#"><i className="bi bi-instagram"></i></a>
+          <a href="https://www.facebook.com/emmanuel.perez.775?mibextid=LQQJ4d"><BiLogoFacebook /></a> {/* Placeholder Facebook link */}
+          <a href="#"><BiLogoTwitter /></a> {/* Placeholder Twitter link */}
+          <a href="#"><BiLogoLinkedin /></a> {/* Placeholder LinkedIn link */}
+          <a href="https://www.instagram.com/fourpillarsdevelopment/"><BiLogoInstagram /></a> {/* Actual Instagram link */}
         </div>
         <p>&copy; 2024 Four Pillars Development. All rights reserved.</p>
       </div>

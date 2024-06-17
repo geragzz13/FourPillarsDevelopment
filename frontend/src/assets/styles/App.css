@@ -10,11 +10,36 @@
   
   .App-header {
     position: relative; /* Ensure position is relative for video and content stacking */
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100vh;
     overflow: hidden; /* Hide overflow to prevent scrollbars */
+    background-color: transparent;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    padding: 0;
   }
-  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+  .App-link {
+    color: white;
+}
+
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
   .video-bg {
     position: absolute;
     top: 0;
@@ -31,9 +56,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    padding-top: 56px; /* Adjust padding as needed */
+    padding: 0; /* Adjust the padding */
+    background-color: black;
   }
+  
   
   /* Additional styles for Navbar and Footer as needed */
   .navbar {
@@ -45,14 +71,12 @@
     /* Add more styles as per your design */
   }
   
-  .footer {
-    background-color: #282c34; /* Change to match desired footer background color */
-    color: white; /* Text color for footer */
-    padding: 10px 0;
-    text-align: center;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    /* Add more styles as per your design */
-  }
   
+  @keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
