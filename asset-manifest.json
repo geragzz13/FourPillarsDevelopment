@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/FourPillarsDevelopment/static/css/main.d37dbc8f.css",
+    "main.js": "/FourPillarsDevelopment/static/js/main.179eeea8.js",
+    "static/media/FourPillarsBackgroundVideo.mp4": "/FourPillarsDevelopment/static/media/FourPillarsBackgroundVideo.cbccc33d298cbe521fb0.mp4",
+    "static/media/logo.png": "/FourPillarsDevelopment/static/media/logo.a32d92974339c7406774.png",
+    "index.html": "/FourPillarsDevelopment/index.html",
+    "main.d37dbc8f.css.map": "/FourPillarsDevelopment/static/css/main.d37dbc8f.css.map",
+    "main.179eeea8.js.map": "/FourPillarsDevelopment/static/js/main.179eeea8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d37dbc8f.css",
+    "static/js/main.179eeea8.js"
+  ]
+}
