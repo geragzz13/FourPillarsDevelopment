@@ -12,9 +12,8 @@
   top: 80%; /* Move 50% from the top */
   transform: translate(-50%, -50%); /* Move 50% left and top */
   width: 90%; /* 90% of the parent container */
-  color: #D2B48C;
+  color: #F9F8DA;
   margin: 30px;
-  font-family: 'Titillium Web', sans-serif; /* Apply the same font-family as in Navbar */
   font-weight: 700; /* Apply the same font-weight as in Navbar */
 }
 
@@ -43,7 +42,7 @@
 }
 
 .hero-text-box {
-  background-color: #E6D5BA; /* Changed color to #E6D5BA */
+  background-color: #F9F8DA; /* Changed color to #E6D5BA */
   padding: 10px; /* Adjusted padding */
   border-radius: 10px;
   width: fit-content; /* Adjusted width to fit content */

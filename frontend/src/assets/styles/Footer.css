@@ -5,7 +5,7 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #C4A484;
+  background-color: #01351A;
   color: white;
   padding: 10px 0;
   text-align: center;
@@ -39,7 +39,7 @@
   text-decoration: none;
   color: inherit;
   font-size: 1rem;
-  font-family: 'Titillium Web', sans-serif !important;
+ /* font-family: 'Titillium Web', sans-serif !important;  old font*/
 }
 
 .footer .social-icons {

@@ -1,0 +1,28 @@
+/* frontend/src/assets/styles/Jumbotron.css */
+
+.jumbotron {
+    background-color: #F9F8DA; /* Adjust background color as needed */
+    background-image: url('../assets/fourpillarslogo.png');
+    background-size: cover;
+    background-position: center;
+    color: #131010; /* Adjust text color as needed */
+    text-align: center;
+    padding: 100px 0;
+    margin-bottom: 0;
+}
+
+.jumbotron .container {
+    max-width: 800px; /* Adjust maximum width of content */
+    margin: 0 auto; /* Center align the content */
+}
+
+.jumbotron h1 {
+    font-size: 3rem; /* Adjust heading font size */
+    margin-bottom: 20px; /* Adjust spacing below heading */
+}
+
+.jumbotron p {
+    font-size: 1.5rem; /* Adjust paragraph font size */
+    line-height: 1.6; /* Adjust line height for readability */
+    margin-bottom: 0; /* Ensure no extra margin at the bottom */
+}

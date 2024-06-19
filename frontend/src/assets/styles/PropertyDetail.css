@@ -1,0 +1,34 @@
+/* src/assets/styles/PropertyDetail.css */
+
+.property-detail-container {
+    font-family: 'Suranna-Regular', sans-serif;
+    min-height: calc(100vh - 250px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #E6D5BA;
+    color: #333;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 200px;
+}
+
+.property-detail-container h3 {
+    font-family: 'Suranna-Regular', sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.property-detail-container .card {
+    margin-bottom: 20px;
+}
+
+.property-detail-container .card-img-top {
+    height: 400px;
+    object-fit: cover;
+}
