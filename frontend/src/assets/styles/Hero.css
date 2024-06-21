@@ -1,3 +1,5 @@
+/* src/assets/styles/hero.css */
+
 .hero {
   height: 90vh;
   width: 200%;
@@ -42,15 +44,19 @@
 }
 
 .hero-text-box {
-  background-color: #F9F8DA; /* Changed color to #E6D5BA */
+  background-color: rgba(1, 53, 26, 0.8); /* Darker semi-transparent #01351A */
   padding: 10px; /* Adjusted padding */
   border-radius: 10px;
   width: fit-content; /* Adjusted width to fit content */
   margin: 0 auto; /* Center horizontally */
+  font-family: 'Suranna-Regular', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
 }
 
 .hero-text-box h1 {
-  color: black; /* Set text color to black */
+  color: #F9F8DA; /* Set text color to #F9F8DA for contrast */
 }
 
 .video-background {

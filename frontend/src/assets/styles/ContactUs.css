@@ -19,22 +19,29 @@
   .contact-us-container h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #8b4513;
+    color: #01351A;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
   }
   
   .contact-us-container p {
     font-size: 1.2rem;
     margin-bottom: 30px;
-    color: #8b4513;
+    color: #01351A;
+    font-family: 'Montserrat', sans-serif;
   }
   
   .contact-us-container .form-group {
     margin-bottom: 1.5rem;
+    color: #01351A;
+    font-family: 'Montserrat', sans-serif;
   }
   
   .contact-us-container .form-label {
-    font-size: 1rem;
-    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    color: #01351A;
   }
   
   .contact-us-container .form-control {

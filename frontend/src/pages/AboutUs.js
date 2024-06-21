@@ -6,11 +6,11 @@ const AboutUs = () => {
     // Dummy data for team members (replace with actual data)
     const teamMembers = [
         { id: 1, name: 'Emmanuel Perez', imgSrc: '/team-member-1.jpg', description: 'CEO' },
-        { id: 2, name: 'Jane Smith', imgSrc: '/team-member-2.jpg', description: 'COO' },
+        { id: 2, name: 'Emiliano Perez', imgSrc: '/team-member-2.jpg', description: 'COO' },
         { id: 3, name: 'Mike Johnson', imgSrc: '/team-member-3.jpg', description: 'Marketing Director' },
         { id: 4, name: 'John Doe', imgSrc: '/team-member-1.jpg', description: 'CEO' },
         { id: 5, name: 'Gerardo Gonzalez', imgSrc: '/team-member-2.jpg', description: 'COO' },
-        { id: 6, name: 'Emiliano Perez', imgSrc: '/team-member-3.jpg', description: 'Marketing Director' },
+        { id: 6, name: 'Jane Smith', imgSrc: '/team-member-3.jpg', description: 'Marketing Director' },
         // Add more team members as needed
     ];
 
