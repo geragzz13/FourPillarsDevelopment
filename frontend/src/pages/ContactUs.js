@@ -42,7 +42,7 @@ const ContactUs = () => {
     <div className="contact-us-container">
       <Container className="full-width-form">
         <Row className="justify-content-center">
-          <Col md={8}>
+          <Col xs={12} md={8}>
             <h1>Contact Us</h1>
             <p>Fill out the form below to get in touch with us</p>
             <Form onSubmit={handleSubmit}>

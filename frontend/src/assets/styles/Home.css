@@ -7,6 +7,7 @@
     align-items: center;
     justify-content: center;
     background-color: #F9F8DA; /* Adjust to match your design */
+  /*background-color: #01351A; */
     color: #333; /* Adjust text color for contrast */
     padding: 20px;
     font-family: 'Suranna-Regular', sans-serif;
@@ -21,8 +22,6 @@
     font-size: 2rem; /* Example: Adjust heading font size */
     margin-bottom: 20px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
-    margin-bottom: 20px;
   }
   
   .home-container p {

@@ -1,90 +1,95 @@
 /* src/assets/styles/ContactUs.css */
 
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .contact-us-container {
-    min-height: calc(100vh - 100px); /* Adjust based on your footer height */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #f7f5ef;
-    color: #333;
-    padding: 200px;
-    box-sizing: border-box;
-    position: relative;
-    z-index: 100; /* Ensure this container is above other content */
-    width: 100%;
-    margin: 0; /* Remove any default margin */
+  min-height: calc(100vh - 100px); /* Adjust based on your footer height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f5ef;
+  color: #333;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 100; /* Ensure this container is above other content */
+  width: 100%;
+  margin: 0; /* Remove any default margin */
+}
+
+.contact-us-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #01351A;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact-us-container p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #01351A;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact-us-container .form-group {
+  margin-bottom: 1.5rem;
+  color: #01351A;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact-us-container .form-label {
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  color: #01351A;
+}
+
+.contact-us-container .form-control {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: border-color 0.2s ease-in-out; /* Transition for hover effect */
+}
+
+.contact-us-container .form-control:focus {
+  border-color: #8b4513;
+  box-shadow: 0 0 5px rgba(139, 69, 19, 0.5);
+}
+
+.contact-us-container .form-control:hover {
+  border-color: #8b4513; /* Change border color on hover */
+}
+
+.contact-us-container .btn-primary {
+  background-color:  #01351A;
+  border-color:  #01351A;
+  color: #fff;
+  margin-top: 20px; /* Ensure there's spacing above the button */
+  margin-bottom: 80px; /* Added margin below the button for more space */
+  padding: 10px 20px; /* Adjust padding for the button */
+}
+
+.contact-us-container .btn-primary:hover {
+  background-color: #01351A;
+  border-color: #a0522d;
+}
+
+.full-width-form {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+  padding-bottom: 50px; /* Add padding at the bottom for spacing */
+}
+
+@media (min-width: 576px) {
+  .contact-us-container {
+    padding: 50px;
   }
-  
-  .contact-us-container h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #01351A;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
-  }
-  
-  .contact-us-container p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    color: #01351A;
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-  .contact-us-container .form-group {
-    margin-bottom: 1.5rem;
-    color: #01351A;
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-  .contact-us-container .form-label {
-    margin-bottom: 20px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
-    color: #01351A;
-  }
-  
-  .contact-us-container .form-control {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    transition: border-color 0.2s ease-in-out; /* Transition for hover effect */
-  }
-  
-  .contact-us-container .form-control:focus {
-    border-color: #8b4513;
-    box-shadow: 0 0 5px rgba(139, 69, 19, 0.5);
-  }
-  
-  .contact-us-container .form-control:hover {
-    border-color: #8b4513; /* Change border color on hover */
-  }
-  
-  .contact-us-container .btn-primary {
-    background-color: #8b4513;
-    border-color: #8b4513;
-    color: #fff;
-    margin-top: 20px; /* Ensure there's spacing above the button */
-    margin-bottom: 30px; /* Added margin below the button for more space */
-    padding: 10px 20px; /* Adjust padding for the button */
-  }
-  
-  .contact-us-container .btn-primary:hover {
-    background-color: #a0522d;
-    border-color: #a0522d;
-  }
-  
-  .full-width-form {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
-    padding-bottom: 100px; /* Add padding at the bottom for spacing */
-  }
-  
-  @media (min-width: 576px) {
-    .full-width-form {
-      padding: 0 15px; /* Add padding on both sides for spacing on larger screens */
-    }
-  }
-  
+}

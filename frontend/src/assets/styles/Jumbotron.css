@@ -1,5 +1,10 @@
 /* frontend/src/assets/styles/Jumbotron.css */
 
+
+:root {
+    --font-montserrat: 'Montserrat', sans-serif; /* example of montserrat font usage: font-family: var(--font-montserrat) !important; /* Use Montserrat font */
+  }
+
 .jumbotron {
     background-color: #F9F8DA; /* Adjust background color as needed */
     background-image: url('../assets/fourpillarslogo.png');

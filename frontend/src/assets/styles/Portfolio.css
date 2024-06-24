@@ -1,7 +1,7 @@
-/* portfolio.css */
-
 :root {
     --font-montserrat: 'Montserrat', sans-serif;
+    --primary-color: #01351A;
+    --background-color: #F9F8DA;
 }
 
 .portfolio-container {
@@ -10,7 +10,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #F9F8DA; /* Adjust background color as needed */
+    background-color: var(--background-color); /* Adjust background color as needed */
     color: #333;
     padding: 20px;
     box-sizing: border-box;
@@ -22,41 +22,96 @@
     font-family: var(--font-montserrat); /* Apply Montserrat font */
 }
 
+.property-carousel {
+    width: 100%;
+    padding: 20px 0; /* Add padding above and below */
+    margin-top: 20px; /* Adjust margin as needed */
+}
+
 .property-card {
-    /* border: 1px solid #ccc; */ /* Remove border */
     border-radius: 5px;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
-    margin-bottom: 20px;
-    width: 100%; /* Ensure cards take full width of container */
-    background-color: #F9F8DA;
+    background-color: var(--background-color);
     font-family: var(--font-montserrat); /* Apply Montserrat font */
+    width: 100%; /* Full width for the card */
+    display: flex;
+    flex-direction: column; /* Ensure items stack vertically */
+    align-items: center; /* Center content horizontally */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+    margin-bottom: 20px; /* Space between cards */
 }
 
-.property-card:hover {
-    transform: scale(1.05);
-}
-
-.property-card .card-img-top {
-    height: 200px; /* Adjust height of the image */
+.property-card-img {
+    width: 100%; /* Make sure the image takes up full width */
+    height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Ensure the image covers the whole space */
-    margin-bottom: 15px; /* Spacing below the image */
 }
 
 .property-card .card-body {
     padding: 15px;
-    font-family: var(--font-montserrat); /* Apply Montserrat font */
+    flex-grow: 1; /* Expand to fill remaining space */
+    display: flex;
+    flex-direction: column; /* Ensure text content stacks properly */
+    justify-content: space-between; /* Space evenly within the card body */
+    text-align: center; /* Center text content */
 }
 
 .property-card .card-title {
     font-weight: bold;
     margin-bottom: 10px;
-    font-family: var(--font-montserrat); /* Apply Montserrat font */
-    color: #01351A;
+    color: var(--primary-color); /* Title color */
 }
 
 .property-card .card-text {
     font-size: 1rem;
-    font-family: var(--font-montserrat); /* Apply Montserrat font */
-    color: #01351A;
+    color: var(--primary-color); /* Text color */
+    flex-grow: 1; /* Expand text content as needed */
+}
+
+.property-card .btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
+    align-self: center; /* Center button horizontally */
+}
+
+.property-card .btn-primary:hover {
+    background-color: darken(var(--primary-color), 10%);
+    border-color: darken(var(--primary-color), 10%);
+    color: #fff; /* Ensure text color remains white on hover */
+}
+
+.property-card .btn-primary:focus,
+.property-card .btn-primary.focus {
+    box-shadow: none; /* Remove button shadow on focus */
+    outline: none; /* Remove button outline on focus */
+}
+
+/* Custom styles for Carousel controls */
+.carousel-control-next,
+.carousel-control-prev {
+    width: 5%; /* Increase size */
+    color: var(--primary-color); /* Green color */
+    opacity: 1; /* Make fully opaque */
+    font-size: 2rem; /* Increase font size */
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    background-color: var(--primary-color); /* Green color */
+    border-radius: 50%; /* Make icons round */
+    width: 2.5rem; /* Increase icon size */
+    height: 2.5rem; /* Increase icon size */
+}
+
+@media (max-width: 576px) {
+    .property-card {
+        flex-direction: column; /* Stack content vertically on small screens */
+    }
+
+    .property-card-img {
+        width: 100%; /* Ensure image takes full width */
+        height: auto; /* Adjust height automatically */
+    }
 }
