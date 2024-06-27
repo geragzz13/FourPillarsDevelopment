@@ -1,16 +1,16 @@
-// src/pages/ContactUs.js
-
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-import axios from 'axios';
+import emailjs from 'emailjs-com'; // Import EmailJS library
 import '../assets/styles/ContactUs.css'; // Import the CSS file
 
+const USER_ID = process.env.REACT_APP_EMAILJS_USER_ID; // Get EmailJS user ID from environment variables
+const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID; // Get EmailJS template ID from environment variables
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phoneNumber: '', // New field for phone number
-    propertyInterest: '', // New field for property interest
+    phoneNumber: '',
+    propertyInterest: '',
     message: ''
   });
 
@@ -18,12 +18,18 @@ const ContactUs = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    // Send form data to backend
-    try {
-      const res = await axios.post('http://localhost:5000/api/contact', formData);
-      console.log('Form Submission Successful:', res);
+
+    // Send form data via EmailJS
+    emailjs.sendForm(
+      'outlooktest_service', // Replace with your EmailJS service ID
+      TEMPLATE_ID, // Replace with your EmailJS template ID
+      e.target,
+      USER_ID // Replace with your EmailJS user ID (API key)
+    )
+    .then((result) => {
+      console.log('EmailJS Success:', result.text);
       // Clear form fields after successful submission
       setFormData({
         name: '',
@@ -32,10 +38,10 @@ const ContactUs = () => {
         propertyInterest: '',
         message: ''
       });
-    } catch (err) {
-      console.error('Form Submission Error:', err);
+    }, (error) => {
+      console.error('EmailJS Error:', error.text);
       // Handle or show error message
-    }
+    });
   };
 
   return (

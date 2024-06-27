@@ -26,20 +26,20 @@ html, body {
 .contact-us-container h1 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #01351A;
+  color: #01351a;
   font-family: 'Montserrat', sans-serif;
 }
 
 .contact-us-container p {
   font-size: 1.2rem;
   margin-bottom: 30px;
-  color: #01351A;
+  color: #01351a;
   font-family: 'Montserrat', sans-serif;
 }
 
 .contact-us-container .form-group {
   margin-bottom: 1.5rem;
-  color: #01351A;
+  color: #01351a;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -47,7 +47,7 @@ html, body {
   margin-bottom: 20px;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
-  color: #01351A;
+  color: #01351a;
 }
 
 .contact-us-container .form-control {
@@ -67,8 +67,8 @@ html, body {
 }
 
 .contact-us-container .btn-primary {
-  background-color:  #01351A;
-  border-color:  #01351A;
+  background-color: #01351a;
+  border-color: #01351a;
   color: #fff;
   margin-top: 20px; /* Ensure there's spacing above the button */
   margin-bottom: 80px; /* Added margin below the button for more space */
@@ -76,7 +76,7 @@ html, body {
 }
 
 .contact-us-container .btn-primary:hover {
-  background-color: #01351A;
+  background-color: #01351a;
   border-color: #a0522d;
 }
 

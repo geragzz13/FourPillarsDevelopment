@@ -1,11 +1,21 @@
+/* src/assets/styles/Home.css */
+
+/* Base styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .home-container {
-    min-height: calc(100vh - 250px); /* Adjust 250px based on your footer height */
+    min-height: calc(100vh - 250px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #F9F8DA; /* Adjust to match your design */
-    color: #333; /* Adjust text color for contrast */
+    background-color: #F9F8DA;
+    color: #333;
     padding: 20px;
     font-family: 'Suranna-Regular', sans-serif;
     font-size: 1.2rem;
@@ -32,7 +42,7 @@
 .section-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding-bottom: 100px; /* Adjust to match your footer height */
+    padding-bottom: 100px;
     font-family: 'Suranna-Regular', sans-serif;
     font-size: 1.2rem;
     line-height: 1.6;
@@ -104,7 +114,7 @@
 }
 
 .btn-primary:hover {
-    background-color: #012E1F; /* Darken the background color on hover */
+    background-color: #012E1F;
 }
 
 .image-container {
@@ -121,13 +131,32 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Class for fade-in animation */
 .fade-in {
-    opacity: 0; /* Start with opacity 0 */
-    transition: opacity 0.8s ease-in-out; /* Smooth transition for opacity */
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
 }
 
-/* Apply fade-in when the element is visible */
 .fade-in.active {
     opacity: 1;
+}
+
+/* Mobile specific styles */
+@media (max-width: 576px) {
+    .section-content {
+        padding-bottom: 50px; /* Reduce padding at the bottom */
+    }
+
+    .service-item,
+    .project-item {
+        flex: 1 1 100%; /* One item per row on small screens */
+        margin-bottom: 20px; /* Reduce margin */
+    }
+
+    .section-header h2 {
+        font-size: 2rem; /* Reduce font size */
+    }
+
+    .home-container {
+        font-size: 1rem; /* Adjust font size for better readability on small screens */
+    }
 }
