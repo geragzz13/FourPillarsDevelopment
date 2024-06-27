@@ -3,8 +3,8 @@ import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import emailjs from 'emailjs-com'; // Import EmailJS library
 import '../assets/styles/ContactUs.css'; // Import the CSS file
 
-const USER_ID = process.env.REACT_APP_EMAILJS_USER_ID; // Get EmailJS user ID from environment variables
-const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID; // Get EmailJS template ID from environment variables
+/* const USER_ID = process.env.REACT_APP_EMAILJS_USER_ID; // Get EmailJS user ID from environment variables
+const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID; // Get EmailJS template ID from environment variables */
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -21,12 +21,13 @@ const ContactUs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+
     // Send form data via EmailJS
     emailjs.sendForm(
       'outlooktest_service', // Replace with your EmailJS service ID
-      TEMPLATE_ID, // Replace with your EmailJS template ID
+      'template_b7q1m9a', // Replace with your EmailJS template ID
       e.target,
-      USER_ID // Replace with your EmailJS user ID (API key)
+      'qsS7UuJAhUcQ48mov' // Replace with your EmailJS user ID (API key)
     )
     .then((result) => {
       console.log('EmailJS Success:', result.text);

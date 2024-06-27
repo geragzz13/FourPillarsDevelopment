@@ -1,7 +1,7 @@
 import React from 'react';
 import '../assets/styles/Hero.css';
 import videoSource from '../assets/videos/FourPillarsBackgroundVideo.mp4';
-import icon from '../assets/images/logo.png';
+/* import icon from '../assets/images/logo.png';*/
 const Hero = () => {
   return (
     <section className="hero">
