@@ -2,6 +2,7 @@
     --font-montserrat: 'Montserrat', sans-serif;
     --primary-color: #01351A;
     --background-color: #F9F8DA;
+    --card-background-color: #F0F0C9; /* A slightly darker background for the cards */
 }
 
 .portfolio-container {
@@ -20,53 +21,79 @@
     margin: 0;
     padding-bottom: 200px; /* Additional padding below content */
     font-family: var(--font-montserrat); /* Apply Montserrat font */
+    text-align: center; /* Center align all text content */
 }
 
 .property-carousel {
-    width: 100%;
-    padding: 20px 0; /* Add padding above and below */
-    margin-top: 20px; /* Adjust margin as needed */
+    width: 90%; /* Adjust width of carousel for mobile */
+    margin: 0 auto; /* Center align carousel */
+}
+
+.slick-slide {
+    padding: 0 5px; /* Adjusted padding for mobile */
 }
 
 .property-card {
-    border-radius: 5px;
+    border: none; /* Removed border around the card */
+    border-radius: 8px; /* Rounded corners */
     overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-    background-color: var(--background-color);
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out; /* Smooth transition with increased duration */
+    margin-bottom: 20px; /* Adjust margin bottom as needed */
+    width: 80%; /* Adjusted width for better fit on mobile */
+    max-width: 250px; /* Limit maximum width on smaller screens */
     font-family: var(--font-montserrat); /* Apply Montserrat font */
-    width: 100%; /* Full width for the card */
-    display: flex;
-    flex-direction: column; /* Ensure items stack vertically */
-    align-items: center; /* Center content horizontally */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
-    margin-bottom: 20px; /* Space between cards */
+    padding: 0; /* Remove any padding */
+    background-color: var(--card-background-color); /* Darker background for the cards */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
-.property-card-img {
-    width: 100%; /* Make sure the image takes up full width */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure the image covers the whole space */
+.property-card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a stronger shadow on hover */
+}
+
+.property-card .property-card-img {
+    max-height: 300px; /* Maximum height of the image */
+    width: auto; /* Allow the width to adjust based on the image size */
+    max-width: 100%; /* Limit maximum width to prevent overflow */
+    object-fit: contain; /* Ensure the entire image is visible */
+    display: block; /* Ensure image behaves as a block element */
+    margin: 0 auto; /* Center the image horizontally */
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+.property-card .property-card-img:hover {
+    transform: scale(1.1); /* Slightly enlarge the image on hover */
 }
 
 .property-card .card-body {
     padding: 15px;
-    flex-grow: 1; /* Expand to fill remaining space */
-    display: flex;
-    flex-direction: column; /* Ensure text content stacks properly */
-    justify-content: space-between; /* Space evenly within the card body */
-    text-align: center; /* Center text content */
+    font-family: var(--font-montserrat); /* Apply Montserrat font */
+    background-color: var(--card-background-color);
+    opacity: 1; /* Make the card body always visible */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition for opacity */
 }
 
 .property-card .card-title {
     font-weight: bold;
     margin-bottom: 10px;
-    color: var(--primary-color); /* Title color */
+    font-family: var(--font-montserrat); /* Apply Montserrat font */
+    font-size: 1rem; /* Adjusted font size for mobile */
+    transition: color 0.5s ease-in-out; /* Smooth transition for color */
+}
+
+.property-card:hover .card-title {
+    color: var(--primary-color); /* Change color on hover */
 }
 
 .property-card .card-text {
-    font-size: 1rem;
-    color: var(--primary-color); /* Text color */
-    flex-grow: 1; /* Expand text content as needed */
+    font-size: 0.9rem; /* Adjusted font size for mobile */
+    font-family: var(--font-montserrat); /* Apply Montserrat font */
+    transition: color 0.5s ease-in-out; /* Smooth transition for color */
+}
+
+.property-card:hover .card-text {
+    color: var(--primary-color); /* Change color on hover */
 }
 
 .property-card .btn-primary {
@@ -74,12 +101,16 @@
     border-color: var(--primary-color);
     color: #fff;
     align-self: center; /* Center button horizontally */
+    font-size: 0.8rem; /* Adjusted font size for mobile */
+    padding: 8px 16px; /* Adjusted padding for mobile */
+    transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, transform 0.5s ease-in-out; /* Smooth transition for button */
 }
 
 .property-card .btn-primary:hover {
     background-color: darken(var(--primary-color), 10%);
     border-color: darken(var(--primary-color), 10%);
     color: #fff; /* Ensure text color remains white on hover */
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
 }
 
 .property-card .btn-primary:focus,
@@ -88,30 +119,29 @@
     outline: none; /* Remove button outline on focus */
 }
 
-/* Custom styles for Carousel controls */
-.carousel-control-next,
-.carousel-control-prev {
-    width: 5%; /* Increase size */
-    color: var(--primary-color); /* Green color */
-    opacity: 1; /* Make fully opaque */
-    font-size: 2rem; /* Increase font size */
-}
-
-.carousel-control-next-icon,
-.carousel-control-prev-icon {
-    background-color: var(--primary-color); /* Green color */
-    border-radius: 50%; /* Make icons round */
-    width: 2.5rem; /* Increase icon size */
-    height: 2.5rem; /* Increase icon size */
-}
-
-@media (max-width: 576px) {
-    .property-card {
-        flex-direction: column; /* Stack content vertically on small screens */
+@media (min-width: 576px) {
+    .portfolio-container {
+        padding-bottom: 150px; /* Adjusted padding for larger screens */
     }
 
-    .property-card-img {
-        width: 100%; /* Ensure image takes full width */
-        height: auto; /* Adjust height automatically */
+    .property-carousel {
+        width: 80%; /* Adjust width of carousel for tablets */
+    }
+
+    .property-card {
+        width: auto; /* Reset width for larger screens */
+        max-width: 300px; /* Ensure cards take full width of container */
+    }
+
+    .property-card .card-title {
+        font-size: 1.2rem; /* Adjusted font size for tablets */
+    }
+
+    .property-card .card-text {
+        font-size: 1rem; /* Adjusted font size for tablets */
+    }
+
+    .property-card .btn-primary {
+        font-size: 0.9rem; /* Adjusted font size for tablets */
     }
 }

@@ -1,0 +1,63 @@
+/* Capabilities.css */
+
+.capabilities-section {
+    background-color: #F9F8DA;
+    color: #01351A;
+    padding: 80px 0;
+    padding-bottom: 120px; /* Added padding at the bottom */
+}
+
+.capabilities-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.capability {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 300px;
+    padding: 20px; /* Added padding */
+}
+
+.capability-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    background: none; /* Ensure background is transparent */
+}
+
+.capability h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px; /* Increased margin-bottom */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.capability p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 576px) {
+    .capabilities-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .capability {
+        max-width: 100%;
+    }
+
+    .capability-icon {
+        margin-bottom: 10px;
+    }
+
+    .capabilities-section {
+        padding: 40px 0; /* Adjust padding for mobile */
+        padding-bottom: 60px; /* Adjust bottom padding for mobile */
+    }
+}

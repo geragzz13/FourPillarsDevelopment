@@ -11,7 +11,7 @@ teal color: #F9F8DA
     flex-direction: column;
     min-height: 100vh;
     text-align: center;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+   /* overflow-x: hidden; /* Prevent horizontal scrolling */
   }
   
   .App-header {
