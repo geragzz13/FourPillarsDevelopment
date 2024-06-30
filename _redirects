@@ -1,2 +1,8 @@
-# Redirect all traffic to www
-https://fourpillarsdev.com/* https://www.fourpillarsdev.com/:splat 301!
+/*    /index.html   200
+
+# Redirect all HTTP traffic to HTTPS
+http://fourpillarsdev.com/*    https://www.fourpillarsdev.com/:splat   301!
+http://www.fourpillarsdev.com/*    https://www.fourpillarsdev.com/:splat   301!
+
+# Ensure all traffic is redirected to www subdomain with HTTPS
+https://fourpillarsdev.com/*    https://www.fourpillarsdev.com/:splat   301!
