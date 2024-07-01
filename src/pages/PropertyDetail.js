@@ -1,12 +1,12 @@
-// src/pages/PropertyDetail.js
-
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { Container, Card } from 'react-bootstrap'; // Import necessary Bootstrap components
 import '../assets/styles/PropertyDetail.css'; // Import your custom CSS for PropertyDetail page
 import SugarMillEstateImage from '../assets/images/SugarMillPortfolio.png'; // Corrected path
+
 const PropertyDetail = () => {
-    const { id } = useParams();
+    const { id } = useParams(); // eslint-disable-line no-unused-vars
 
     // Dummy data for a single property (replace with actual data)
     const property = {
