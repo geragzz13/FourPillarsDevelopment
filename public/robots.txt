@@ -1,3 +1,62 @@
-# https://www.robotstxt.org/robotstxt.html
+# Block all crawlers from accessing private and admin areas
 User-agent: *
-Disallow:
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+Disallow: /settings/
+Disallow: /user-profile/
+Disallow: /search/
+
+# Allow all crawlers to access the rest of the site
+User-agent: *
+Allow: /
+
+# Block specific crawlers from accessing any part of the site
+User-agent: BadBot
+Crawl-delay: 10
+Disallow: /
+
+# Allow Googlebot full access, but set a crawl delay for other bots
+User-agent: Googlebot
+Allow: /
+Disallow: /tmp/
+Disallow: /private/
+
+User-agent: Bingbot
+Crawl-delay: 10
+
+# Allow specific files in disallowed folders
+User-agent: *
+Disallow: /private/
+Allow: /private/public-info.html
+
+# Block specific file types
+User-agent: *
+Disallow: /*.pdf$
+Disallow: /*.doc$
+Disallow: /*.exe$
+
+# Block URL parameters (e.g., tracking or session parameters)
+User-agent: *
+Disallow: /*?sessionid
+Disallow: /*?trackingid
+
+# Allow web crawlers to access JavaScript, CSS, and image files
+User-agent: *
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.jpg$
+Allow: /*.png$
+Allow: /*.gif$
+
+# Crawl-delay directive for specific bots
+User-agent: *
+Crawl-delay: 10
+
+# Specify the location of the sitemap
+Sitemap: https://www.fourpillarsdev.com/sitemap.xml
+
+# End of robots.txt file
