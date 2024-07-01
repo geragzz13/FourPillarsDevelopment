@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import '../assets/styles/Home.css';
 import Capabilities from '../components/Capabilities';
 
@@ -8,8 +9,14 @@ const Home = () => {
             const elements = document.querySelectorAll('.fade-in');
             
             elements.forEach((element) => {
-                if (isElementInViewport(element) && !element.classList.contains('active')) {
-                    element.classList.add('active');
+                if (isElementInViewport(element)) {
+                    if (!element.classList.contains('active')) {
+                        element.classList.add('active');
+                    }
+                } else {
+                    if (element.classList.contains('active')) {
+                        element.classList.remove('active');
+                    }
                 }
             });
         };
@@ -74,16 +81,22 @@ const Home = () => {
                 </div>
                 <div className="section-content">
                     <div className="project-item fade-in">
-                        <h3>Sugar Mill Estate</h3>
-                        <p>A prestigious residential community featuring modern homes and extensive green spaces, designed for sustainable living.</p>
+                        <Link to="/property/1" className="custom-link">
+                            <h3>Sugar Mill Estate</h3>
+                            <p>A prestigious residential community featuring modern homes and extensive green spaces, designed for sustainable living.</p>
+                        </Link>
                     </div>
                     <div className="project-item fade-in">
-                        <h3>Dawson Estates</h3>
-                        <p>An iconic commercial development offering state-of-the-art townhouses, apartments, and is close to many facilities in the heart of the city.</p>
+                        <Link to="/property/2" className="custom-link">
+                            <h3>Dawson Estates</h3>
+                            <p>An iconic commercial development offering state-of-the-art townhouses, apartments, and is close to many facilities in the heart of the city.</p>
+                        </Link>
                     </div>
                 </div>
             </section>
+
             <Capabilities />
+
             <section className="contact-section section fade-in">
                 <div className="section-header">
                     <h2>Contact Us</h2>

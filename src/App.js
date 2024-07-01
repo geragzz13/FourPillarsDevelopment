@@ -15,7 +15,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './assets/styles/Fonts.css'; // Fonts CSS
 import videoSource from './assets/videos/FourPillarsBackgroundVideo.mp4'; // Background video
-import Capabilities from './components/Capabilities'; // Capabilities component
+/* import Capabilities from './components/Capabilities'; // Capabilities component */
 
 function App() {
   return (

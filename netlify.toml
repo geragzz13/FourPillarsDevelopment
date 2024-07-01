@@ -1,0 +1,23 @@
+[[redirects]]
+  from = "http://fourpillarsdev.com/*"
+  to = "https://www.fourpillarsdev.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.fourpillarsdev.com/*"
+  to = "https://www.fourpillarsdev.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://fourpillarsdev.com/*"
+  to = "https://www.fourpillarsdev.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://cheerful-pasca-871367.netlify.app/*"
+  to = "https://www.fourpillarsdev.com/:splat"
+  status = 301
+  force = true
