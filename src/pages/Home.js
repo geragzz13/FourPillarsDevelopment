@@ -47,7 +47,7 @@ const Home = () => {
                 </div>
                 <div className="section-content fade-in">
                     <p>
-                        Four Pillars Development is a leading land developer specializing in residential and commercial projects. With over two decades of experience, we are committed to delivering exceptional quality and innovative design in every project we undertake.
+                        Four Pillars Development is a South Texas Based Construction Company with over 50 years of experience specializing in Residential Construction.
                     </p>
                     <p>
                         Our mission is to create sustainable communities that enhance quality of life while respecting the environment. We prioritize integrity, transparency, and customer satisfaction in all our endeavors.
@@ -104,9 +104,9 @@ const Home = () => {
                 <div className="section-content fade-in">
                     <p>For inquiries or project collaborations, please contact us at:</p>
                     <ul>
-                        <li>Email: info@fourpillarsdev.com</li>
-                        <li>Phone: +1 (123) 456-7890</li>
-                        <li>Address: 456 Oak Street, Cityville, State, Zip Code</li>
+                        <li>Email: fourpillarsdevelopment@gmail.com</li>
+                        <li>Phone: +1 (956) 456-7890</li>
+                        <li>Address: 1509 Shavano Dr, Edinburg, Texas, 78504</li>
                     </ul>
                 </div>
             </section>
