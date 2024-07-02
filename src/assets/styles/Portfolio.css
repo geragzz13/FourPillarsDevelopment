@@ -2,146 +2,148 @@
     --font-montserrat: 'Montserrat', sans-serif;
     --primary-color: #01351A;
     --background-color: #F9F8DA;
-    --card-background-color: #F0F0C9; /* A slightly darker background for the cards */
+    --card-background-color: #F0F0C9; 
 }
 
 .portfolio-container {
-    min-height: calc(100vh - 250px); /* Adjust based on your footer height */
+    min-height: 600px; /* Adjusted based on the tallest card */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--background-color); /* Adjust background color as needed */
+    background-color: var(--background-color);
     color: #333;
     padding: 20px;
     box-sizing: border-box;
     position: relative;
-    z-index: 100; /* Ensure this container is above other content */
+    z-index: 100;
     width: 100%;
     margin: 0;
-    padding-bottom: 200px; /* Additional padding below content */
-    font-family: var(--font-montserrat); /* Apply Montserrat font */
-    text-align: center; /* Center align all text content */
+    font-family: var(--font-montserrat);
+    text-align: center;
+    padding-bottom: 200px !important; /* Additional padding to accommodate the footer */
+    padding-top: 50px;
 }
 
+
 .property-carousel {
-    width: 90%; /* Adjust width of carousel for mobile */
-    margin: 0 auto; /* Center align carousel */
+    width: 90%;
+    margin: 0 auto;
 }
 
 .slick-slide {
-    padding: 0 5px; /* Adjusted padding for mobile */
+    padding: 0 5px;
+    padding-bottom: 80px;
 }
 
 .property-card {
-    border: none; /* Removed border around the card */
-    border-radius: 8px; /* Rounded corners */
+    border: none;
+    border-radius: 8px;
     overflow: hidden;
-    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out; /* Smooth transition with increased duration */
-    margin-bottom: 20px; /* Adjust margin bottom as needed */
-    width: 80%; /* Adjusted width for better fit on mobile */
-    max-width: 250px; /* Limit maximum width on smaller screens */
-    font-family: var(--font-montserrat); /* Apply Montserrat font */
-    padding: 0; /* Remove any padding */
-    background-color: var(--card-background-color); /* Darker background for the cards */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 300px;
+    font-family: var(--font-montserrat);
+    padding: 0;
+    background-color: var(--card-background-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .property-card:hover {
-    transform: scale(1.05); /* Scale up on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a stronger shadow on hover */
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .property-card .property-card-img {
-    max-height: 300px; /* Maximum height of the image */
-    width: auto; /* Allow the width to adjust based on the image size */
-    max-width: 100%; /* Limit maximum width to prevent overflow */
-    object-fit: contain; /* Ensure the entire image is visible */
-    display: block; /* Ensure image behaves as a block element */
-    margin: 0 auto; /* Center the image horizontally */
-    transition: transform 0.5s ease-in-out; /* Smooth transition */
+    max-height: 300px;
+    width: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.5s ease-in-out;
 }
 
 .property-card .property-card-img:hover {
-    transform: scale(1.1); /* Slightly enlarge the image on hover */
+    transform: scale(1.1);
 }
 
 .property-card .card-body {
     padding: 15px;
-    font-family: var(--font-montserrat); /* Apply Montserrat font */
+    font-family: var(--font-montserrat);
     background-color: var(--card-background-color);
-    opacity: 1; /* Make the card body always visible */
-    transition: opacity 0.5s ease-in-out; /* Smooth transition for opacity */
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .property-card .card-title {
     font-weight: bold;
     margin-bottom: 10px;
-    font-family: var(--font-montserrat); /* Apply Montserrat font */
-    font-size: 1rem; /* Adjusted font size for mobile */
-    transition: color 0.5s ease-in-out; /* Smooth transition for color */
+    font-family: var(--font-montserrat);
+    font-size: 1rem;
+    transition: color 0.5s ease-in-out;
 }
 
 .property-card:hover .card-title {
-    color: var(--primary-color); /* Change color on hover */
+    color: var(--primary-color);
 }
 
 .property-card .card-text {
-    font-size: 0.9rem; /* Adjusted font size for mobile */
-    font-family: var(--font-montserrat); /* Apply Montserrat font */
-    transition: color 0.5s ease-in-out; /* Smooth transition for color */
+    font-size: 0.9rem;
+    font-family: var(--font-montserrat);
+    transition: color 0.5s ease-in-out;
 }
 
 .property-card:hover .card-text {
-    color: var(--primary-color); /* Change color on hover */
+    color: var(--primary-color);
 }
 
 .property-card .btn-primary {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
     color: #fff;
-    align-self: center; /* Center button horizontally */
-    font-size: 0.8rem; /* Adjusted font size for mobile */
-    padding: 8px 16px; /* Adjusted padding for mobile */
-    transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, transform 0.5s ease-in-out; /* Smooth transition for button */
+    align-self: center;
+    font-size: 0.8rem;
+    padding: 8px 16px;
+    transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .property-card .btn-primary:hover {
-    background-color: darken(var(--primary-color), 10%);
-    border-color: darken(var(--primary-color), 10%);
-    color: #fff; /* Ensure text color remains white on hover */
-    transform: scale(1.1); /* Slightly enlarge the button on hover */
+    background-color: #012E1F;
+    border-color: #012E1F;
+    color: #fff;
+    transform: scale(1.1);
 }
 
 .property-card .btn-primary:focus,
 .property-card .btn-primary.focus {
-    box-shadow: none; /* Remove button shadow on focus */
-    outline: none; /* Remove button outline on focus */
+    box-shadow: none;
+    outline: none;
 }
 
 @media (min-width: 576px) {
     .portfolio-container {
-        padding-bottom: 150px; /* Adjusted padding for larger screens */
+        padding-bottom: 150px;
     }
 
     .property-carousel {
-        width: 80%; /* Adjust width of carousel for tablets */
+        width: 80%;
     }
 
     .property-card {
-        width: auto; /* Reset width for larger screens */
-        max-width: 300px; /* Ensure cards take full width of container */
+        width: auto;
+        max-width: 300px;
     }
 
     .property-card .card-title {
-        font-size: 1.2rem; /* Adjusted font size for tablets */
+        font-size: 1.2rem;
     }
 
     .property-card .card-text {
-        font-size: 1rem; /* Adjusted font size for tablets */
+        font-size: 1rem;
     }
 
     .property-card .btn-primary {
-        font-size: 0.9rem; /* Adjusted font size for tablets */
+        font-size: 0.9rem;
     }
 }
