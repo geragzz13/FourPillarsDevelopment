@@ -7,8 +7,8 @@ const AboutUs = () => {
     const teamMembers = [
         { id: 1, name: 'Emmanuel Perez', imgSrc: '/team-member-1.jpg', description: 'CEO' },
         { id: 2, name: 'Emiliano Perez', imgSrc: '/team-member-2.jpg', description: 'CEO' },
-        { id: 3, name: 'Third Pillar lol', imgSrc: '/team-member-3.jpg', description: 'CEO' },
-        { id: 4, name: 'Fourth Pillar lol', imgSrc: '/team-member-1.jpg', description: 'CEO' }
+        { id: 3, name: 'John Doe', imgSrc: '/team-member-3.jpg', description: 'CEO' },
+        { id: 4, name: 'Jane Doe', imgSrc: '/team-member-1.jpg', description: 'CEO' }
         // Add more team members as needed
     ];
 
@@ -21,8 +21,6 @@ const AboutUs = () => {
                 {/* Paragraph section aligned to the right */}
                 <Row>
                     <Col md={6}>
-                        <p>
-                        </p>
                     </Col>
                 </Row>
 

@@ -9,7 +9,7 @@ import ElDoradoImage from '../assets/images/ElDoradoPortfolio.png';
 import PillarsMainCardImage from '../assets/images/PillarsMainCard.png'; // Import the new image
 
 const properties = [
-    { id: 0, name: 'Pillars Main Card', imgSrc: PillarsMainCardImage, location: 'Your Location', description: 'Swipe to find out more.' }, // New first card
+    { id: 0, name: 'Welcome', imgSrc: PillarsMainCardImage, location: 'Your Location', description: 'Swipe to find out more.' }, // New first card
     { id: 1, name: 'Sugar Mill Estate', imgSrc: SugarMillEstateImage, location: 'Edinburg, TX', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.' },
     { id: 2, name: 'Dawson Estates', imgSrc: DawsonEstatesImage, location: 'Mercedes, TX', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.' },
     { id: 3, name: 'El Dorado Subdivision', imgSrc: ElDoradoImage, location: 'Edinburg, TX', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.' },
@@ -21,7 +21,7 @@ const Portfolio = () => {
         dots: false, // Hide dots
         infinite: true,
         speed: 500,
-        slidesToShow: 1,
+        slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000, // Adjust the auto-scroll speed (in milliseconds)
