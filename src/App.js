@@ -8,6 +8,7 @@ import Services from './pages/Services'; // Services Page component
 import AboutUs from './pages/AboutUs'; // AboutUs Page component
 import ContactUs from './pages/ContactUs'; // ContactUs Page component
 import Portfolio from './pages/Portfolio'; // Portfolio Page component
+import Maintenance from './components/Maintenance';
 import PropertyDetail from './pages/PropertyDetail'; // Property Detail Page component
 import './assets/styles/App.css'; // App CSS
 import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap CSS
@@ -18,6 +19,10 @@ import videoSource from './assets/videos/FourPillarsBackgroundVideo.mp4'; // Bac
 /* import Capabilities from './components/Capabilities'; // Capabilities component */
 
 function App() {
+  const isMaintenanceMode = true;
+  if (isMaintenanceMode) {
+    return <Maintenance />;
+}
   return (
     <Router>
       <div className="App">

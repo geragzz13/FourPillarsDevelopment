@@ -40,7 +40,7 @@ const Footer = () => {
         <div className="social-icons">
           <a href="https://www.facebook.com/emmanuel.perez.775?mibextid=LQQJ4d"><BiLogoFacebook /></a> {/* Placeholder Facebook link */}
           <a href="https://www.twitter.com"><BiLogoTwitter /></a> {/* Placeholder Twitter link */}
-          <a href="https://www.linkedin.com"><BiLogoLinkedin /></a> {/* Placeholder LinkedIn link */}
+          <a href="https://www.linkedin.com/company/four-pillars-development/"><BiLogoLinkedin /></a> {/* Placeholder LinkedIn link */}
           <a href="https://www.instagram.com/fourpillarsdevelopment/"><BiLogoInstagram /></a> {/* Actual Instagram link */}
         </div>
         <p>&copy; 2024 Four Pillars Development</p>

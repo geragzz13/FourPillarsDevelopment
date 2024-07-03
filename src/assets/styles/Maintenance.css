@@ -1,0 +1,38 @@
+/* src/assets/styles/App.css */
+@font-face {
+    font-family: 'Suranna-Regular';
+    src: url('../fonts/Suranna-Regular.ttf') format('truetype'); /* Adjust the path if necessary */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #01351A;
+    font-family: 'Suranna-Regular', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.maintenance-container {
+    background-color: #01351A;
+    font-family: 'Suranna-Regular', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1, p {
+    margin: 0;
+    padding: 10px;
+}
