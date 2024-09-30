@@ -1,10 +1,14 @@
 /* Capabilities.css */
 
 .capabilities-section {
-    background-color: #F9F8DA;
+    background-color: #d2c8a1;
     color: #01351A;
     padding: 80px 0;
     padding-bottom: 120px; /* Added padding at the bottom */
+    padding-top: 50px;
+    border-radius: 15px; /* Added rounded edges */
+    overflow: hidden; /* Optional: to ensure the border radius is applied to child elements */
+    margin-bottom: 40px; /* Added margin for spacing below the section */
 }
 
 .capabilities-content {
@@ -20,6 +24,9 @@
     margin-bottom: 40px;
     max-width: 300px;
     padding: 20px; /* Added padding */
+    border-radius: 10px; /* Added rounded edges for individual capability items */
+    background-color: #ffffff; /* Ensure each capability item stands out */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
 }
 
 .capability-icon {

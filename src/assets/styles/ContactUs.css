@@ -15,31 +15,33 @@ html, body {
   justify-content: center;
   background-color: #f7f5ef;
   color: #333;
-  padding: 20px;
+  padding: 20px; /* This applies to all sides */
+  padding-top: 40px; /* Added padding at the top for spacing */
   box-sizing: border-box;
   position: relative;
   z-index: 100; /* Ensure this container is above other content */
   width: 100%;
-  margin: 0; /* Remove any default margin */
+  margin-bottom: 40px;
+  
 }
 
 .contact-us-container h1 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #01351a;
+  color: #193320;
   font-family: 'Montserrat', sans-serif;
 }
 
 .contact-us-container p {
   font-size: 1.2rem;
   margin-bottom: 30px;
-  color: #01351a;
+  color: #193320;
   font-family: 'Montserrat', sans-serif;
 }
 
 .contact-us-container .form-group {
   margin-bottom: 1.5rem;
-  color: #01351a;
+  color: #193320;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -47,7 +49,7 @@ html, body {
   margin-bottom: 20px;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
-  color: #01351a;
+  color: #193320;
 }
 
 .contact-us-container .form-control {
@@ -62,7 +64,7 @@ html, body {
   box-shadow: 0 0 5px rgba(139, 69, 19, 0.5);
 }
 
-.contact-us-container .form-control:hover {
+contact-us-container .form-control:hover {
   border-color: #8b4513; /* Change border color on hover */
 }
 
