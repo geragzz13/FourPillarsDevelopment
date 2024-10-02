@@ -80,8 +80,8 @@ html, body {
 /* Fade-in styles */
 .fade-in {
     opacity: 0;
-    transform: translateY(30px); /* Move element down slightly */
-    transition: opacity 0.9s ease-out, transform 0.9s ease-out; /* Increased duration */
+    transform: translateY(80px); /* Move element further down */
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* Longer duration for more drama */
 }
 
 .fade-in.active {
@@ -91,8 +91,8 @@ html, body {
 
 /* Fade-in from left */
 .fade-in-left {
-    transform: translateX(-50px); /* Increased start position off-screen to the left */
-    transition: opacity 0.9s ease-out, transform 0.9s ease-out; /* Increased duration */
+    transform: translateX(-100px); /* Move element further left */
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* Longer duration */
 }
 
 .fade-in-left.active {
@@ -102,8 +102,8 @@ html, body {
 
 /* Fade-in from right */
 .fade-in-right {
-    transform: translateX(50px); /* Increased start position off-screen to the right */
-    transition: opacity 0.9s ease-out, transform 0.9s ease-out; /* Increased duration */
+    transform: translateX(100px); /* Move element further right */
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* Longer duration */
 }
 
 .fade-in-right.active {
