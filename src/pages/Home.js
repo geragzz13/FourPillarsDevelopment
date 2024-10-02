@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/Home.css';
-import Capabilities from '../components/Capabilities';
+/*import Capabilities from '../components/Capabilities'; */
 import aboutImage from '../assets/images/aboutImage.jpg';
 
 const Home = () => {
