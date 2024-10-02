@@ -123,7 +123,7 @@ const Home = () => {
             </section>
 
             {/* Capabilities Section */}
-            <Capabilities />
+            {/*  <Capabilities /> */}
 
             {/* Contact Section */}
             <section className="contact-section section fade-in-left">
