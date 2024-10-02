@@ -91,7 +91,6 @@
     border-color: #193320; /* Keep the same border color */
 }
 
-
 @media (max-width: 768px) {
     .property-carousel {
         width: 90%;
@@ -121,7 +120,7 @@
 
 @media (max-width: 576px) {
     .portfolio-container {
-        padding-bottom: 100px;
+        padding-bottom: 150px; /* Increased bottom padding */
     }
 
     .property-carousel {

@@ -6,6 +6,7 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
+  font-family: var(--font-montserrat);
 }
 
 .contact-us-container {
@@ -30,7 +31,7 @@ html, body {
   font-size: 2rem;
   margin-bottom: 20px;
   color: #193320;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat);
 }
 
 .contact-us-container p {
