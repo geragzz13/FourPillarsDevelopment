@@ -1,3 +1,5 @@
+/* primary white: #ffffff; */
+/* primary black: #000000; */
 :root {
     --font-montserrat: 'Montserrat', sans-serif;
 }
@@ -8,7 +10,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #d2c8a1; /* Adjust background color as needed */
+    background-color: #ffffff; /* Adjust background color as needed */
     color: #333;
     padding: 20px;
     box-sizing: border-box;
@@ -39,7 +41,7 @@
     line-height: 1.6;
     margin-bottom: 10px;
     font-family: var(--font-montserrat); /* Apply Montserrat font */
-    background-color: #01351A;
+    background-color: #000000;
     color: #F9F8DA;
     background-color: rgba(1, 53, 26, 0.8); /* Darker semi-transparent #01351A */
     padding: 10px; /* Adjusted padding */

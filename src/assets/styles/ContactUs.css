@@ -1,5 +1,6 @@
 /* src/assets/styles/ContactUs.css */
-
+/* primary white: #ffffff
+primary black: #000000 */
 html, body {
   margin: 0;
   padding: 0;
@@ -13,7 +14,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #f7f5ef;
+  background-color: #ffffff;
   color: #333;
   padding: 20px; /* This applies to all sides */
   padding-top: 40px; /* Added padding at the top for spacing */

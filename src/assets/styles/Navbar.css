@@ -1,5 +1,6 @@
 /* src/assets/styles/Navbar.css */
-
+/* primary white: #ffffff; */
+/* primary black: #000000; */
 /* Base styles */
 html, body {
   margin: 0;
@@ -48,7 +49,7 @@ html, body {
 }
 
 .nav-link {
-  color: #d2c8a1 !important;
+  color: #ffffff !important;
   font-weight: 700 !important;
   font-size: 20px;
   font-family: 'Suranna-Regular', sans-serif;

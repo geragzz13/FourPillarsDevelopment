@@ -6,19 +6,12 @@ import '../assets/styles/Portfolio.css';
 import SugarMillEstateImage from '../assets/images/SugarMillPortfolio.png';
 import DawsonEstatesImage from '../assets/images/DawsonEstatesPortfolio.png';
 import ElDoradoImage from '../assets/images/ElDoradoPortfolio.png';
-import PillarsMainCardImage from '../assets/images/PillarsMainCard.png'; // Import the new image
 
 const properties = [
-    { id: 0, name: 'Welcome', imgSrc: ElDoradoImage, location: 'Your Location', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.' }, // New first card
-    { id: 1, name: 'Sugar Mill Estate', imgSrc: SugarMillEstateImage, location: 'Edinburg, TX', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.' },
-    { id: 2, name: 'Dawson Estates', imgSrc: DawsonEstatesImage, location: 'Mercedes, TX', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.' },
-    { id: 3, name: 'El Dorado Subdivision', imgSrc: ElDoradoImage, location: 'Edinburg, TX', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.' },
-    { id: 4, name: 'Villas', imgSrc: ElDoradoImage, location: 'Edinburg, TX', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.' },
-    { id: 5, name: 'The Heights at Alamo', imgSrc: ElDoradoImage, location: 'Alamo, TX', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.' },
-    { id: 6, name: 'Vida Subdivision', imgSrc: ElDoradoImage, location: 'Edinburg, TX', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.' },
-    // Add more properties as needed
-    // Add more properties as needed
-    // Add more properties as needed
+    { id: 0, name: 'Welcome', imgSrc: ElDoradoImage, location: 'Your Location', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+    { id: 1, name: 'Sugar Mills Estate', imgSrc: SugarMillEstateImage, location: 'Edinburg, TX', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+    { id: 2, name: 'Dawson Estates', imgSrc: DawsonEstatesImage, location: 'Mercedes, TX', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+    { id: 3, name: 'El Dorado Subdivision', imgSrc: ElDoradoImage, location: 'Edinburg, TX', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' }
     // Add more properties as needed
 ];
 
@@ -27,14 +20,28 @@ const Portfolio = () => {
         dots: false, // Hide dots
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 3, // Default for desktop
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 3000, // Adjust the auto-scroll speed (in milliseconds)
-        arrows: false, // Hide arrows for manual control
-        swipe: true, // Enable swipe for touch devices
-        draggable: true, // Enable dragging with mouse
-        adaptiveHeight: true
+        autoplaySpeed: 3000,
+        arrows: false, // Hide arrows
+        swipe: true, // Enable swipe
+        draggable: true, // Enable drag with mouse
+        adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 768, // For tablets and below
+                settings: {
+                    slidesToShow: 2, // Show 2 slides
+                },
+            },
+            {
+                breakpoint: 576, // For mobile devices
+                settings: {
+                    slidesToShow: 1, // Show 1 slide
+                },
+            },
+        ],
     };
 
     return (

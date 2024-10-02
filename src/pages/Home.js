@@ -109,7 +109,7 @@ const Home = () => {
                 <div className="section-content">
                     <div className="project-item fade-in">
                         <Link to="/property/1" className="custom-link">
-                            <h3>Sugar Mill Estate</h3>
+                            <h3>Sugar Mills Estate</h3>
                             <p>A prestigious residential community featuring modern homes and extensive green spaces, designed for sustainable living.</p>
                         </Link>
                     </div>
@@ -133,8 +133,9 @@ const Home = () => {
                 <div className="section-content">
                     <p>For inquiries or project collaborations, please contact us at:</p>
                     <ul>
-                        <li>Email: fourpillarsdevelopment@gmail.com</li>
-                        <li>Phone: +1 (956) 456-7890</li>
+                        <li>Email: <a href="mailto:fourpillarsdevelopmentsales@gmail.com" style={{ color: '#193320', textDecoration: 'none' }}>fourpillarsdevelopmentsales@gmail.com</a></li>
+                        <li>: <a href="tel:+19567779579" style={{ color: '#193320', textDecoration: 'none' }}>+1 (956) 777-9579</a></li>
+                        <li>: <a href="tel:+19567779340" style={{ color: '#193320', textDecoration: 'none' }}>+1 (956) 777-9340</a></li>
                         <li>Address: 1509 Shavano Dr, Edinburg, Texas, 78504</li>
                     </ul>
                 </div>

@@ -6,20 +6,41 @@ import '../assets/styles/PropertyDetail.css'; // Import your custom CSS for Prop
 import SugarMillEstateImage from '../assets/images/SugarMillPortfolio.png'; // Corrected path
 
 const PropertyDetail = () => {
-    const { id } = useParams(); // eslint-disable-line no-unused-vars
+    const { id } = useParams(); // Get the property ID from the URL params
 
-    // Dummy data for a single property (replace with actual data)
-    const property = {
-        id: 1,
-        name: 'Sugar Mill Estate',
-        imgSrc: SugarMillEstateImage,
-        location: 'Edinburg, TX',
-        description: 'Detailed description of Sugar Mill Estate.',
-        contacts: [
-            { name: 'Emmanuel Perez', role: 'Manager', email: 'john.doe@example.com' },
-            { name: 'Emiliano Perez', role: 'Manager', email: 'jane.smith@example.com' }
-        ]
-    };
+    // Dummy data for multiple properties (replace with actual data)
+    const properties = [
+        {
+            id: 1,
+            name: 'Sugar Mill Estate',
+            imgSrc: SugarMillEstateImage,
+            location: 'Edinburg, TX',
+            description: 'Detailed description of Sugar Mill Estate.',
+            contacts: [
+                { name: 'Emmanuel Perez', role: 'Manager', email: 'john.doe@example.com' },
+                { name: 'Emiliano Perez', role: 'Manager', email: 'jane.smith@example.com' }
+            ]
+        },
+        {
+            id: 2,
+            name: 'Dawson Estates',
+            imgSrc: SugarMillEstateImage,
+            location: 'Edinburg, TX',
+            description: 'Detailed description of Dawson Estates.',
+            contacts: [
+                { name: 'Emmanuel Perez', role: 'Manager', email: 'john.doe@example.com' },
+                { name: 'Emiliano Perez', role: 'Manager', email: 'jane.smith@example.com' }
+            ]
+        }
+    ];
+
+    // Find the property based on the id from URL
+    const property = properties.find(prop => prop.id === parseInt(id));
+
+    // Render a message if the property is not found
+    if (!property) {
+        return <p>Property not found</p>;
+    }
 
     return (
         <div className="property-detail-container">
