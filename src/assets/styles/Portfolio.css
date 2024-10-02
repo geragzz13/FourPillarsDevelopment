@@ -2,7 +2,7 @@
     --font-montserrat: 'Montserrat', sans-serif;
     --primary-color: #000000;
     --background-color: #ffffff;
-    --card-background-color: #F0F0C9; 
+    --card-background-color: #ffffff; 
 }
 
 .portfolio-container {
@@ -64,6 +64,7 @@
 
 .property-card .card-body {
     padding: 15px;
+    color: #193320;
 }
 
 .property-card .card-title {
@@ -74,6 +75,7 @@
 
 .property-card .card-text {
     font-size: 0.9rem;
+    color: #000000;
 }
 
 .property-card .btn-primary {
