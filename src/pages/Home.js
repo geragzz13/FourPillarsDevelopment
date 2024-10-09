@@ -59,7 +59,7 @@ const Home = () => {
             {/* About Section */}
             <section className="about-section fade-in">
                 <div className="about-content">
-                    <h2>ABOUT FOUR PILLARS DEVELOPMENT</h2>
+                    <h2>WELCOME TO FOUR PILLARS DEVELOPMENT</h2>
                     <p>
                         At Four Pillars Development, we believe that innovation and craftsmanship come together to redefine the landscape of real estate in Edinburg, Texas. As a family-owned and operated business with over 20 years of experience, we prioritize efficient builds that not only meet the needs of our community but also stand the test of time. Our commitment to quality and integrity reflects our Texan roots, driving us to create exceptional residential and commercial developments that enhance the vibrant fabric of our city. Through a harmonious blend of modern design and sustainable practices, we aim to cultivate spaces where families can thrive and businesses can flourish, making Edinburg a better place to live and work.
                     </p>
