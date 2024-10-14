@@ -1,0 +1,30 @@
+.property-hero {
+    position: relative;
+    overflow: hidden; /* Ensures content does not overflow */
+}
+
+.property-hero-video {
+    width: 100%; /* Full width */
+    height: auto; /* Height set to auto for responsive behavior */
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    min-width: 100%; /* Minimum width */
+    min-height: 100%; /* Minimum height */
+    object-fit: cover; /* Cover the area */
+    transform: translate(-50%, -50%); /* Center the video */
+    z-index: 1; /* Send video to the back */
+}
+
+.property-hero-content {
+    position: relative; /* Position content on top of the video */
+    z-index: 2; /* Bring content to the front */
+    text-align: center; /* Center text */
+    color: white; /* Change color for visibility */
+}
+
+@media (max-width: 768px) {
+    .property-hero-video {
+        height: 60vh; /* Adjust height for mobile */
+    }
+}

@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Container, Card, Carousel, Button } from 'react-bootstrap';
+import { Container, Card, Carousel, Button, Row, Col } from 'react-bootstrap';
+import '../assets/styles/PropertyDetail.css';
+import PropertyHero from '../components/PropertyHero';
+
+// Import images
 import SugarMillEstateImage from '../assets/images/SugarMillPortfolio.png';
 import DawsonEstatesImage from '../assets/images/DawsonEstatesPortfolio.png';
 import ElDoradoImage from '../assets/images/ElDoradoPortfolio.png';
-import ElDoradoMap from '../assets/images/ElDoradoMap.png';
 import ElDorado1 from '../assets/images/ElDorado1.png';
 import ElDorado2 from '../assets/images/ElDorado2.png';
 import ElDorado3 from '../assets/images/ElDorado3.png';
 import ElDorado4 from '../assets/images/ElDorado4.png';
 import ElDorado5 from '../assets/images/ElDorado5.png';
-import '../assets/styles/PropertyDetail.css';
 
+// Property data
 const properties = [
     {
         id: 1,
@@ -19,12 +22,9 @@ const properties = [
         imgSrc: SugarMillEstateImage,
         location: 'Edinburg, TX',
         description: 'This is a detailed description for Sugar Mills Estate.',
+        siteDetails: '2,500 sq ft, 4 beds, 3 baths',
+        contact: 'Contact: John Doe, Phone: (123) 456-7890',
         images: [SugarMillEstateImage],
-        videos: [],
-        contacts: [
-            { name: 'Emmanuel Perez', role: 'Manager', email: 'emmanuel@example.com' },
-            { name: 'Emiliano Perez', role: 'Manager', email: 'emiliano@example.com' },
-        ],
     },
     {
         id: 2,
@@ -32,12 +32,9 @@ const properties = [
         imgSrc: DawsonEstatesImage,
         location: 'Mercedes, TX',
         description: 'This is a detailed description for Dawson Estates.',
+        siteDetails: '3,200 sq ft, 5 beds, 4 baths',
+        contact: 'Contact: Jane Smith, Phone: (234) 567-8901',
         images: [DawsonEstatesImage],
-        videos: [],
-        contacts: [
-            { name: 'Carlos Sanchez', role: 'Agent', email: 'carlos@example.com' },
-            { name: 'Maria Garcia', role: 'Agent', email: 'maria@example.com' },
-        ],
     },
     {
         id: 3,
@@ -45,19 +42,10 @@ const properties = [
         imgSrc: ElDoradoImage,
         location: 'Edinburg, TX',
         description: 'This is a detailed description for El Dorado Subdivision.',
+        siteDetails: '3,800 sq ft, 6 beds, 5 baths',
+        contact: 'Contact: Emily Davis, Phone: (345) 678-9012',
         images: [
-            ElDoradoImage,
-            ElDoradoMap,
-            ElDorado1,
-            ElDorado2,
-            ElDorado3,
-            ElDorado4,
-            ElDorado5
-        ],
-        videos: [],
-        contacts: [
-            { name: 'Juan Lopez', role: 'Agent', email: 'juan@example.com' },
-            { name: 'Lucia Martinez', role: 'Agent', email: 'lucia@example.com' },
+            ElDoradoImage, ElDorado1, ElDorado2, ElDorado3, ElDorado4, ElDorado5
         ],
     },
 ];
@@ -84,10 +72,12 @@ const PropertyDetail = () => {
 
     return (
         <div className="property-detail-container">
+            {/* PropertyHero Component for background video */}
+            <PropertyHero />
+
             <Container>
-                <h3>{property.name}</h3>
+                {/* Image Carousel */}
                 <Card className="property-detail-card">
-                    {/* Image Carousel */}
                     {property.images.length > 0 && (
                         <Carousel>
                             {property.images.map((image, index) => (
@@ -96,7 +86,7 @@ const PropertyDetail = () => {
                                         className="d-block w-100 card-img-top"
                                         src={image}
                                         alt={`Slide ${index}`}
-                                        onClick={() => handleImageClick(image)} // Click handler
+                                        onClick={() => handleImageClick(image)}
                                     />
                                 </Carousel.Item>
                             ))}
@@ -105,41 +95,27 @@ const PropertyDetail = () => {
 
                     {/* Property Details */}
                     <Card.Body>
-                        <Card.Text><strong>Location:</strong> {property.location}</Card.Text>
+                        <h2>{property.name}</h2>
+                        <h5>{property.location}</h5>
                         <Card.Text>{property.description}</Card.Text>
-
-                        {/* Videos Section (if available) */}
-                        {property.videos.length > 0 && (
-                            <div className="video-section">
-                                {property.videos.map((video, index) => (
-                                    <video key={index} width="100%" controls>
-                                        <source src={video} type="video/mp4" />
-                                        Your browser does not support the video tag.
-                                    </video>
-                                ))}
-                            </div>
-                        )}
-
-                        {/* Contacts Section */}
-                        <h5>Contacts:</h5>
-                        {property.contacts.map((contact, index) => (
-                            <p key={index}>
-                                {contact.name} - {contact.role} - <a href={`mailto:${contact.email}`}>{contact.email}</a>
-                            </p>
-                        ))}
-
                         <Button variant="primary" as={Link} to="/portfolio">Back to Portfolio</Button>
+                    </Card.Body>
+                </Card>
+
+                {/* Property Details / Site Details Section */}
+                <Card className="property-details-card">
+                    <Card.Body>
+                        <h3>Property Details</h3>
+                        <p>{property.siteDetails}</p>
+                        <h3>Contact Information</h3>
+                        <p>{property.contact}</p>
                     </Card.Body>
                 </Card>
 
                 {/* Image popup */}
                 {showImage && (
                     <div className="image-popup" onClick={handleCloseImage}>
-                        <img
-                            src={showImage}
-                            alt="Selected"
-                            className="popup-image"
-                        />
+                        <img src={showImage} alt="Selected" className="popup-image" />
                     </div>
                 )}
             </Container>

@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
 .property-detail-container {
     font-family: 'Suranna-Regular', sans-serif;
     min-height: calc(100vh - 250px);
