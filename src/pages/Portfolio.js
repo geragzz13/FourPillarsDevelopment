@@ -6,14 +6,54 @@ import '../assets/styles/Portfolio.css';
 import SugarMillEstateImage from '../assets/images/SugarMillPortfolio.png';
 import DawsonEstatesImage from '../assets/images/DawsonEstatesPortfolio.png';
 import ElDoradoImage from '../assets/images/ElDoradoPortfolio.png';
+import Westwood1 from '../assets/images/westwood1.png';
+import TheHeights1 from '../assets/images/TheHeights1.png';
 
+// Define properties array with correct imgSrc for each card
 const properties = [
-    { id: 1, name: 'Sugar Mills Estate', imgSrc: SugarMillEstateImage, location: 'Edinburg, TX', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-    { id: 2, name: 'Dawson Estates', imgSrc: DawsonEstatesImage, location: 'Mercedes, TX', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-    { id: 3, name: 'El Dorado Subdivision', imgSrc: ElDoradoImage, location: 'Edinburg, TX', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-    { id: 4, name: 'The Heights at Alamo', imgSrc: ElDoradoImage, location: 'Edinburg, TX', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-    { id: 5, name: 'Verona Subdivision', imgSrc: ElDoradoImage, location: 'Edinburg, TX', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-    { id: 6, name: 'Westwood Villas', imgSrc: ElDoradoImage, location: 'Edinburg, TX', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' }
+    {
+        id: 1,
+        name: 'Sugar Mills Estate',
+        imgSrc: SugarMillEstateImage,
+        location: 'Edinburg, TX',
+        description: 'This is a detailed description for Sugar Mills Estate.',
+        siteDetails: '2,500 sq ft, 4 beds, 3 baths',
+    },
+    {
+        id: 2,
+        name: 'Dawson Estates',
+        imgSrc: DawsonEstatesImage,
+        location: 'Mercedes, TX',
+        description: 'This is a detailed description for Dawson Estates.',
+    },
+    {
+        id: 3,
+        name: 'El Dorado Subdivision',
+        imgSrc: ElDoradoImage,
+        location: 'Edinburg, TX',
+        description: 'This is a detailed description for El Dorado Subdivision.',
+    },
+    {
+        id: 4,
+        name: 'The Heights at Alamo',
+        imgSrc: TheHeights1, // Ensure this is the correct image for "The Heights"
+        location: 'Edinburg, TX',
+        description: 'This is a detailed description for The Heights at Alamo.',
+    },
+    {
+        id: 5,
+        name: 'Verona Subdivision',
+        imgSrc: ElDoradoImage,
+        location: 'Edinburg, TX',
+        description: 'This is a detailed description for Verona Subdivision.',
+    },
+    {
+        id: 6,
+        name: 'Westwood Villas',
+        imgSrc: Westwood1,
+        location: 'Edinburg, TX',
+        description: 'This is a detailed description for Westwood Villas.',
+    },
 ];
 
 const Portfolio = () => {

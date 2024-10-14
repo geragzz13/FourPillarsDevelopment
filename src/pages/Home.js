@@ -70,6 +70,36 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* Featured Projects */}
+            <section className="featured-projects fade-in-right">
+                <h2>Our Featured Projects</h2>
+                <div className="project-showcase">
+                    <div className="project-item">
+                        <div className="video-wrapper">
+                            <video controls className="project-video">
+                                <source src={heightsHilight} type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <h3>The Heights at Alamo</h3>
+                        <p>A new fourplex community with spacious 2 & 3-bedroom units, perfect for generating steady rental income.</p>
+                        <Link to="/property/4" className="project-button">View Details</Link>
+                    </div>
+                    <div className="project-item">
+                        <div className="video-wrapper">
+                            <video controls className="project-video">
+                                <source src={veronaHighlight} type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <h3>Verona Subdivision</h3>
+                        <p>Verona Apartments is a gated subdivision centrally located with easy access to McAllen & Brownsville, major highways, schools, & shopping centers.</p>
+                        <Link to="/property/5" className="project-button">View Details</Link>
+                    </div>
+                </div>
+                <Link to="/portfolio" className="view-all-button">View All Projects</Link>
+            </section>
+
             {/* Services Section */}
             <section className="services-section section fade-in-left">
                 <div className="section-header">
@@ -101,34 +131,6 @@ const Home = () => {
                     </div>
                 </div>
             )}
-
-            {/* Featured Projects */}
-<section className="featured-projects fade-in-right">
-    <h2>Our Featured Projects</h2>
-    <div className="project-showcase">
-        <div className="project-item">
-            <div className="video-wrapper">
-                <video controls className="project-video">
-                    <source src={heightsHilight} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <h3>The Heights at Alamo</h3>
-            <p>A new fourplex community with spacious 2 & 3-bedroom units, perfect for generating steady rental income.</p>
-        </div>
-        <div className="project-item">
-            <div className="video-wrapper">
-                <video controls className="project-video">
-                    <source src={veronaHighlight} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <h3>Verona Subdivsion</h3>
-            <p>Verona Apartments is a gated subdivision centrally located with easy access to McAllen & Brownsville, major highways, schools, & shopping centers</p>
-        </div>
-    </div>
-    <Link to="/portfolio" className="view-all-button">View All Projects</Link>
-</section>
 
             {/* Contact Section */}
             <section className="contact-section section fade-in-left">

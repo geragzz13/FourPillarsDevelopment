@@ -143,3 +143,59 @@
 .property-details-card .btn:hover {
     background-color: #155a2b; /* Darker green on hover */
 }
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .property-detail-content {
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .carousel-container {
+        width: 100%; /* Full width on mobile */
+        padding-right: 0; /* Remove padding */
+        padding-top: 10px; /* Less padding on top */
+    }
+
+    .property-details-card {
+        flex: 0 0 100%; /* Full width for details card on mobile */
+        margin-top: 20px; /* Adjust margin for mobile */
+    }
+
+    .property-detail-content h2 {
+        font-size: 24px; /* Smaller font size for mobile */
+    }
+
+    .property-location {
+        font-size: 18px; /* Smaller font size for location */
+    }
+
+    .property-description,
+    .property-details,
+    .property-contact {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    .property-details-card .btn {
+        width: 100%; /* Full-width button on mobile */
+    }
+}
+
+@media (max-width: 576px) {
+    .property-detail-content h2 {
+        font-size: 22px; /* Further reduce size for extra small screens */
+    }
+
+    .property-location {
+        font-size: 16px; /* Further reduce location font size */
+    }
+
+    .property-description,
+    .property-details,
+    .property-contact {
+        font-size: 12px; /* Further reduce font size for mobile */
+    }
+
+    .property-details-card .btn {
+        padding: 12px; /* Increase padding for better touch targets */
+    }
+}

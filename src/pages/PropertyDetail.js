@@ -14,8 +14,26 @@ import ElDorado2 from '../assets/images/ElDorado2.png';
 import ElDorado3 from '../assets/images/ElDorado3.png';
 import ElDorado4 from '../assets/images/ElDorado4.png';
 import ElDorado5 from '../assets/images/ElDorado5.png';
+import Westwood1 from '../assets/images/westwood1.png';
+import Westwood2 from '../assets/images/westwood2.png';
+import Westwood3 from '../assets/images/westwood3.png';
+import Westwood4 from '../assets/images/westwood4.png';
+import Westwood5 from '../assets/images/westwood5.png';
+import TheHeights1 from '../assets/images/TheHeights1.png';
+import TheHeights2 from '../assets/images/TheHeights2.png';
+import TheHeights3 from '../assets/images/TheHeights3.png';
+import TheHeights4 from '../assets/images/TheHeights4.png';
+import TheHeights5 from '../assets/images/TheHeights5.png';
+import TheHeights6 from '../assets/images/TheHeights6.png';
+import TheHeights7 from '../assets/images/TheHeights7.png';
+import TheHeights8 from '../assets/images/TheHeights8.png';
+import TheHeights9 from '../assets/images/TheHeights9.png';
+// Contact Information (shared for all properties)
+const contactInfo = [
+    'Contact: Emiliano Perez: +1 (956) 777-9579',
+    'Contact: Mariana Treviño: +1 (956) 621-6607',
+];
 
-// Property data
 const properties = [
     {
         id: 1,
@@ -24,7 +42,6 @@ const properties = [
         location: 'Edinburg, TX',
         description: 'This is a detailed description for Sugar Mills Estate.',
         siteDetails: '2,500 sq ft, 4 beds, 3 baths',
-        contact: 'Contact: John Doe, Phone: (123) 456-7890',
         images: [SugarMillEstateImage],
     },
     {
@@ -34,7 +51,6 @@ const properties = [
         location: 'Mercedes, TX',
         description: 'This is a detailed description for Dawson Estates.',
         siteDetails: '3,200 sq ft, 5 beds, 4 baths',
-        contact: 'Contact: Jane Smith, Phone: (234) 567-8901',
         images: [DawsonEstatesImage],
     },
     {
@@ -44,21 +60,19 @@ const properties = [
         location: 'Edinburg, TX',
         description: 'This is a detailed description for El Dorado Subdivision.',
         siteDetails: '3,800 sq ft, 6 beds, 5 baths',
-        contact: 'Contact: Emily Davis, Phone: (345) 678-9012',
         images: [
-            ElDoradoImage, ElDorado1, ElDorado2, ElDorado3, ElDorado4, ElDorado5
+             ElDorado1, ElDorado2, ElDorado3, ElDorado4, ElDorado5
         ],
     },
     {
         id: 4,
         name: 'The Heights at Alamo',
-        imgSrc: ElDoradoImage,
+        imgSrc: TheHeights1,
         location: 'Edinburg, TX',
         description: 'This is a detailed description for The Heights at Alamo.',
         siteDetails: '3,800 sq ft, 6 beds, 5 baths',
-        contact: 'Contact: Emily Davis, Phone: (345) 678-9012',
         images: [
-            ElDoradoImage, ElDorado1, ElDorado2, ElDorado3, ElDorado4, ElDorado5
+             TheHeights1, TheHeights2, TheHeights3, TheHeights4, TheHeights5, TheHeights6, TheHeights7, TheHeights8, TheHeights9
         ],
     },
     {
@@ -68,21 +82,19 @@ const properties = [
         location: 'Edinburg, TX',
         description: 'This is a detailed description for Verona Subdivision.',
         siteDetails: '3,800 sq ft, 6 beds, 5 baths',
-        contact: 'Contact: Emily Davis, Phone: (345) 678-9012',
         images: [
-            ElDoradoImage, ElDorado1, ElDorado2, ElDorado3, ElDorado4, ElDorado5
+             ElDorado1, ElDorado2, ElDorado3, ElDorado4, ElDorado5
         ],
     },
     {
         id: 6,
         name: 'Westwood Villas',
-        imgSrc: ElDoradoImage,
+        imgSrc: Westwood1,
         location: 'Edinburg, TX',
         description: 'This is a detailed description for Westwood Villas.',
         siteDetails: '3,800 sq ft, 6 beds, 5 baths',
-        contact: 'Contact: Emily Davis, Phone: (345) 678-9012',
         images: [
-            ElDoradoImage, ElDorado1, ElDorado2, ElDorado3, ElDorado4, ElDorado5
+             Westwood1, Westwood2, Westwood3, Westwood4, Westwood5
         ],
     },
 ];
@@ -142,7 +154,9 @@ const PropertyDetail = () => {
                                 <h3>Property Details</h3>
                                 <p className="property-details">{property.siteDetails}</p>
                                 <h3>Contact Information</h3>
-                                <p className="property-contact">{property.contact}</p>
+                                {contactInfo.map((contact, index) => (
+                                    <p key={index} className="property-contact">{contact}</p>
+                                ))}
                                 <Button variant="primary" as={Link} to="/portfolio" className="mt-3">
                                     Back to Portfolio
                                 </Button>
@@ -158,7 +172,7 @@ const PropertyDetail = () => {
                     </div>
                 )}
             </Container>
-            <Footer/>
+            <Footer />
         </div>
     );
 };

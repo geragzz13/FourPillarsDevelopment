@@ -21,8 +21,8 @@
     margin: 0;
     font-family: var(--font-montserrat);
     text-align: center;
-    padding-bottom: 200px;
-    padding-top: 50px;
+    padding-bottom: 200px; /* Padding at the bottom */
+    padding-top: 50px; /* Padding at the top */
 }
 
 .portfolio-title {
@@ -59,16 +59,17 @@
 
 .slick-slide {
     padding: 0 5px;
-    padding-bottom: 80px;
+    padding-bottom: 80px; /* Padding below each slide */
 }
 
 .property-card {
     border: none;
     border-radius: 8px;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Space between cards */
     width: 100%;
-    max-width: 300px;
+    max-width: 400px; /* Increased max-width for larger cards */
+    height: 520px; /* Increased height for larger cards */
     font-family: var(--font-montserrat);
     padding: 0;
     background-color: var(--card-background-color);
@@ -82,16 +83,17 @@
 }
 
 .property-card .property-card-img {
-    max-height: 300px;
+    max-height: 320px; /* Increased height for images */
     width: 100%;
-    object-fit: contain;
+    object-fit: cover; /* Change to cover for better image fit */
     display: block;
     margin: 0 auto;
 }
 
 .property-card .card-body {
-    padding: 15px;
+    padding: 15px; /* Padding within the card body */
     color: #193320;
+    flex-grow: 1; /* Allow card body to expand */
 }
 
 .property-card .card-title {
@@ -112,6 +114,7 @@
     font-size: 0.8rem;
     padding: 8px 16px;
     transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+    margin-top: 15px; /* Margin above the button for spacing */
 }
 
 .property-card .btn-primary:hover {
@@ -132,6 +135,7 @@
     .property-card {
         max-width: 100%;
         margin-bottom: 20px;
+        height: auto; /* Allow height to adjust for mobile */
     }
 
     .property-card .card-title {
@@ -163,6 +167,7 @@
     .property-card {
         max-width: 100%;
         margin-bottom: 20px;
+        height: auto; /* Allow height to adjust for mobile */
     }
 
     .property-card .card-title {
