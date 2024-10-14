@@ -81,3 +81,13 @@ teal color: #F9F8DA
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Updated project-video class */
+.project-video {
+    width: 50% !important; /* Set width to 50% */
+    max-width: 75px !important; /* Adjusted max-width for smaller videos */
+    height: 40px !important; /* Adjusted height for the video */
+    border-radius: 10px; /* Optional: adds rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds shadow */
+    margin: 10px; /* Space around videos */
+}

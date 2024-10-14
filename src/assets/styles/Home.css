@@ -39,6 +39,7 @@ html, body {
     background-color: #ffffff;
     margin-bottom: 40px; /* Added margin for spacing between sections */
     border-radius: 15px; /* Added rounded edges */
+    overflow: hidden; /* helps contain any child elements */
 }
 
 /* About Section Specific Styles */
@@ -217,6 +218,7 @@ html, body {
 .modal-content button:hover {
     background-color: #1a5e40;
 }
+
 .about-image img {
     width: 100%; /* Stays responsive */
     max-width: 700px; 
@@ -266,6 +268,31 @@ html, body {
         color: #012E1F !important; /* Change color on hover */
         text-decoration: underline !important; /* Add underline on hover */
     }
-    
-    
+}
+
+/* Video Styles */
+.project-videos-container {
+    display: flex;
+    justify-content: space-between; /* Space videos evenly */
+    width: 100%;
+    max-width: 800px; /* Restrict max width of the container */
+    margin: 0 auto; /* Center the container */
+}
+
+.project-video {
+    width: 50% !important; /* Set width to 50% */
+    max-width: 75px !important; /* Adjusted max-width for smaller videos */
+    height: 40px !important; /* Adjusted height for the video */
+    border-radius: 10px; /* Optional: adds rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds shadow */
+    margin: 10px; /* Space around videos */
+}
+
+
+@media (max-width: 300px) {
+    .project-video {
+        max-width: 90%; /* Full width for smaller screens */
+        height: auto; /* Adjust height for mobile */
+        margin-bottom: 20px; /* Space below videos */
+    }
 }

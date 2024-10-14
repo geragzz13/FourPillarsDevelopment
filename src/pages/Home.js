@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/Home.css';
-/*import Capabilities from '../components/Capabilities'; */
 import aboutImage from '../assets/images/aboutImage.jpg';
+import heightsHilight from '../assets/videos/HeightsHilight.mp4';
+import veronaHighlight from '../assets/videos/VeronaHighlights.mp4';
 
 const Home = () => {
     const [modalContent, setModalContent] = useState({ title: '', description: '' });
@@ -65,7 +66,7 @@ const Home = () => {
                     </p>
                 </div>
                 <div className="about-image">
-                    <img src={aboutImage} alt="About Harwood International" />
+                    <img src={aboutImage} alt="About Four Pillars Development" />
                 </div>
             </section>
 
@@ -77,15 +78,15 @@ const Home = () => {
                 <div className="section-content">
                     <div className="service-item fade-in" onClick={() => openModal("Land Development", "We specialize in transforming raw land into vibrant residential and commercial developments, tailored to meet the needs of modern communities.")}>
                         <h3>Land Development</h3>
-                        <p>We specialize in transforming raw land into vibrant residential and commercial developments, tailored to meet the needs of modern communities.</p>
+                        <p>Transforming raw land into vibrant residential and commercial developments.</p>
                     </div>
                     <div className="service-item fade-in" onClick={() => openModal("Construction Services", "From initial planning to final construction, we offer comprehensive construction services ensuring superior craftsmanship and timely delivery.")}>
                         <h3>Construction Services</h3>
-                        <p>From initial planning to final construction, we offer comprehensive construction services ensuring superior craftsmanship and timely delivery.</p>
+                        <p>Comprehensive construction services ensuring superior craftsmanship and timely delivery.</p>
                     </div>
                     <div className="service-item fade-in" onClick={() => openModal("Project Management", "Our expert project management team oversees every phase of development, ensuring efficiency, cost-effectiveness, and adherence to deadlines.")}>
                         <h3>Project Management</h3>
-                        <p>Our expert project management team oversees every phase of development, ensuring efficiency, cost-effectiveness, and adherence to deadlines.</p>
+                        <p>Expert project management for efficient and cost-effective development.</p>
                     </div>
                 </div>
             </section>
@@ -101,29 +102,33 @@ const Home = () => {
                 </div>
             )}
 
-            {/* Projects Section */}
-            <section className="projects-section section fade-in-right">
+            {/* Showcase Section */}
+            <section className="showcase-section section fade-in-right">
                 <div className="section-header">
-                    <h2>Recent Projects</h2>
+                    <h2>Showcase</h2>
                 </div>
                 <div className="section-content">
-                    <div className="project-item fade-in">
-                        <Link to="/property/1" className="custom-link">
-                            <h3>Sugar Mills Estate</h3>
-                            <p>A prestigious residential community featuring modern homes and extensive green spaces, designed for sustainable living.</p>
-                        </Link>
+                    {/* Project 1 */}
+                    <div className="showcase-item fade-in">
+                        <h3>Heights Highlight</h3>
+                        <video controls width="100%">
+                            <source src={heightsHilight} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>A brief description of the Heights Highlight project.</p>
                     </div>
-                    <div className="project-item fade-in">
-                        <Link to="/property/2" className="custom-link">
-                            <h3>Dawson Estates</h3>
-                            <p>An iconic commercial development offering state-of-the-art townhouses, apartments, and is close to many facilities in the heart of the city.</p>
-                        </Link>
+                    
+                    {/* Project 2 */}
+                    <div className="showcase-item fade-in">
+                        <h3>Verona Highlight</h3>
+                        <video controls width="100%">
+                            <source src={veronaHighlight} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>A brief description of the Verona Highlight project.</p>
                     </div>
                 </div>
             </section>
-
-            {/* Capabilities Section */}
-            {/*  <Capabilities /> */}
 
             {/* Contact Section */}
             <section className="contact-section section fade-in-left">
@@ -134,8 +139,8 @@ const Home = () => {
                     <p>For inquiries or project collaborations, please contact us at:</p>
                     <ul>
                         <li>Email: <a href="mailto:fourpillarsdevelopmentsales@gmail.com" style={{ color: '#193320', textDecoration: 'none' }}>fourpillarsdevelopmentsales@gmail.com</a></li>
-                        <li>: <a href="tel:+19567779579" style={{ color: '#193320', textDecoration: 'none' }}>+1 (956) 777-9579</a></li>
-                        <li>: <a href="tel:+19567779340" style={{ color: '#193320', textDecoration: 'none' }}>+1 (956) 777-9340</a></li>
+                        <li>Phone: <a href="tel:+19567779579" style={{ color: '#193320', textDecoration: 'none' }}>+1 (956) 777-9579</a></li>
+                        <li>Phone: <a href="tel:+19567779340" style={{ color: '#193320', textDecoration: 'none' }}>+1 (956) 777-9340</a></li>
                         <li>Address: 1509 Shavano Dr, Edinburg, Texas, 78504</li>
                     </ul>
                 </div>

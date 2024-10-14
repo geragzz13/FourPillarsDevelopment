@@ -12,33 +12,32 @@ const properties = [
     { id: 1, name: 'Sugar Mills Estate', imgSrc: SugarMillEstateImage, location: 'Edinburg, TX', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
     { id: 2, name: 'Dawson Estates', imgSrc: DawsonEstatesImage, location: 'Mercedes, TX', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
     { id: 3, name: 'El Dorado Subdivision', imgSrc: ElDoradoImage, location: 'Edinburg, TX', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' }
-    // Add more properties as needed
 ];
 
 const Portfolio = () => {
     const settings = {
-        dots: false, // Hide dots
+        dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 3, // Default for desktop
+        slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
-        arrows: false, // Hide arrows
-        swipe: true, // Enable swipe
-        draggable: true, // Enable drag with mouse
+        arrows: false,
+        swipe: true,
+        draggable: true,
         adaptiveHeight: true,
         responsive: [
             {
-                breakpoint: 768, // For tablets and below
+                breakpoint: 768,
                 settings: {
-                    slidesToShow: 2, // Show 2 slides
+                    slidesToShow: 2,
                 },
             },
             {
-                breakpoint: 576, // For mobile devices
+                breakpoint: 576,
                 settings: {
-                    slidesToShow: 1, // Show 1 slide
+                    slidesToShow: 1,
                 },
             },
         ],
@@ -47,6 +46,9 @@ const Portfolio = () => {
     return (
         <div className="portfolio-container">
             <Container>
+                <div className="portfolio-title">
+                    <h2>Available Properties</h2>
+                </div>
                 <Slider {...settings} className="property-carousel">
                     {properties.map((property) => (
                         <Card key={property.id} className="property-card">
