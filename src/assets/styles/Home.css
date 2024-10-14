@@ -20,8 +20,8 @@ html, body {
     font-family: 'Suranna-Regular', sans-serif;
     font-size: 1.2rem;
     line-height: 1.6;
-    border-radius: 15px; /* Added rounded edges */
-    overflow: hidden; /* to ensure the border radius is applied to child elements */
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 /* Consistent Section Styles */
@@ -37,9 +37,9 @@ html, body {
     width: 100%;
     box-sizing: border-box;
     background-color: #ffffff;
-    margin-bottom: 40px; /* Added margin for spacing between sections */
-    border-radius: 15px; /* Added rounded edges */
-    overflow: hidden; /* helps contain any child elements */
+    margin-bottom: 40px;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 /* About Section Specific Styles */
@@ -47,14 +47,14 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 80px 20px; /* Keep same padding */
-    background-color: #ffffff; /* Keep background consistent */
-    border-bottom: 1px solid #ddd; /* Border to match others */
+    padding: 80px 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
     width: 100%;
     box-sizing: border-box;
-    margin-bottom: 40px; /* Same bottom margin for consistency */
-    border-radius: 15px; /* Added rounded edges */
-    overflow: hidden; /* helps contain any child elements */
+    margin-bottom: 40px;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .about-content {
@@ -75,9 +75,10 @@ html, body {
 
 .about-image img {
     width: 100%;
-    max-width: 400px;
+    max-width: 700px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
 }
 
 /* Fade-in styles */
@@ -94,6 +95,7 @@ html, body {
 
 /* Fade-in from left */
 .fade-in-left {
+    opacity: 0;
     transform: translateX(-100px); 
     transition: opacity 1.5s ease-out, transform 1.5s ease-out; 
 }
@@ -105,6 +107,7 @@ html, body {
 
 /* Fade-in from right */
 .fade-in-right {
+    opacity: 0;
     transform: translateX(100px); 
     transition: opacity 1.5s ease-out, transform 1.5s ease-out; 
 }
@@ -138,11 +141,11 @@ html, body {
     margin: 10px 0;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s; /* Hover effect */
+    transition: transform 0.2s;
 }
 
 .service-item:hover, .project-item:hover {
-    transform: translateY(-5px); /* Slight hover effect */
+    transform: translateY(-5px);
 }
 
 .custom-link {
@@ -167,8 +170,9 @@ html, body {
     transition: background-color 0.3s;
     margin-top: 20px; 
 }
+
 .contact-button:hover {
-    background-color: #1a5e40; /* Darker shade on hover */
+    background-color: #1a5e40;
 }
 
 /* Modal Styles */
@@ -182,22 +186,22 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1000; /* Ensure it's above other elements */
+    z-index: 1000;
 }
 
 .modal-content {
     background-color: white;
     padding: 50px; 
     border-radius: 10px;
-    width: 90%; /* Adjusted width for responsiveness */
-    max-width: 800px; /* Larger max width for bigger screens */
+    width: 90%;
+    max-width: 1500px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
 .modal-content h3 {
     margin-top: 0;
-    font-size: 2.5rem; /* Larger font size for headings */
+    font-size: 2.5rem;
 }
 
 .modal-content p {
@@ -209,7 +213,7 @@ html, body {
     padding: 14px 24px; 
     font-size: 1.4rem; 
     border: none;
-    background-color: #01351A; /* Your preferred color */
+    background-color: #01351A;
     color: white;
     border-radius: 5px;
     cursor: pointer;
@@ -219,80 +223,127 @@ html, body {
     background-color: #1a5e40;
 }
 
-.about-image img {
-    width: 100%; /* Stays responsive */
-    max-width: 700px; 
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 0 auto; /* Centered Image */
+/* Featured Projects Styles */
+.featured-projects {
+    padding: 80px 20px;
+    background-color: #ffffff;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 2000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-@media (max-width: 768px) {
-    .about-image img {
-        max-width: 300px; /* Smaller size for mobile */
-    }
+.project-showcase {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.project-item {
+    width: calc(50% - 20px);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.project-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-item h3 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #01351A;
+}
+
+.project-item p {
+    color: #333;
+    margin-top: 10px;
+}
+
+.view-all-button {
+    display: inline-block;
+    background-color: #01351A;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.view-all-button:hover {
+    background-color: #1a5e40;
 }
 
 /* Responsive Styles */
+@media (max-width: 1200px) {
+    .featured-projects {
+        max-width: 100%;
+        padding: 80px 40px;
+    }
+}
+
 @media (max-width: 768px) {
     .about-section {
         flex-direction: column;
-        text-align: center; /* Center text on mobile */
+        text-align: center;
     }
 
     .about-content {
         margin-right: 0;
-        margin-bottom: 20px; /* Spacing below content */
+        margin-bottom: 20px;
     }
 
     .about-image img {
-        max-width: 100%; /* Full width for smaller screens */
-        height: auto; /* Maintain aspect ratio */
+        max-width: 100%;
+        height: auto;
     }
 
     .service-item, .project-item {
-        width: 100%; /* Ensure items are full width */
+        width: 100%;
     }
 
     .modal-content {
-        width: 95%; /* Responsive width for modal */
+        width: 95%;
+        padding: 30px;
     }
 
     .contact-section a {
-        color: #193320 !important; /* Main Green */
+        color: #193320 !important;
         text-decoration: none !important; 
-        font-weight: bold; /* Optional */
+        font-weight: bold;
     }
     
     .contact-section a:hover {
-        color: #012E1F !important; /* Change color on hover */
-        text-decoration: underline !important; /* Add underline on hover */
+        color: #012E1F !important;
+        text-decoration: underline !important;
+    }
+
+    .featured-projects {
+        padding: 60px 20px;
     }
 }
 
-/* Video Styles */
-.project-videos-container {
-    display: flex;
-    justify-content: space-between; /* Space videos evenly */
-    width: 100%;
-    max-width: 800px; /* Restrict max width of the container */
-    margin: 0 auto; /* Center the container */
-}
-
-.project-video {
-    width: 50% !important; /* Set width to 50% */
-    max-width: 75px !important; /* Adjusted max-width for smaller videos */
-    height: 40px !important; /* Adjusted height for the video */
-    border-radius: 10px; /* Optional: adds rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds shadow */
-    margin: 10px; /* Space around videos */
-}
-
-
 @media (max-width: 300px) {
-    .project-video {
-        max-width: 90%; /* Full width for smaller screens */
-        height: auto; /* Adjust height for mobile */
-        margin-bottom: 20px; /* Space below videos */
+    .about-image img {
+        max-width: 300px;
     }
 }

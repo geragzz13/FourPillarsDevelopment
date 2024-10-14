@@ -8,10 +8,12 @@ import DawsonEstatesImage from '../assets/images/DawsonEstatesPortfolio.png';
 import ElDoradoImage from '../assets/images/ElDoradoPortfolio.png';
 
 const properties = [
-    { id: 0, name: 'Welcome', imgSrc: ElDoradoImage, location: 'Your Location', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
     { id: 1, name: 'Sugar Mills Estate', imgSrc: SugarMillEstateImage, location: 'Edinburg, TX', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
     { id: 2, name: 'Dawson Estates', imgSrc: DawsonEstatesImage, location: 'Mercedes, TX', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-    { id: 3, name: 'El Dorado Subdivision', imgSrc: ElDoradoImage, location: 'Edinburg, TX', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' }
+    { id: 3, name: 'El Dorado Subdivision', imgSrc: ElDoradoImage, location: 'Edinburg, TX', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+    { id: 4, name: 'The Heights at Alamo', imgSrc: ElDoradoImage, location: 'Edinburg, TX', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+    { id: 5, name: 'Verona Subdivision', imgSrc: ElDoradoImage, location: 'Edinburg, TX', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+    { id: 6, name: 'Westwood Villas', imgSrc: ElDoradoImage, location: 'Edinburg, TX', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' }
 ];
 
 const Portfolio = () => {

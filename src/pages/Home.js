@@ -102,33 +102,33 @@ const Home = () => {
                 </div>
             )}
 
-            {/* Showcase Section */}
-            <section className="showcase-section section fade-in-right">
-                <div className="section-header">
-                    <h2>Showcase</h2>
-                </div>
-                <div className="section-content">
-                    {/* Project 1 */}
-                    <div className="showcase-item fade-in">
-                        <h3>Heights Highlight</h3>
-                        <video controls width="100%">
-                            <source src={heightsHilight} type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                        <p>A brief description of the Heights Highlight project.</p>
-                    </div>
-                    
-                    {/* Project 2 */}
-                    <div className="showcase-item fade-in">
-                        <h3>Verona Highlight</h3>
-                        <video controls width="100%">
-                            <source src={veronaHighlight} type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                        <p>A brief description of the Verona Highlight project.</p>
-                    </div>
-                </div>
-            </section>
+            {/* Featured Projects */}
+<section className="featured-projects fade-in-right">
+    <h2>Our Featured Projects</h2>
+    <div className="project-showcase">
+        <div className="project-item">
+            <div className="video-wrapper">
+                <video controls className="project-video">
+                    <source src={heightsHilight} type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <h3>The Heights at Alamo</h3>
+            <p>A new fourplex community with spacious 2 & 3-bedroom units, perfect for generating steady rental income.</p>
+        </div>
+        <div className="project-item">
+            <div className="video-wrapper">
+                <video controls className="project-video">
+                    <source src={veronaHighlight} type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <h3>Verona Subdivsion</h3>
+            <p>Verona Apartments is a gated subdivision centrally located with easy access to McAllen & Brownsville, major highways, schools, & shopping centers</p>
+        </div>
+    </div>
+    <Link to="/portfolio" className="view-all-button">View All Projects</Link>
+</section>
 
             {/* Contact Section */}
             <section className="contact-section section fade-in-left">
