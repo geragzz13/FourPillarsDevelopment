@@ -68,6 +68,8 @@
     width: 65%; /* Adjusted width to allow room for property details */
     flex: 0 0 65%; /* Flex properties to ensure the width is respected */
     padding-top: 100px; /* Adjust for spacing as needed */
+    display: flex; /* Centering carousel */
+    justify-content: center; /* Centering carousel */
 }
 
 /* Property details card adjustments */
@@ -148,12 +150,15 @@
 @media (max-width: 768px) {
     .property-detail-content {
         flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center-align elements */
+        margin-top: 20px; /* Adjust margin for spacing */
     }
 
     .carousel-container {
         width: 100%; /* Full width on mobile */
         padding-right: 0; /* Remove padding */
         padding-top: 10px; /* Less padding on top */
+        justify-content: center; /* Center the carousel */
     }
 
     .property-details-card {
@@ -163,20 +168,24 @@
 
     .property-detail-content h2 {
         font-size: 24px; /* Smaller font size for mobile */
+        text-align: center; /* Center align for better appearance */
     }
 
     .property-location {
         font-size: 18px; /* Smaller font size for location */
+        text-align: center; /* Center align for better appearance */
     }
 
     .property-description,
     .property-details,
     .property-contact {
         font-size: 14px; /* Smaller font size for mobile */
+        text-align: center; /* Center align for better appearance */
     }
 
     .property-details-card .btn {
         width: 100%; /* Full-width button on mobile */
+        padding: 12px; /* Increase padding for better touch targets */
     }
 }
 
