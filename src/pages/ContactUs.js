@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import emailjs from 'emailjs-com'; // Import EmailJS library
 import '../assets/styles/ContactUs.css'; // Import the CSS file
 
-/* const USER_ID = process.env.REACT_APP_EMAILJS_USER_ID; // Get EmailJS user ID from environment variables
-const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID; // Get EmailJS template ID from environment variables */
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -13,6 +11,7 @@ const ContactUs = () => {
     propertyInterest: '',
     message: ''
   });
+  const fadeInRef = useRef(null); // Ref for the fade-in element
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -20,7 +19,6 @@ const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
 
     // Send form data via EmailJS
     emailjs.sendForm(
@@ -41,12 +39,41 @@ const ContactUs = () => {
       });
     }, (error) => {
       console.error('EmailJS Error:', error.text);
-      // Handle or show error message
+      // Optionally show an error message to the user
+      alert('Error sending message. Please try again later.');
     });
   };
 
+  useEffect(() => {
+    // Scroll to the contact section with an offset when the component mounts
+    if (fadeInRef.current) {
+      const topPosition = fadeInRef.current.getBoundingClientRect().top + window.scrollY;
+      const offset = 150; // Adjust this value for less or more scroll
+      window.scrollTo({ top: topPosition - offset, behavior: 'smooth' });
+    }
+
+    // Initialize IntersectionObserver for fade-in effect
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active'); // Add active class when in view
+        } else {
+          entry.target.classList.remove('active'); // Remove active class when out of view
+        }
+      });
+    });
+
+    // Observe the fade-in element
+    if (fadeInRef.current) observer.observe(fadeInRef.current);
+
+    return () => {
+      // Cleanup observer on component unmount
+      observer.disconnect();
+    };
+  }, []);
+
   return (
-    <div className="contact-us-container">
+    <div className="contact-us-container" ref={fadeInRef}>
       <Container className="full-width-form">
         <Row className="justify-content-center">
           <Col xs={12} md={8}>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Slider from 'react-slick';
 import { Container, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -85,8 +85,19 @@ const Portfolio = () => {
         ],
     };
 
+    const portfolioRef = useRef(null); // Ref for portfolio section
+
+    useEffect(() => {
+        // Scroll to the portfolio section on load with an offset
+        if (portfolioRef.current) {
+            const topPosition = portfolioRef.current.getBoundingClientRect().top + window.scrollY;
+            const offset = 150; // Adjust this value for less or more scroll
+            window.scrollTo({ top: topPosition - offset, behavior: 'smooth' });
+        }
+    }, []);
+
     return (
-        <div className="portfolio-container">
+        <div className="portfolio-container" ref={portfolioRef}>
             <Container>
                 <div className="portfolio-title">
                     <h2>Available Properties</h2>

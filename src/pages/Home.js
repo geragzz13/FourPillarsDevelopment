@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/Home.css';
 import aboutImage from '../assets/images/aboutImage.jpg';
@@ -8,8 +8,16 @@ import veronaHighlight from '../assets/videos/VeronaHighlights.mp4';
 const Home = () => {
     const [modalContent, setModalContent] = useState({ title: '', description: '' });
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const mainContentRef = useRef(null); // Ref for main content
 
     useEffect(() => {
+        // Scroll to the main content on load with an offset
+        if (mainContentRef.current) {
+            const topPosition = mainContentRef.current.getBoundingClientRect().top + window.scrollY;
+            const offset = 150; // Adjust this value for less or more scroll
+            window.scrollTo({ top: topPosition - offset, behavior: 'smooth' });
+        }
+
         const fadeInElements = () => {
             const elements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
             let delay = 0; // Initialize a delay variable
@@ -56,7 +64,7 @@ const Home = () => {
     };
 
     return (
-        <div className="home-container">
+        <div id="main-content" className="home-container" ref={mainContentRef}>
             {/* About Section */}
             <section className="about-section fade-in">
                 <div className="about-content">
@@ -83,7 +91,7 @@ const Home = () => {
                         </div>
                         <h3>The Heights at Alamo</h3>
                         <p>A new fourplex community with spacious 2 & 3-bedroom units, perfect for generating steady rental income.</p>
-                        <Link to="/property/4" className="project-button">View Details</Link>
+                        <Link to="/property/4" className="view-all-button">View Details</Link>
                     </div>
                     <div className="project-item">
                         <div className="video-wrapper">
@@ -94,7 +102,7 @@ const Home = () => {
                         </div>
                         <h3>Verona Subdivision</h3>
                         <p>Verona Apartments is a gated subdivision centrally located with easy access to McAllen & Brownsville, major highways, schools, & shopping centers.</p>
-                        <Link to="/property/5" className="project-button">View Details</Link>
+                        <Link to="/property/5" className="view-all-button">View Details</Link>
                     </div>
                 </div>
                 <Link to="/portfolio" className="view-all-button">View All Projects</Link>

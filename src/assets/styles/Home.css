@@ -302,6 +302,7 @@ html, body {
     }
 }
 
+/* Thumbnail fix for mobile */
 @media (max-width: 768px) {
     .about-section {
         flex-direction: column;
@@ -322,54 +323,15 @@ html, body {
         width: 100%;
     }
 
-    .modal-content {
-        width: 95%;
-        padding: 30px;
+    /* Fix for thumbnail visibility */
+    .project-item .video-wrapper {
+        height: auto; /* Ensures proper height scaling */
+        padding-top: 0; /* Resets padding for mobile */
     }
 
-    .contact-section a {
-        color: #193320 !important;
-        text-decoration: none !important; 
-        font-weight: bold;
-    }
-
-    .contact-section a:hover {
-        color: #012E1F !important;
-        text-decoration: underline !important;
-    }
-
-    .featured-projects {
-        padding: 60px 20px;
-    }
-
-    /* Contact Us area adjustments */
-    .contact-section {
-        padding: 40px 20px; /* Adjust padding for mobile */
-        font-size: 1rem; /* Decrease font size */
-        line-height: 1.4; /* Decrease line-height */
-    }
-
-    .contact-section h2 {
-        font-size: 2rem; /* Decrease header size */
-        margin-bottom: 20px;
-    }
-
-    .contact-button {
-        font-size: 1.2rem; /* Smaller button font size */
-        padding: 10px 20px; /* Smaller button padding */
-    }
-
-    .contact-section p {
-        margin-bottom: 10px; /* Adjust paragraph spacing */
-    }
-}
-
-@media (max-width: 480px) {
-    .section-header h2 {
-        font-size: 2rem; /* Decrease header size */
-    }
-
-    .section-content {
-        padding-bottom: 60px;
+    .project-video {
+        position: static; /* Fixes thumbnail display */
+        width: 100%;
+        height: auto; /* Ensures scaling on mobile */
     }
 }
