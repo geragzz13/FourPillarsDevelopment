@@ -147,10 +147,12 @@
     background-color: #155a2b; /* Darker green on hover */
 }
 
-/* Mobile-Only Adjustments for Hiding the .align-items-start.row div */
+/* Mobile-Only Adjustments for Correcting Alignment */
 @media (max-width: 768px) {
     .align-items-start.row {
-        display: none; /* Hides the div on mobile */
+        flex-direction: column; /* Stack elements vertically */
+        width: 100%; /* Ensure it takes the full width */
+        margin: 0; /* Remove any excess margins that might cause alignment issues */
     }
 
     .property-detail-content {
@@ -229,5 +231,6 @@
         padding: 12px; /* Increase padding for better touch targets */
     }
 }
+
 
 
