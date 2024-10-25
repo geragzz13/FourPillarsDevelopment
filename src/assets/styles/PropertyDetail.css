@@ -70,6 +70,7 @@
     padding-top: 100px; /* Adjust for spacing as needed */
     display: flex; /* Centering carousel */
     justify-content: center; /* Centering carousel */
+    align-items: center; /* Center carousel vertically */
 }
 
 /* Property details card adjustments */
@@ -146,7 +147,7 @@
     background-color: #155a2b; /* Darker green on hover */
 }
 
-/* Media Queries for Mobile Responsiveness */
+/* Mobile-Only Adjustments for Image Centering */
 @media (max-width: 768px) {
     .property-detail-content {
         flex-direction: column; /* Stack elements vertically */
@@ -156,9 +157,24 @@
 
     .carousel-container {
         width: 100%; /* Full width on mobile */
-        padding-right: 0; /* Remove padding */
+        padding: 0; /* Remove padding */
         padding-top: 10px; /* Less padding on top */
-        justify-content: center; /* Center the carousel */
+        justify-content: center; /* Center the carousel horizontally */
+        align-items: center; /* Center the carousel vertically */
+        text-align: center; /* Center-align text inside carousel */
+    }
+
+    .property-detail-container .card {
+        width: 100%; /* Ensure the card is full width on mobile */
+        max-width: 100%; /* Allow full width images */
+        margin: 0; /* Ensure it takes full width without gaps */
+    }
+
+    .property-detail-container .card-img-top {
+        width: 100%; /* Ensure the image is full width */
+        max-width: 100%; /* Make sure the image scales properly */
+        height: auto; /* Allow image to adjust based on its aspect ratio */
+        object-fit: cover; /* Keep the aspect ratio of the image */
     }
 
     .property-details-card {
