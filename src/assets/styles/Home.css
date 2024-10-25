@@ -267,31 +267,28 @@ html, body {
     object-fit: cover;
 }
 
-.project-item h3 {
-    margin-top: 20px;
-    font-size: 1.5rem;
-    color: #01351A;
-}
+/* Mobile Styles for Video Thumbnails */
+@media (max-width: 768px) {
+    .project-video {
+        background-size: cover; /* Ensures the thumbnail covers the entire video area */
+        background-position: center; /* Centers the thumbnail */
+        background-repeat: no-repeat; /* Prevents the thumbnail from repeating */
+    }
 
-.project-item p {
-    color: #333;
-    margin-top: 10px;
-}
+    /* Heights at Alamo Thumbnail */
+    .project-video.heights-video {
+        background-image: url('../images/TheHeights1.png'); /* Replace with actual path */
+    }
 
-.view-all-button {
-    display: inline-block;
-    background-color: #01351A;
-    color: #ffffff;
-    padding: 12px 24px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 20px;
-    transition: background-color 0.3s;
-}
+    /* Verona Subdivision Thumbnail */
+    .project-video.verona-video {
+        background-image: url('../images/TheHeights2.png'); /* Replace with actual path */
+    }
 
-.view-all-button:hover {
-    background-color: #1a5e40;
+    /* Remove the thumbnail when the video plays */
+    .project-video:playing {
+        background-image: none; /* Hides the background image when the video starts playing */
+    }
 }
 
 /* Responsive Styles */
