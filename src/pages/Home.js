@@ -5,7 +5,7 @@ import aboutImage from '../assets/images/aboutImage.jpg';
 import heightsHilight from '../assets/videos/HeightsHilight.mp4';
 import veronaHighlight from '../assets/videos/VeronaHighlights.mp4';
 import HeightsThumbnail from '../assets/images/TheHeights1.png';
-import VeronaThumbnail from '../assets/images/TheHeights8';
+import VeronaThumbnail from '../assets/images/TheHeights8.png';
 const Home = () => {
     const [modalContent, setModalContent] = useState({ title: '', description: '' });
     const [isModalOpen, setIsModalOpen] = useState(false);
