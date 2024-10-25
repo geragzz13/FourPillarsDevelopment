@@ -158,6 +158,30 @@ html, body {
     font-size: 1.5rem;
 }
 
+/* Base Button Styles */
+.btn {
+    background-color: #01351a;
+    border-color: #01351a;
+    color: #fff;
+    font-size: 0.8rem;
+    padding: 8px 16px;
+    transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+    margin-top: 15px; /* Margin above the button for spacing */
+    text-decoration: none; /* Remove underline from links */
+    display: inline-block; /* Ensure the button behaves like a button */
+    border-radius: 5px; /* Add some rounded corners */
+}
+
+.btn:hover {
+    background-color: #015c20;
+    transform: scale(1.05); /* Slight hover effect */
+}
+
+/* View All Button, inheriting from .btn */
+.view-all-button {
+    /* Inherits styles from .btn */
+}
+
 /* Contact Button Styles */
 .contact-button {
     background-color: #01351A;
@@ -266,17 +290,6 @@ html, body {
     height: 100%;
     object-fit: cover;
 }
-
-.view-all-button {
-    background-color: #01351a;
-    border-color: #01351a;
-    color: #fff;
-    font-size: 0.8rem;
-    padding: 8px 16px;
-    transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
-    margin-top: 15px; /* Margin above the button for spacing */
-}
-
 
 /* Mobile Styles for Video Thumbnails */
 @media (max-width: 768px) {

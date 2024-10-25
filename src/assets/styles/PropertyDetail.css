@@ -147,8 +147,12 @@
     background-color: #155a2b; /* Darker green on hover */
 }
 
-/* Mobile-Only Adjustments for Image Centering */
+/* Mobile-Only Adjustments for Hiding the .align-items-start.row div */
 @media (max-width: 768px) {
+    .align-items-start.row {
+        display: none; /* Hides the div on mobile */
+    }
+
     .property-detail-content {
         flex-direction: column; /* Stack elements vertically */
         align-items: center; /* Center-align elements */
@@ -159,8 +163,10 @@
         width: 100%; /* Full width on mobile */
         padding: 0; /* Remove all padding */
         padding-top: 10px; /* Less padding on top */
+        display: flex; /* Ensure the container behaves as a flexbox */
         justify-content: center; /* Center the carousel horizontally */
         align-items: center; /* Center the carousel vertically */
+        margin: 0 auto; /* Ensure horizontal centering */
         text-align: center; /* Ensure content is centered */
     }
 
@@ -223,4 +229,5 @@
         padding: 12px; /* Increase padding for better touch targets */
     }
 }
+
 

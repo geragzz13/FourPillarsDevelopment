@@ -6,6 +6,7 @@ import heightsHilight from '../assets/videos/HeightsHilight.mp4';
 import veronaHighlight from '../assets/videos/VeronaHighlights.mp4';
 import HeightsThumbnail from '../assets/images/TheHeights1.png';
 import VeronaThumbnail from '../assets/images/TheHeights8.png';
+
 const Home = () => {
     const [modalContent, setModalContent] = useState({ title: '', description: '' });
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -92,7 +93,7 @@ const Home = () => {
                         </div>
                         <h3>The Heights at Alamo</h3>
                         <p>A new fourplex community with spacious 2 & 3-bedroom units, perfect for generating steady rental income.</p>
-                        <Link to="/property/4" className="view-all-button">View Details</Link>
+                        <Link to="/property/4" className="btn view-all-button">View Details</Link>
                     </div>
                     <div className="project-item">
                         <div className="video-wrapper">
@@ -103,10 +104,10 @@ const Home = () => {
                         </div>
                         <h3>Verona Subdivision</h3>
                         <p>Verona Apartments is a gated subdivision centrally located with easy access to McAllen & Brownsville, major highways, schools, & shopping centers.</p>
-                        <Link to="/property/5" className="view-all-button">View Details</Link>
+                        <Link to="/property/5" className="btn view-all-button">View Details</Link>
                     </div>
                 </div>
-                <Link to="/portfolio" className="view-all-button">View All Projects</Link>
+                <Link to="/portfolio" className="btn view-all-button">View All Projects</Link>
             </section>
 
             {/* Services Section */}
@@ -136,7 +137,7 @@ const Home = () => {
                     <div className="modal-content" onClick={(e) => e.stopPropagation()}>
                         <h3>{modalContent.title}</h3>
                         <p>{modalContent.description}</p>
-                        <button onClick={closeModal}>Close</button>
+                        <button className="btn" onClick={closeModal}>Close</button>
                     </div>
                 </div>
             )}
