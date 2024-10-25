@@ -157,24 +157,23 @@
 
     .carousel-container {
         width: 100%; /* Full width on mobile */
-        padding: 0; /* Remove padding */
+        padding: 0; /* Remove all padding */
         padding-top: 10px; /* Less padding on top */
         justify-content: center; /* Center the carousel horizontally */
         align-items: center; /* Center the carousel vertically */
-        text-align: center; /* Center-align text inside carousel */
+        text-align: center; /* Ensure content is centered */
     }
 
     .property-detail-container .card {
-        width: 100%; /* Ensure the card is full width on mobile */
-        max-width: 100%; /* Allow full width images */
-        margin: 0; /* Ensure it takes full width without gaps */
+        width: 100%; /* Full width for the card on mobile */
+        margin: 0 auto; /* Center the card horizontally */
     }
 
     .property-detail-container .card-img-top {
         width: 100%; /* Ensure the image is full width */
-        max-width: 100%; /* Make sure the image scales properly */
-        height: auto; /* Allow image to adjust based on its aspect ratio */
-        object-fit: cover; /* Keep the aspect ratio of the image */
+        max-width: 100%; /* Ensure it scales properly */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Ensure the image is not distorted */
     }
 
     .property-details-card {
@@ -224,3 +223,4 @@
         padding: 12px; /* Increase padding for better touch targets */
     }
 }
+

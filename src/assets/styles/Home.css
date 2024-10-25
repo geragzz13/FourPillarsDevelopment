@@ -267,7 +267,7 @@ html, body {
     object-fit: cover;
 }
 
-.view-all-button .btn-primary {
+.view-all-button {
     background-color: #01351a;
     border-color: #01351a;
     color: #fff;
