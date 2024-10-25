@@ -330,8 +330,25 @@ html, body {
     }
 
     .project-video {
-        position: static; /* Fixes thumbnail display */
+        position: relative; /* Allows responsive scaling */
         width: 100%;
         height: auto; /* Ensures scaling on mobile */
+    }
+
+    /* Add a fallback image for video thumbnails on mobile */
+    .project-video::before {
+        content: url('../images/TheHeights1.png'); /* Add a fallback image path */
+        display: block;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1; /* Ensures the image appears over the video */
+    }
+
+    /* Hide the fallback image when the video is played */
+    .project-video:playing::before {
+        display: none; /* Hide the thumbnail when the video plays */
     }
 }

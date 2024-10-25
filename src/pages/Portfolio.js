@@ -16,7 +16,7 @@ const properties = [
         name: 'Sugar Mills Estate',
         imgSrc: SugarMillEstateImage,
         location: 'Edinburg, TX',
-        description: 'This is a detailed description for Sugar Mills Estate.',
+        description: 'Student Housing Goldmine, Sugar Mills Estate!',
         siteDetails: '2,500 sq ft, 4 beds, 3 baths',
     },
     {
@@ -24,35 +24,35 @@ const properties = [
         name: 'Dawson Estates',
         imgSrc: DawsonEstatesImage,
         location: 'Mercedes, TX',
-        description: 'This is a detailed description for Dawson Estates.',
+        description: 'Prime Investment property in Mercedes, TX!',
     },
     {
         id: 3,
         name: 'El Dorado Subdivision',
         imgSrc: ElDoradoImage,
         location: 'Edinburg, TX',
-        description: 'This is a detailed description for El Dorado Subdivision.',
+        description: 'Prime Investment Opportunity in North McAllen!',
     },
     {
         id: 4,
         name: 'The Heights at Alamo',
         imgSrc: TheHeights1, // Ensure this is the correct image for "The Heights"
-        location: 'Edinburg, TX',
-        description: 'This is a detailed description for The Heights at Alamo.',
+        location: 'Alamo, TX',
+        description: 'Luxury living in Alamo, TX!',
     },
     {
         id: 5,
         name: 'Verona Subdivision',
         imgSrc: ElDoradoImage,
-        location: 'Edinburg, TX',
-        description: 'This is a detailed description for Verona Subdivision.',
+        location: 'Weslaco, TX',
+        description: 'Weslaco Fourplexes: Fully leased & cash flowing',
     },
     {
         id: 6,
         name: 'Westwood Villas',
         imgSrc: Westwood1,
         location: 'Edinburg, TX',
-        description: 'This is a detailed description for Westwood Villas.',
+        description: 'Discover Your Next Investment Opportunity at Westwood Villas!',
     },
 ];
 

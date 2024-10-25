@@ -40,8 +40,8 @@ const properties = [
         name: 'Sugar Mills Estate',
         imgSrc: SugarMillEstateImage,
         location: 'Edinburg, TX',
-        description: 'This is a detailed description for Sugar Mills Estate.',
-        siteDetails: '2,500 sq ft, 4 beds, 3 baths',
+        description: 'Boasting a convenient location, Sugar Mills Estates is the perfect multi-family development for your next investment! Built with spacious modern 3 Bed/2 Bath and 2 Bed/2 Bath units, this property blends exceptional design with promising returns.',
+        siteDetails: '2,500 sq ft, 3 beds, 2 baths and 2 beds, 2 baths available!',
         images: [SugarMillEstateImage],
     },
     {
@@ -49,8 +49,8 @@ const properties = [
         name: 'Dawson Estates',
         imgSrc: DawsonEstatesImage,
         location: 'Mercedes, TX',
-        description: 'This is a detailed description for Dawson Estates.',
-        siteDetails: '3,200 sq ft, 5 beds, 4 baths',
+        description: 'Get a closer look at our last remaining perfectly located 4-unit apartments inside the Dawson Estates subdivision! Easy highway access, near schools and popular eateries.',
+        siteDetails: '3,200 sq ft, 3 beds, 2 baths',
         images: [DawsonEstatesImage],
     },
     {
@@ -58,7 +58,7 @@ const properties = [
         name: 'El Dorado Subdivision',
         imgSrc: ElDoradoImage,
         location: 'Edinburg, TX',
-        description: 'This is a detailed description for El Dorado Subdivision.',
+        description: 'Experience upscale living at the El Dorado Subdivision in Edinburg, Texas. Starting at $540,000, these fourplexes offer unmatched comfort and style, ideally located near the University of Texas Rio Grande Valley, offering a short travel time. Located conveniently off of Ware Rd. ',
         siteDetails: '3,800 sq ft, 6 beds, 5 baths',
         images: [
              ElDorado1, ElDorado2, ElDorado3, ElDorado4, ElDorado5
@@ -69,8 +69,8 @@ const properties = [
         name: 'The Heights at Alamo',
         imgSrc: TheHeights1,
         location: 'Edinburg, TX',
-        description: 'This is a detailed description for The Heights at Alamo.',
-        siteDetails: '3,800 sq ft, 6 beds, 5 baths',
+        description: 'The Heights at Alamo is rising, a new fourplex community with spacious 2 & 3-bedroom units, perfect for generating steady rental income.',
+        siteDetails: '3,800 sq ft, 2 beds, 2 baths, and 3 beds 3 baths',
         images: [
              TheHeights1, TheHeights2, TheHeights3, TheHeights4, TheHeights5, TheHeights6, TheHeights7, TheHeights8, TheHeights9
         ],
@@ -80,8 +80,8 @@ const properties = [
         name: 'Verona Subdivision',
         imgSrc: ElDoradoImage,
         location: 'Edinburg, TX',
-        description: 'This is a detailed description for Verona Subdivision.',
-        siteDetails: '3,800 sq ft, 6 beds, 5 baths',
+        description: 'Verona Apartments is a gated subdivision centrally located with easy access to McAllen & Brownsville, major highways, schools, & shopping centers ',
+        siteDetails: '3,800 sq ft, 2 beds, 2 baths, 3 beds, 3 baths',
         images: [
              ElDorado1, ElDorado2, ElDorado3, ElDorado4, ElDorado5
         ],
@@ -90,8 +90,8 @@ const properties = [
         id: 6,
         name: 'Westwood Villas',
         imgSrc: Westwood1,
-        location: 'Edinburg, TX',
-        description: 'This is a detailed description for Westwood Villas.',
+        location: 'Alton, TX',
+        description: 'Looking for a prime investment in Alton, Texas? Look no further! Westwood Villas is your gateway to smart real estate investing. With Fourplex, Fiveplex, and Sixplex lots available, this upcoming multifamily subdivision is the perfect place to grow your portfolio. Located along Stewart Rd and Lark Ave, Westwood Villas offers unparalleled potential for high returns and consistent rental income.',
         siteDetails: '3,800 sq ft, 6 beds, 5 baths',
         images: [
              Westwood1, Westwood2, Westwood3, Westwood4, Westwood5
