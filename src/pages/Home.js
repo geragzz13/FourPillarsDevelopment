@@ -4,7 +4,8 @@ import '../assets/styles/Home.css';
 import aboutImage from '../assets/images/aboutImage.jpg';
 import heightsHilight from '../assets/videos/HeightsHilight.mp4';
 import veronaHighlight from '../assets/videos/VeronaHighlights.mp4';
-
+import HeightsThumbnail from '../assets/images/TheHeights1.png';
+import VeronaThumbnail from '../assets/images/TheHeights8';
 const Home = () => {
     const [modalContent, setModalContent] = useState({ title: '', description: '' });
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -84,7 +85,7 @@ const Home = () => {
                 <div className="project-showcase">
                     <div className="project-item">
                         <div className="video-wrapper">
-                            <video controls className="project-video">
+                            <video controls className="project-video" poster={HeightsThumbnail}>
                                 <source src={heightsHilight} type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
@@ -95,7 +96,7 @@ const Home = () => {
                     </div>
                     <div className="project-item">
                         <div className="video-wrapper">
-                            <video controls className="project-video">
+                            <video controls className="project-video" poster={VeronaThumbnail}>
                                 <source src={veronaHighlight} type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
