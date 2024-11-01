@@ -123,6 +123,35 @@
     border-color: #193320; /* Keep the same border color */
 }
 
+/* Tabs for switching between available and upcoming properties */
+.portfolio-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.portfolio-tab {
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.portfolio-tab:hover {
+    color: #1D4D2D;
+    border-color: #1D4D2D;
+}
+
+.portfolio-tab.active {
+    color: #1D4D2D;
+    border-color: #1D4D2D;
+    font-weight: bold;
+}
+
+/* Responsive adjustments for tablets and smaller screens */
 @media (max-width: 768px) {
     .property-carousel {
         width: 90%;
@@ -151,6 +180,36 @@
     }
 }
 
+/* Tabs for switching between available and upcoming properties */
+.portfolio-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.portfolio-tab {
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.portfolio-tab:hover {
+    color: #1D4D2D;
+    border-color: #1D4D2D;
+}
+
+.portfolio-tab.active {
+    color: #1D4D2D;
+    border-color: #1D4D2D;
+    font-weight: bold;
+}
+
+
+/* Further adjustments for mobile devices */
 @media (max-width: 576px) {
     .portfolio-container {
         padding-bottom: 150px; /* Increased bottom padding */

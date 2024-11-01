@@ -33,6 +33,9 @@ const CustomNavbar = () => {
             <Nav.Link as={Link} to="/portfolio" className="nav-link" onClick={scrollToTop}>
               PORTFOLIO
             </Nav.Link>
+            <Nav.Link as={Link} to="/upcoming-properties" className="nav-link" onClick={scrollToTop}>
+            UPCOMING PROPERTIES
+            </Nav.Link>
            {/* } <Nav.Link as={Link} to="/about-us" className="nav-link" onClick={scrollToTop}> */}
              {/* ABOUT US */}
             {/* </Nav.Link> */}

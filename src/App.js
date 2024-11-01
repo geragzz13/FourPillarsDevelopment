@@ -9,6 +9,7 @@ import Services from './pages/Services';
 import ContactUs from './pages/ContactUs'; 
 import Portfolio from './pages/Portfolio'; 
 import PropertyDetail from './pages/PropertyDetail'; 
+import UpcomingProperties from './pages/UpcomingProperties';
 import './assets/styles/App.css'; 
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import 'slick-carousel/slick/slick.css';
@@ -58,6 +59,7 @@ function App() {
           <Route path="/contact-us" element={<Layout><ContactUs /></Layout>} />
           <Route path="/portfolio" element={<Layout><Portfolio /></Layout>} />
           <Route path="/property/:id" element={<><Navbar /><PropertyDetail /></>} /> {/* Render Navbar with PropertyDetail */}
+          <Route path="/upcoming-properties" element={<Layout><UpcomingProperties/></Layout>}/>
         </Routes>
       </div>
     </Router>
