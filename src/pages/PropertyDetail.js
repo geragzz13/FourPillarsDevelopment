@@ -38,7 +38,7 @@ const properties = [
     {
         id: 1,
         name: 'Sugar Mills Estate',
-        imgSrc: SugarMillEstateImage,
+        imgSrc: DawsonEstatesImage,
         location: 'Edinburg, TX',
         description: 'Boasting a convenient location, Sugar Mills Estates is the perfect multi-family development for your next investment! Built with spacious modern 3 Bed/2 Bath and 2 Bed/2 Bath units, this property blends exceptional design with promising returns.',
         siteDetails: '2,500 sq ft, 3 beds, 2 baths and 2 beds, 2 baths available!',
@@ -56,12 +56,12 @@ const properties = [
     {
         id: 3,
         name: 'El Dorado Subdivision',
-        imgSrc: ElDoradoImage,
+        imgSrc: ElDorado1,
         location: 'Edinburg, TX',
         description: 'Experience upscale living at the El Dorado Subdivision in Edinburg, Texas. Starting at $540,000, these fourplexes offer unmatched comfort and style, ideally located near the University of Texas Rio Grande Valley, offering a short travel time. Located conveniently off of Ware Rd. ',
         siteDetails: '3,800 sq ft, 6 beds, 5 baths',
         images: [
-             ElDorado1, ElDorado2, ElDorado3, ElDorado4, ElDorado5
+             ElDoradoImage, ElDorado2, ElDorado3, ElDorado4, ElDorado5
         ],
     },
     {
@@ -78,7 +78,7 @@ const properties = [
     {
         id: 5,
         name: 'Verona Subdivision',
-        imgSrc: ElDoradoImage,
+        imgSrc: DawsonEstatesImage,
         location: 'Edinburg, TX',
         description: 'Verona Apartments is a gated subdivision centrally located with easy access to McAllen & Brownsville, major highways, schools, & shopping centers ',
         siteDetails: '3,800 sq ft, 2 beds, 2 baths, 3 beds, 3 baths',
