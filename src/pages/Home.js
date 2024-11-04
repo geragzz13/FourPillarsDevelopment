@@ -31,37 +31,37 @@ const Home = () => {
     };
 
     const containerVariants = {
-        hidden: { opacity: 0, y: 80 },
+        hidden: { opacity: 0, y: 60 },
         visible: {
             opacity: 1,
             y: 0,
             transition: {
-                duration: 2.5,
-                ease: [0.4, 0.0, 0.2, 1],
-                staggerChildren: 0.3,
+                duration: 1.8,
+                ease: [0.42, 0, 0.58, 1], // Smooth easing
+                staggerChildren: 0.2,
             },
         },
     };
 
     const itemVariants = {
-        hidden: { opacity: 0, y: 40 },
+        hidden: { opacity: 0, y: 30 },
         visible: {
             opacity: 1,
             y: 0,
             transition: {
-                duration: 2,
-                ease: [0.4, 0.0, 0.2, 1],
+                duration: 1.4,
+                ease: [0.42, 0, 0.58, 1], // Consistent easing
             },
         },
     };
 
     const modalVariants = {
-        hidden: { opacity: 0, scale: 0.8 },
+        hidden: { opacity: 0, scale: 0.9 },
         visible: {
             opacity: 1,
             scale: 1,
             transition: {
-                duration: 0.5, // Faster duration for the modal
+                duration: 0.4, // Faster modal animation
                 ease: 'easeOut',
             },
         },
