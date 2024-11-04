@@ -126,10 +126,6 @@ html, body {
     outline: none;
   }
 
-  .navbar-toggler-icon {
-    background-image: none;
-  }
-
   .navbar-toggler-icon:before {
     content: '\2630'; /* Unicode character for the hamburger icon */
     font-size: 1.5rem;
