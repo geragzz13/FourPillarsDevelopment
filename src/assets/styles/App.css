@@ -30,7 +30,7 @@ teal color: #F9F8DA
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #FFFFFF;
   padding: 0; /* Default padding */
 }
 
