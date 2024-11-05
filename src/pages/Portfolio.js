@@ -3,15 +3,10 @@ import Slider from 'react-slick';
 import { Container, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../assets/styles/Portfolio.css';
-import SugarMillEstateImage from '../assets/images/SugarMillPortfolio.png';
-import DawsonEstatesImage from '../assets/images/DawsonEstatesPortfolio.png';
-import ElDoradoImage from '../assets/images/ElDoradoPortfolio.png';
-import Westwood1 from '../assets/images/westwood1.png';
 import TheHeights1 from '../assets/images/TheHeights1.png';
-import DawsonThumbnail from '../assets/images/DawsonThumbnail.png';
 import ElDoradoThumbnail from '../assets/images/ElDoradoThumbnail.png'
 import SugarMillsThumbnail from '../assets/images/SugarMillsThumbnail.png';
-import VidaThumbnail from '../assets/images/VidaThumbnail.png';
+
 // Define properties array with correct imgSrc for each card
 const properties = [
     {
