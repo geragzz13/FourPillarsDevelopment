@@ -8,13 +8,16 @@ import DawsonEstatesImage from '../assets/images/DawsonEstatesPortfolio.png';
 import ElDoradoImage from '../assets/images/ElDoradoPortfolio.png';
 import Westwood1 from '../assets/images/westwood1.png';
 import TheHeights1 from '../assets/images/TheHeights1.png';
-
+import DawsonThumbnail from '../assets/images/DawsonThumbnail.png';
+import ElDoradoThumbnail from '../assets/images/ElDoradoThumbnail.png'
+import SugarMillsThumbnail from '../assets/images/SugarMillsThumbnail.png';
+import VidaThumbnail from '../assets/images/VidaThumbnail.png';
 // Define properties array with correct imgSrc for each card
 const properties = [
     {
         id: 1,
         name: 'Sugar Mills Estate',
-        imgSrc: SugarMillEstateImage,
+        imgSrc: SugarMillsThumbnail,
         location: 'Edinburg, TX',
         description: 'Student Housing Goldmine, Sugar Mills Estate!',
         siteDetails: '2,500 sq ft, 4 beds, 3 baths',
@@ -22,14 +25,14 @@ const properties = [
     {
         id: 2,
         name: 'Dawson Estates',
-        imgSrc: DawsonEstatesImage,
+        imgSrc: DawsonEstatesThumbnail,
         location: 'Mercedes, TX',
         description: 'Prime Investment property in Mercedes, TX!',
     },
     {
         id: 3,
         name: 'El Dorado Subdivision',
-        imgSrc: ElDoradoImage,
+        imgSrc: ElDoradoThumbnail,
         location: 'Edinburg, TX',
         description: 'Prime Investment Opportunity in North McAllen!',
     },
@@ -43,17 +46,17 @@ const properties = [
     {
         id: 5,
         name: 'Verona Subdivision',
-        imgSrc: ElDoradoImage,
+        imgSrc: ElDoradoThumbnail,
         location: 'Weslaco, TX',
         description: 'Weslaco Fourplexes: Fully leased & cash flowing',
     },
-    {
+   /*  {
         id: 6,
         name: 'Westwood Villas',
         imgSrc: Westwood1,
         location: 'Edinburg, TX',
         description: 'Discover Your Next Investment Opportunity at Westwood Villas!',
-    },
+    }, */
 ];
 
 const Portfolio = () => {
