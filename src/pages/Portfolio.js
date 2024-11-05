@@ -6,7 +6,7 @@ import '../assets/styles/Portfolio.css';
 import TheHeights1 from '../assets/images/TheHeights1.png';
 import ElDoradoThumbnail from '../assets/images/ElDoradoThumbnail.png'
 import SugarMillsThumbnail from '../assets/images/SugarMillsThumbnail.png';
-
+import DawsonThumbnail from '../assets/images/DawsonThumbnail.png';
 // Define properties array with correct imgSrc for each card
 const properties = [
     {
@@ -20,7 +20,7 @@ const properties = [
     {
         id: 2,
         name: 'Dawson Estates',
-        imgSrc: DawsonEstatesThumbnail,
+        imgSrc: DawsonThumbnail,
         location: 'Mercedes, TX',
         description: 'Prime Investment property in Mercedes, TX!',
     },
