@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import '../assets/styles/Home.css';
@@ -9,8 +9,6 @@ import HeightsThumbnail from '../assets/images/TheHeights1.png';
 import VeronaThumbnail from '../assets/images/TheHeights8.png';
 
 const Home = () => {
-    const [modalContent, setModalContent] = useState({ title: '', description: '' });
-    const [isModalOpen, setIsModalOpen] = useState(false);
     const mainContentRef = useRef(null);
 
     useEffect(() => {
@@ -21,15 +19,6 @@ const Home = () => {
         }
     }, []);
 
-    const openModal = (title, description) => {
-        setModalContent({ title, description });
-        setIsModalOpen(true);
-    };
-
-    const closeModal = () => {
-        setIsModalOpen(false);
-    };
-
     const containerVariants = {
         hidden: { opacity: 0, y: 60 },
         visible: {
@@ -37,7 +26,7 @@ const Home = () => {
             y: 0,
             transition: {
                 duration: 1.8,
-                ease: [0.42, 0, 0.58, 1], // Smooth easing
+                ease: [0.42, 0, 0.58, 1],
                 staggerChildren: 0.2,
             },
         },
@@ -50,25 +39,31 @@ const Home = () => {
             y: 0,
             transition: {
                 duration: 1.4,
-                ease: [0.42, 0, 0.58, 1], // Consistent easing
-            },
-        },
-    };
-
-    const modalVariants = {
-        hidden: { opacity: 0, scale: 0.9 },
-        visible: {
-            opacity: 1,
-            scale: 1,
-            transition: {
-                duration: 0.4, // Faster modal animation
-                ease: 'easeOut',
+                ease: [0.42, 0, 0.58, 1],
             },
         },
     };
 
     return (
         <div id="main-content" className="home-container" ref={mainContentRef}>
+            
+            {/* Introduction Section */}
+            <motion.section
+                className="introduction-section"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.6 }}
+                variants={containerVariants}
+            >
+                <motion.div className="introduction-content" variants={itemVariants}>
+                    <h2>Developer & Contractor of Award-Winning Multi-Family Properties</h2>
+                    <p>
+                        As a renowned developer, we focus on crafting luxurious, multi-family properties with a vision for
+                        sustainability and quality that not only enhance the community but stand as benchmarks in the real estate industry.
+                    </p>
+                </motion.div>
+            </motion.section>
+
             {/* About Section */}
             <motion.section
                 className="about-section"
@@ -78,9 +73,11 @@ const Home = () => {
                 variants={containerVariants}
             >
                 <motion.div className="about-content" variants={itemVariants}>
-                    <h2>WELCOME TO FOUR PILLARS DEVELOPMENT</h2>
+                    <h2>About Us</h2>
                     <p>
-                        At Four Pillars Development, we believe that innovation and craftsmanship come together to redefine the landscape of real estate in Edinburg, Texas. As a family-owned and operated business with over 20 years of experience, we prioritize efficient builds that not only meet the needs of our community but also stand the test of time. Our commitment to quality and integrity reflects our Texan roots, driving us to create exceptional residential and commercial developments that enhance the vibrant fabric of our city.
+                        At Four Pillars Development, we have over 20 years of experience in delivering high-quality residential 
+                        and commercial developments. Our mission is to transform the urban landscape through innovation, efficiency, 
+                        and craftsmanship, creating spaces that bring lasting value to the community.
                     </p>
                 </motion.div>
                 <motion.div className="about-image" variants={itemVariants}>
@@ -117,7 +114,7 @@ const Home = () => {
                             </video>
                         </div>
                         <h3>Verona Subdivision</h3>
-                        <p>Verona Apartments is a gated subdivision centrally located with easy access to McAllen & Brownsville, major highways, schools, & shopping centers.</p>
+                        <p>Verona Apartments is a gated subdivision centrally located with easy access to major highways, schools, and shopping centers.</p>
                         <Link to="/property/5" className="btn view-all-button">View Details</Link>
                     </motion.div>
                 </motion.div>
@@ -136,19 +133,32 @@ const Home = () => {
                     <h2>Our Services</h2>
                 </div>
                 <motion.div className="section-content" variants={containerVariants}>
-                    <motion.div className="service-item" variants={itemVariants} onClick={() => openModal("Land Development", "We specialize in transforming raw land into vibrant residential and commercial developments.")}>
+                    <motion.div className="service-item" variants={itemVariants}>
                         <h3>Land Development</h3>
                         <p>Transforming raw land into vibrant residential and commercial developments.</p>
                     </motion.div>
-                    <motion.div className="service-item" variants={itemVariants} onClick={() => openModal("Construction Services", "From initial planning to final construction, we offer comprehensive construction services ensuring superior craftsmanship.")}>
+                    <motion.div className="service-item" variants={itemVariants}>
                         <h3>Construction Services</h3>
-                        <p>Comprehensive construction services ensuring superior craftsmanship.</p>
+                        <p>From initial planning to final construction, we offer comprehensive construction services ensuring superior craftsmanship.</p>
                     </motion.div>
-                    <motion.div className="service-item" variants={itemVariants} onClick={() => openModal("Project Management", "Our expert project management team oversees every phase of development, ensuring efficiency.")}>
+                    <motion.div className="service-item" variants={itemVariants}>
                         <h3>Project Management</h3>
-                        <p>Expert project management for efficient and cost-effective development.</p>
+                        <p>Our expert project management team oversees every phase of development, ensuring efficiency and quality.</p>
                     </motion.div>
                 </motion.div>
+            </motion.section>
+
+            {/* Call to Action Section */}
+            <motion.section
+                className="cta-section"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                variants={containerVariants}
+            >
+                <h2>Ready to Start Your Project?</h2>
+                <p>Partner with us to create exceptional properties that meet your unique vision and requirements.</p>
+                <Link to="/contact" className="btn cta-button">Contact Us</Link>
             </motion.section>
 
             {/* Contact Section */}
@@ -172,29 +182,6 @@ const Home = () => {
                     </ul>
                 </motion.div>
             </motion.section>
-
-            {/* Modal for Service Information */}
-            {isModalOpen && (
-                <motion.div
-                    className="modal-overlay"
-                    initial="hidden"
-                    animate="visible"
-                    variants={modalVariants}
-                    onClick={closeModal}
-                >
-                    <motion.div
-                        className="modal-content"
-                        onClick={(e) => e.stopPropagation()}
-                        initial="hidden"
-                        animate="visible"
-                        variants={modalVariants}
-                    >
-                        <h3>{modalContent.title}</h3>
-                        <p>{modalContent.description}</p>
-                        <button className="btn" onClick={closeModal}>Close</button>
-                    </motion.div>
-                </motion.div>
-            )}
         </div>
     );
 };

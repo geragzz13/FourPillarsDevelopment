@@ -4,22 +4,22 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
+    font-family: 'Suranna-Regular', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    background-color: #f3f4f6;
 }
 
+/* Container Styles */
 .home-container {
     min-height: calc(100vh - 250px);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    background-color: #000000;
+    background-color: #000;
     color: #333;
     padding: 20px;
-    font-family: 'Suranna-Regular', sans-serif;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    border-radius: 15px;
-    overflow: hidden;
+    overflow: hidden; /* Removed border-radius */
 }
 
 /* Consistent Section Styles */
@@ -34,8 +34,27 @@ html, body {
     box-sizing: border-box;
     background-color: #ffffff;
     margin-bottom: 40px;
-    border-radius: 15px;
-    overflow: hidden;
+    overflow: hidden; /* Removed border-radius */
+}
+
+/* Introduction Section */
+.introduction-section {
+    text-align: center;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    padding: 60px 20px;
+    overflow: hidden; /* Removed border-radius */
+}
+
+.introduction-section h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+.introduction-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
 }
 
 /* About Section */
@@ -48,8 +67,7 @@ html, body {
     width: 100%;
     box-sizing: border-box;
     margin-bottom: 40px;
-    border-radius: 15px;
-    overflow: hidden;
+    overflow: hidden; /* Removed border-radius */
 }
 
 .about-content {
@@ -73,39 +91,9 @@ html, body {
     max-width: 700px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
 }
 
-/* Smooth Fade-in Animation */
-.fade-in, .fade-in-left, .fade-in-right {
-    opacity: 0;
-    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth animation */
-}
-
-.fade-in.active {
-    opacity: 1;
-    transform: translateY(0); /* Final position */
-}
-
-.fade-in-left {
-    transform: translateX(-30px);
-}
-
-.fade-in-left.active {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.fade-in-right {
-    transform: translateX(30px);
-}
-
-.fade-in-right.active {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-/* Section headers */
+/* Section Headers */
 .section-header {
     margin-bottom: 40px;
     text-align: center;
@@ -116,91 +104,37 @@ html, body {
     color: #000000;
 }
 
-.section-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-bottom: 100px;
-}
-
 /* Service and Project Item Styles */
 .service-item, .project-item {
     background-color: #FFFFFF;
     padding: 20px;
     margin: 10px 0;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s;
 }
 
 .service-item:hover, .project-item:hover {
     transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Button Styles */
 .btn {
-    background-color: #000000;
-    border-color: #000000;
-    color: #fff;
-    font-size: 0.8rem;
-    padding: 8px 16px;
-    transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
-    margin-top: 15px;
-    text-decoration: none;
-    display: inline-block;
+    background-color: #333;
+    border: 1px solid #333;
+    color: #ffffff;
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     border-radius: 5px;
+    text-decoration: none;
 }
 
 .btn:hover {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
+    color: #333;
     transform: scale(1.05);
-}
-
-/* Modal Styles */
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-}
-
-.modal-content {
-    background-color: #FFFFFF;
-    padding: 50px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 1500px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
-.modal-content h3 {
-    margin-top: 0;
-    font-size: 2.5rem;
-}
-
-.modal-content p {
-    font-size: 1.4rem;
-}
-
-.modal-content button {
-    margin-top: 20px;
-    padding: 14px 24px;
-    font-size: 1.4rem;
-    border: none;
-    background-color: #000000;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.modal-content button:hover {
-    background-color: #FFFFFF;
 }
 
 /* Featured Projects Styles */
@@ -208,20 +142,16 @@ html, body {
     padding: 80px 20px;
     background-color: #ffffff;
     margin-bottom: 40px;
-    border-radius: 15px;
-    overflow: hidden;
     width: 100%;
-    max-width: 2000px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 1200px;
+    overflow: hidden; /* Removed border-radius */
 }
 
 .project-showcase {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
     flex-wrap: wrap;
-    width: 100%;
-    background-color: #FFFFFF;
 }
 
 .project-item {
@@ -233,7 +163,7 @@ html, body {
 .video-wrapper {
     position: relative;
     width: 100%;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    padding-top: 56.25%;
     overflow: hidden;
     border-radius: 10px;
 }
@@ -249,12 +179,6 @@ html, body {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-    .project-video {
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-
     .about-section {
         flex-direction: column;
         text-align: center;
@@ -267,22 +191,14 @@ html, body {
 
     .about-image img {
         max-width: 100%;
-        height: auto;
     }
 
     .service-item, .project-item {
         width: 100%;
     }
 
-    .project-item .video-wrapper {
-        height: auto;
-        padding-top: 0;
-    }
-
-    .project-video {
-        position: relative;
-        width: 100%;
-        height: auto;
+    .project-showcase {
+        flex-direction: column;
     }
 
     .project-video::before {
