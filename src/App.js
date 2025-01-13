@@ -5,6 +5,7 @@ import Navbar from './components/navbar';
 import Footer from './components/Footer'; 
 import Home from './pages/Home'; 
 import Hero from './components/Hero'; 
+import Statistics from './components/statistics'; 
 import Services from './pages/Services'; 
 import ContactUs from './pages/ContactUs'; 
 import Portfolio from './pages/Portfolio'; 
@@ -17,33 +18,30 @@ import 'slick-carousel/slick/slick-theme.css';
 import './assets/styles/Fonts.css'; 
 import videoSource from './assets/videos/FourPillarsBackgroundVideo.mp4'; 
 
-// Create a wrapper component to manage conditional rendering
+// Layout component with proper structuring to ensure CSS inheritance
 const Layout = ({ children }) => {
   const location = useLocation(); 
-
-  // Determine if the current path is the PropertyDetail page
   const isPropertyDetail = location.pathname.startsWith('/property/');
 
   return (
     <>
-      {/* Conditionally render the header */}
+      {/* Kept header structure to ensure proper rendering */}
       {!isPropertyDetail && (
         <header className="App-header">
           <Navbar />
-          {/* Conditionally render Hero component */}
           <Hero videoSource={videoSource} />
+          <Statistics />
         </header>
       )}
       <main className="content">
         {children}
       </main>
-      {/* Always render the footer */}
       <Footer />
     </>
   );
 };
 
-// PropTypes validation
+// PropTypes validation for Layout
 Layout.propTypes = {
   children: PropTypes.node.isRequired, 
 };
@@ -58,7 +56,7 @@ function App() {
           <Route path="/services" element={<Layout><Services /></Layout>} />
           <Route path="/contact-us" element={<Layout><ContactUs /></Layout>} />
           <Route path="/portfolio" element={<Layout><Portfolio /></Layout>} />
-          <Route path="/property/:id" element={<><Navbar /><PropertyDetail /></>} /> {/* Render Navbar with PropertyDetail */}
+          <Route path="/property/:id" element={<><Navbar /><PropertyDetail /><Footer /></>} />
           <Route path="/upcoming-properties" element={<Layout><UpcomingProperties/></Layout>}/>
         </Routes>
       </div>

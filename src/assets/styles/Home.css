@@ -1,191 +1,164 @@
-/* Base styles */
+/* Base Styles */
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    font-family: 'Suranna-Regular', sans-serif;
-    font-size: 1.2rem;
+    font-family: 'Suranna-Regular', sans-serif; /* Ensure this font is imported or change to system font */
+    font-size: 1rem;
     line-height: 1.6;
-    background-color: #f3f4f6;
+    background-color: #ffffff; /* White background */
+    color: #333333; /* Slightly off-black for less stark contrast */
 }
 
-/* Container Styles */
+/* General Container for Home Page */
 .home-container {
-    min-height: calc(100vh - 250px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #000;
-    color: #333;
-    padding: 20px;
-    overflow: hidden; /* Removed border-radius */
-}
-
-/* Consistent Section Styles */
-.section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 75vh;
-    padding: 80px 20px;
+    min-height: 100vh;
+    background-color: #ffffff;
+    padding: 0 20px;
+}
+
+/* Section Styles */
+.section {
     width: 100%;
     box-sizing: border-box;
-    background-color: #ffffff;
-    margin-bottom: 40px;
-    overflow: hidden; /* Removed border-radius */
+    margin-bottom: 60px;
 }
 
 /* Introduction Section */
 .introduction-section {
-    text-align: center;
-    background-color: #1f1f1f;
-    color: #ffffff;
-    padding: 60px 20px;
-    overflow: hidden; /* Removed border-radius */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px 40px; /* Reduced top padding */
+    background-color: #ffffff; /* White background */
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .introduction-section h2 {
-    font-size: 2.5rem;
-    color: #ffffff;
+    font-size: 3rem;
+    color: #222222;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.4;
+    text-align: left;
+    width: 60%; /* Ensures the text takes 60% width */
 }
 
 .introduction-section p {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555555;
+    width: 60%;
+}
+
+.introduction-section .image-container {
+    flex: 1;
+    padding-left: 30px;
+    max-width: 40%;
+}
+
+.introduction-section .image-container img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* About Section */
 .about-section {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 80px 20px;
-    background-color: #ffffff;
-    width: 100%;
-    box-sizing: border-box;
-    margin-bottom: 40px;
-    overflow: hidden; /* Removed border-radius */
+    align-items: center;
+    padding: 60px 20px 60px 20px; /* Reduced padding from top */
+    background-color: #ffffff; /* White background */
+    color: #000000;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    color: #222222;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .about-content {
     flex: 1;
+    padding-right: 40px;
     text-align: left;
-    margin-right: 20px;
-}
-
-.about-content h2 {
-    font-size: 2.5rem;
-    color: #000000;
-    margin-bottom: 20px;
-}
-
-.about-image {
-    flex: 1;
 }
 
 .about-image img {
     width: 100%;
-    max-width: 700px;
+    max-width: 650px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Section Headers */
+/* Section Header */
 .section-header {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     text-align: center;
 }
 
 .section-header h2 {
-    font-size: 2.5rem;
-    color: #000000;
+    font-size: 2.8rem;
+    color: #222222;
+    font-weight: bold;
 }
 
-/* Service and Project Item Styles */
-.service-item, .project-item {
-    background-color: #FFFFFF;
-    padding: 20px;
-    margin: 10px 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s;
-}
-
-.service-item:hover, .project-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* Button Styles */
+/* Button Styling */
 .btn {
-    background-color: #333;
-    border: 1px solid #333;
-    color: #ffffff;
-    font-size: 0.9rem;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    background-color: #007BFF; /* Blue background */
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1rem;
     border-radius: 5px;
     text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #ffffff;
-    color: #333;
+    background-color: #0056b3; /* Darker blue on hover */
     transform: scale(1.05);
-}
-
-/* Featured Projects Styles */
-.featured-projects {
-    padding: 80px 20px;
-    background-color: #ffffff;
-    margin-bottom: 40px;
-    width: 100%;
-    max-width: 1200px;
-    overflow: hidden; /* Removed border-radius */
-}
-
-.project-showcase {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.project-item {
-    width: calc(50% - 20px);
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-.video-wrapper {
-    position: relative;
-    width: 100%;
-    padding-top: 56.25%;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.project-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 /* Mobile Styles */
 @media (max-width: 768px) {
+    .introduction-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 20px 20px; /* Reduced padding further */
+    }
+
+    .introduction-section h2 {
+        font-size: 2.2rem;
+        width: 100%; /* Full width on mobile */
+    }
+
+    .introduction-section p {
+        font-size: 1rem;
+        width: 100%; /* Full width on mobile */
+        margin-top: 20px;
+    }
+
     .about-section {
         flex-direction: column;
         text-align: center;
+        padding: 60px 20px;
     }
 
     .about-content {
-        margin-right: 0;
+        padding-right: 0;
         margin-bottom: 20px;
     }
 
@@ -193,26 +166,8 @@ html, body {
         max-width: 100%;
     }
 
-    .service-item, .project-item {
-        width: 100%;
-    }
-
-    .project-showcase {
-        flex-direction: column;
-    }
-
-    .project-video::before {
-        content: url('../images/TheHeights1.png');
-        display: block;
-        width: 100%;
-        height: auto;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-    }
-
-    .project-video:playing::before {
-        display: none;
+    .btn {
+        font-size: 1rem;
+        padding: 12px 20px;
     }
 }

@@ -1,141 +1,122 @@
-/* src/assets/styles/Navbar.css */
-/* primary white: #ffffff; */
-/* primary black: #000000; */
-/* Base styles */
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
+:root {
+  --primary-white: #ffffff;
+  --primary-black: #000000;
+  --primary-green: #193320;
+  --secondary-green: #013D1D;
+  --teal-color: #F9F8DA;
 }
 
-.navbar {
+/* General Navbar Styling */
+.custom-navbar {
   position: fixed;
   top: 0;
+  right: 0;
   left: 0;
-  width: 100%;
-  height: 150px;
+  padding: 15px 50px; /* Increased padding for a larger navbar */
   z-index: 2000;
-  background-color: #000000;
+  background: transparent; /* Keeping the outer navbar transparent */
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 0;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 0;
+  border: none;
 }
 
-.container-fluid {
-  padding: 20px;
-  background-color: #000000;
-}
-
-.navbar-brand {
-  color: #ffffff !important;
-  margin-right: auto !important;
-  margin-left: 0 !important;
-  padding-left: 0;
-  font-weight: 700 !important;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.navbar-icon {
-  font-size: 1.5rem;
-  margin-right: 10px;
-}
-
-.navbar-brand:hover,
-.nav-link:hover {
-  color: #ccc !important;
-}
-
-.nav-link {
-  color: #ffffff !important;
-  font-weight: 700 !important;
-  font-size: 20px;
-  font-family: 'Suranna-Regular', sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin-bottom: 10px;
-}
-
-.navbar-brand img {
-  width: 300px;
+/* Logo Styling */
+.navbar-logo {
+  width: 160px; /* Slightly larger logo */
   height: auto;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
-.large-favicon {
-  width: 100px !important;
-  height: 100px !important;
-  object-fit: cover;
-  clip-path: inset(10%);
+/* Navbar Links Container with Solid Black Box */
+.navbar-links {
+  display: flex;
+  gap: 0;
+  background: var(--primary-black); /* Changed from blue to primary black */
+  padding: 0;
+  border-radius: 0; /* Square edges */
 }
 
-/* Mobile-specific styles */
-@media (max-width: 576px) {
-  .navbar {
-    height: 120px; /* Adjusted height for mobile */
+/* Navbar Item Styling */
+.nav-item {
+  color: white !important;  /* Forced White Text */
+  font-size: 1.1rem; /* Slightly larger font size */
+  padding: 12px 25px; /* Added more padding for a bigger navbar */
+  border: none;
+  background: transparent;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Fix Bootstrap link colors */
+.navbar .nav-item a {
+  color: white !important;
+  text-decoration: none !important;
+}
+
+/* Hover Effect */
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.2); 
+  color: white !important;
+}
+
+/* Active Link Styling */
+.nav-item.active {
+  background: #5a9bd5 !important; /* Light Blue Active Color */
+  color: white !important;
+  border: none;
+}
+
+/* Dropdown Styling (same as navbar items) */
+.nav-item .dropdown-menu {
+  background: var(--primary-black) !important; 
+  border: none;
+  padding: 0; /* No padding here, relying on the dropdown-item styling */
+  border-radius: 0; /* Square edges for dropdown */
+}
+
+.dropdown-item {
+  color: white !important;
+  padding: 12px 25px; /* Same padding as navbar items */
+  font-size: 1.1rem; /* Same font size as navbar items */
+  background: transparent; /* Transparent background */
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+}
+
+/* Fix for Bootstrap's default styles */
+.navbar .dropdown-toggle::after {
+  color: white !important;
+}
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+  .custom-navbar {
+      padding: 15px; /* Adjusted for larger navbar */
   }
 
-  .container-fluid {
-    padding: 10px;
+  .navbar-links {
+      flex-direction: column;
   }
 
-  .navbar-brand {
-    font-size: 1.5rem;
-    margin-bottom: 10px; /* Adjust margin as needed */
-  }
-
-  .navbar-nav {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 20px; /* Add margin-top to create space */
+  .navbar-logo {
+      width: 130px; /* Adjusted logo size for mobile */
   }
 
   .nav-item {
-    width: 100%;
-    text-align: center;
+      padding: 12px 20px; /* Adjusted padding for mobile */
+      text-align: center;
   }
 
-  .nav-link {
-    font-size: 1rem;
-    padding: 10px;
-    /* Remove the border-bottom */
-    border-bottom: none;
-  }
-
-  .navbar-collapse {
-    position: absolute;
-    top: 120px; /* Adjust to match your navbar height */
-    left: 0;
-    width: 100%;
-    background-color: #000000;
-    z-index: 1000;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  }
-
-  .navbar-toggler {
-    border: none;
-    background: none;
-    font-size: 1.5rem;
-    color: #ffffff !important;
-  }
-
-  .navbar-toggler:focus {
-    outline: none;
-  }
-
-  .navbar-toggler-icon:before {
-    content: '\2630'; /* Unicode character for the hamburger icon */
-    font-size: 1.5rem;
-    color: #ffffff !important;
-  }
-
-  .navbar-collapse.collapsing,
-  .navbar-collapse.show {
-    display: flex !important;
-    flex-direction: column;
-    align-items: center;
+  .dropdown-item {
+      padding: 12px 20px; /* Adjusted padding for dropdown items on mobile */
   }
 }
