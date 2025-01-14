@@ -7,25 +7,30 @@ import logo from '../assets/images/logo.png';
 
 const CustomNavbar = () => {
     const location = useLocation();
-    
     const [showDropdown, setShowDropdown] = useState(null);
+    const [timeoutId, setTimeoutId] = useState(null);
 
-    // Function to handle hover
+    // Function to handle hover (show dropdown)
     const handleMouseEnter = (id) => {
+        if (timeoutId) {
+            clearTimeout(timeoutId); // Clear the timeout if the mouse enters before it closes
+        }
         setShowDropdown(id);
     };
 
+    // Function to handle hover leave (close dropdown with delay)
     const handleMouseLeave = () => {
-        setShowDropdown(null);
+        const newTimeoutId = setTimeout(() => setShowDropdown(null), 500); // Delay of 500ms
+        setTimeoutId(newTimeoutId);
     };
 
-    // Function to determine active link
+    // Check if the current route is active
     const isActive = (path) => location.pathname === path;
 
     return (
         <Navbar expand="lg" className="custom-navbar fixed-top">
             <Container fluid className="navbar-container">
-                {/* Logo Section (Far Left) */}
+                {/* Logo Section */}
                 <Navbar.Brand as={Link} to="/" className="navbar-brand">
                     <img src={logo} className="navbar-logo" alt="Brownstone Logo" />
                 </Navbar.Brand>
@@ -33,60 +38,58 @@ const CustomNavbar = () => {
                 {/* Navbar Toggle for Mobile */}
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
-                {/* Navbar Links Section Wrapped in a Single Box with Border */}
+                {/* Navbar Links Section */}
                 <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-                    <div className="navbar-box">
-                        <Nav className="navbar-links">
-                            <NavDropdown
-                                title="HOME"
-                                id="home-dropdown"
-                                className={`nav-item ${isActive('/home') ? 'active' : ''}`}
-                                show={showDropdown === 'home'}
-                                onMouseEnter={() => handleMouseEnter('home')}
-                                onMouseLeave={handleMouseLeave}
-                            >
-                                <NavDropdown.Item as={Link} to="/home">Main Home</NavDropdown.Item>
-                            </NavDropdown>
+                    <Nav className="navbar-links">
+                        {/* Home Link - Clickable and Wider */}
+                        <Nav.Link 
+                            as={Link} 
+                            to="/" 
+                            className={`nav-link home-link ${isActive('/') ? 'active' : ''}`}>
+                            HOME
+                        </Nav.Link>
 
-                            <NavDropdown
-                                title="ABOUT US"
-                                id="about-dropdown"
-                                className={`nav-item ${isActive('/about-us') ? 'active' : ''}`}
-                                show={showDropdown === 'about'}
-                                onMouseEnter={() => handleMouseEnter('about')}
-                                onMouseLeave={handleMouseLeave}
-                            >
-                                <NavDropdown.Item as={Link} to="/about-company">OUR MISSION & HISTORY</NavDropdown.Item>
-                                <NavDropdown.Item as={Link} to="/our-team">COMPANY CULTURE</NavDropdown.Item>
-                                <NavDropdown.Item as={Link} to="/our-team">EXECUTIVE TEAM</NavDropdown.Item>
-                            </NavDropdown>
+                        {/* About Us Dropdown */}
+                        <NavDropdown
+                            title="ABOUT US"
+                            id="about-dropdown"
+                            className="nav-item"
+                            show={showDropdown === 'about'}
+                            onMouseEnter={() => handleMouseEnter('about')}
+                            onMouseLeave={handleMouseLeave}
+                        >
+                            <NavDropdown.Item as={Link} to="/our-mission-history">OUR MISSION & HISTORY</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/company-culture">COMPANY CULTURE</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/executive-team">EXECUTIVE TEAM</NavDropdown.Item>
+                        </NavDropdown>
 
-                            <NavDropdown
-                                title="DEVELOPMENTS"
-                                id="developments-dropdown"
-                                className={`nav-item ${isActive('/developments') ? 'active' : ''}`}
-                                show={showDropdown === 'developments'}
-                                onMouseEnter={() => handleMouseEnter('developments')}
-                                onMouseLeave={handleMouseLeave}
-                            >
-                                <NavDropdown.Item as={Link} to="/residential">UNDER CONSTRUCTION</NavDropdown.Item>
-                                <NavDropdown.Item as={Link} to="/commercial">FEATURED PROPERTIES</NavDropdown.Item>
-                            </NavDropdown>
+                        {/* Developments Dropdown */}
+                        <NavDropdown
+                            title="DEVELOPMENTS"
+                            id="developments-dropdown"
+                            className="nav-item"
+                            show={showDropdown === 'developments'}
+                            onMouseEnter={() => handleMouseEnter('developments')}
+                            onMouseLeave={handleMouseLeave}
+                        >
+                            <NavDropdown.Item as={Link} to="/under-construction">UNDER CONSTRUCTION</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/featured-properties">FEATURED PROPERTIES</NavDropdown.Item>
+                        </NavDropdown>
 
-                            <NavDropdown
-                                title="CONTACT US"
-                                id="contact-dropdown"
-                                className={`nav-item ${isActive('/contact-us') ? 'active' : ''}`}
-                                show={showDropdown === 'contact'}
-                                onMouseEnter={() => handleMouseEnter('contact')}
-                                onMouseLeave={handleMouseLeave}
-                            >
-                                <NavDropdown.Item as={Link} to="/contact">CONTACT US NOW</NavDropdown.Item>
-                                <NavDropdown.Item as={Link} to="/locations">BID OUR WORK</NavDropdown.Item>
-                                <NavDropdown.Item as={Link} to="/locations">OFFICE LOCATIONS</NavDropdown.Item>
-                            </NavDropdown>
-                        </Nav>
-                    </div>
+                        {/* Contact Us Dropdown */}
+                        <NavDropdown
+                            title="CONTACT US"
+                            id="contact-dropdown"
+                            className="nav-item"
+                            show={showDropdown === 'contact'}
+                            onMouseEnter={() => handleMouseEnter('contact')}
+                            onMouseLeave={handleMouseLeave}
+                        >
+                            <NavDropdown.Item as={Link} to="/contact-us">CONTACT US NOW</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/bid-our-work">BID OUR WORK</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/office-locations">OFFICE LOCATIONS</NavDropdown.Item>
+                        </NavDropdown>
+                    </Nav>
                 </Navbar.Collapse>
             </Container>
         </Navbar>

@@ -12,9 +12,9 @@
   top: 0;
   right: 0;
   left: 0;
-  padding: 15px 50px; /* Increased padding for a larger navbar */
+  padding: 15px 50px;
   z-index: 2000;
-  background: transparent; /* Keeping the outer navbar transparent */
+  background: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,7 +24,7 @@
 
 /* Logo Styling */
 .navbar-logo {
-  width: 160px; /* Slightly larger logo */
+  width: 160px;
   height: auto;
   margin-right: 20px;
 }
@@ -33,66 +33,72 @@
 .navbar-links {
   display: flex;
   gap: 0;
-  background: var(--primary-black); /* Changed from blue to primary black */
+  background: var(--primary-black);
   padding: 0;
-  border-radius: 0; /* Square edges */
+  border-radius: 0;
 }
 
-/* Navbar Item Styling */
-.nav-item {
-  color: white !important;  /* Forced White Text */
-  font-size: 1.1rem; /* Slightly larger font size */
-  padding: 12px 25px; /* Added more padding for a bigger navbar */
+/* General Styling for All Links and Dropdown Items */
+.nav-item, .dropdown-item {
+  color: white !important;
+  font-size: 1.1rem;
+  padding: 12px 25px;
   border: none;
   background: transparent;
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/* Home Link Specific Styling - Made Wider */
+.nav-link.home-link {
+    padding: 12px 35px !important; /* Increased padding for a wider box */
+    color: white !important;
+    font-size: 1.1rem;
+    border: none;
+    background: transparent;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 /* Fix Bootstrap link colors */
-.navbar .nav-item a {
+.navbar .nav-item a, .dropdown-item a {
   color: white !important;
   text-decoration: none !important;
 }
 
-/* Hover Effect */
-.nav-item:hover {
+/* Hover Effect (Consistent for All Items) */
+.nav-item:hover, .dropdown-item:hover {
   background: rgba(255, 255, 255, 0.2); 
   color: white !important;
 }
 
-/* Active Link Styling */
-.nav-item.active {
-  background: #5a9bd5 !important; /* Light Blue Active Color */
+/* Active Link Styling (Same for Both Nav and Dropdown) */
+.nav-item.active, .dropdown-item.active {
+  background: rgba(255, 255, 255, 0.2) !important; 
   color: white !important;
   border: none;
 }
 
-/* Dropdown Styling (same as navbar items) */
+/* Dropdown Styling (Matching Main Navbar Styling) */
 .nav-item .dropdown-menu {
   background: var(--primary-black) !important; 
   border: none;
-  padding: 0; /* No padding here, relying on the dropdown-item styling */
-  border-radius: 0; /* Square edges for dropdown */
+  padding: 0;
+  border-radius: 0;
 }
 
 .dropdown-item {
-  color: white !important;
-  padding: 12px 25px; /* Same padding as navbar items */
-  font-size: 1.1rem; /* Same font size as navbar items */
-  background: transparent; /* Transparent background */
+  font-size: 1.1rem;
   transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
-.dropdown-item:hover {
-  background: rgba(255, 255, 255, 0.2) !important;
-  color: white !important;
-}
-
-/* Fix for Bootstrap's default styles */
+/* Fix for Bootstrap's default caret */
 .navbar .dropdown-toggle::after {
   color: white !important;
 }
@@ -100,7 +106,7 @@
 /* Mobile Styling */
 @media (max-width: 768px) {
   .custom-navbar {
-      padding: 15px; /* Adjusted for larger navbar */
+      padding: 15px;
   }
 
   .navbar-links {
@@ -108,15 +114,15 @@
   }
 
   .navbar-logo {
-      width: 130px; /* Adjusted logo size for mobile */
+      width: 130px;
   }
 
-  .nav-item {
-      padding: 12px 20px; /* Adjusted padding for mobile */
+  .nav-item, .dropdown-item {
+      padding: 12px 20px;
       text-align: center;
   }
 
   .dropdown-item {
-      padding: 12px 20px; /* Adjusted padding for dropdown items on mobile */
+      padding: 12px 20px;
   }
 }

@@ -1,70 +1,89 @@
-/* Capabilities.css */
-
+/* Capabilities Section Styling */
 .capabilities-section {
+    text-align: center;
+    padding: 40px 20px; /* Reduced top padding */
     background-color: #FFFFFF;
     color: #000000;
-    padding: 80px 0;
-    padding-bottom: 120px; /* Added padding at the bottom */
-    padding-top: 50px;
-    border-radius: 15px; /* Added rounded edges */
-    overflow: hidden; /* Optional: to ensure the border radius is applied to child elements */
-    margin-bottom: 40px; /* Added margin for spacing below the section */
+    border-radius: 15px;
+    margin-bottom: 80px;
+    box-sizing: border-box;
 }
 
-.capabilities-content {
+/* Title Styling */
+.capabilities-title {
+    font-size: 3.5rem; /* Increased font size for a bigger title */
+    font-weight: bold;
+    color: #222222;
+    margin-bottom: 60px; /* Added padding below the title for better spacing */
+    text-align: center;
+}
+
+/* Flexbox Container for Horizontal Layout */
+.capabilities-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.capability {
-    text-align: center;
-    margin-bottom: 40px;
+/* Individual Capability Item Styling */
+.capability-item {
+    flex: 1;
+    min-width: 250px;
     max-width: 300px;
-    padding: 20px; /* Added padding */
-    border-radius: 10px; /* Added rounded edges for individual capability items */
-    background-color: #ffffff; /* Ensure each capability item stands out */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    background: #ffffff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.capability-item:hover {
+    transform: scale(1.05);
+}
+
+/* Circular Icon Styling */
+.capability-icon-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #013D1D; /* Dark green circle background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .capability-icon {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 20px;
-    background: none; /* Ensure background is transparent */
+    font-size: 3rem;
+    color: #ffffff;
 }
 
-.capability h3 {
+/* Capability Title and Text Styling */
+.capability-item h3 {
     font-size: 1.8rem;
-    margin-bottom: 20px; /* Increased margin-bottom */
-    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
-.capability p {
-    font-size: 1.2rem;
+.capability-item p {
+    font-size: 1rem;
     line-height: 1.6;
+    color: #555555;
     margin-bottom: 0;
 }
 
-/* Mobile-specific adjustments */
-@media (max-width: 576px) {
-    .capabilities-content {
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .capabilities-container {
         flex-direction: column;
         align-items: center;
     }
 
-    .capability {
+    .capability-item {
         max-width: 100%;
-    }
-
-    .capability-icon {
-        margin-bottom: 10px;
-    }
-
-    .capabilities-section {
-        padding: 40px 0; /* Adjust padding for mobile */
-        padding-bottom: 60px; /* Adjust bottom padding for mobile */
     }
 }

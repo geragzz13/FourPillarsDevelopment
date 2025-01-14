@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import '../assets/styles/Home.css';
 import aboutImage from '../assets/images/aboutImage.jpg';
 import FeaturedProperties from '../components/FeaturedProperties';
+import Capabilities from '../components/Capabilities';  // Importing the Capabilities component correctly
 
 const Home = () => {
     return (
@@ -31,8 +32,11 @@ const Home = () => {
                 </div>
             </motion.section>
 
-            {/* Featured Properties Section - Now Visible */}
+            {/* Featured Properties Section */}
             <FeaturedProperties />
+
+            {/* Capabilities Section - Properly Imported Component */}
+            <Capabilities />
         </div>
     );
 };

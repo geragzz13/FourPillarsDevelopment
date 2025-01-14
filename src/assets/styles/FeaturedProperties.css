@@ -2,9 +2,9 @@
 .featured-properties-section {
     margin-top: 60px; /* Added padding above the featured properties section */
     padding: 20px;
-    padding-bottom: 100px; /* Increased padding below the section for better spacing */
+    padding-bottom: 80px; /* Slightly reduced padding for better spacing */
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: #ffffff; /* Changed to white background */
 }
 
 /* Title Styling */
