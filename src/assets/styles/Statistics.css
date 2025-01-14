@@ -1,26 +1,25 @@
 .statistics-section { 
     display: flex;
     justify-content: space-around;
-    align-items: flex-start; /* Align content at the top */
-    padding: 18px 0; /* Reduced padding slightly to move text up */
-    background: black; /* Deep Blue Background */
+    align-items: flex-end; /* Align items at the bottom */
+    padding: 18px 0 28px; /* Hardcoded extra bottom padding */
+    background: black; 
     color: white;
     text-align: center;
     width: 100%;
-    height: 15vh; /* Slightly smaller height */
+    min-height: 16vh; /* Adjusted height slightly larger */
     box-sizing: border-box;
-    margin-top: -5px; /* Reduced gap between sections */
     border-top: 2px solid rgba(255, 255, 255, 0.1); 
 }
 
 /* Individual Stat Items Styling */
 .stat-item {
     flex: 1;
-    padding: 38px 10px; /* Reduced padding slightly to move text up */
+    padding: 38px 10px; 
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Align text at the bottom of the box */
+    justify-content: flex-end; /* Align text near bottom */
 }
 
 /* Vertical Divider Between Items */
@@ -28,26 +27,26 @@
     content: "";
     position: absolute;
     right: 0;
-    top: 20%; /* Adjusted for alignment */
+    top: 20%;
     height: 60%;
     width: 1.5px;
-    background: rgba(255, 255, 255, 0.7); /* Brighter white for visibility */
+    background: rgba(255, 255, 255, 0.7);
 }
 
 /* Gold Number Styling */
 .stat-item h2 {
-    font-size: 2rem; /* Slightly smaller */
-    color: #013D1D; /* Gold Color */
-    margin: 0; /* Removed top margin */
+    font-size: 2rem;
+    color: #013D1D;
+    margin: 0; 
     font-weight: bold;
-    line-height: 1; /* Adjusted for better vertical alignment */
+    line-height: 1; 
 }
 
 /* White Subtitle Styling */
 .stat-item p {
     font-size: 1rem;
     color: white;
-    margin: 5px 0 0; /* Reduced margin to move the subtitle slightly up */
+    margin: 5px 0 0; 
     text-transform: uppercase;
     letter-spacing: 1px;
     opacity: 0.9;
@@ -57,16 +56,16 @@
 @media (max-width: 768px) {
     .statistics-section {
         flex-direction: column;
-        height: auto;
-        padding: 28px 0; /* Slightly adjusted padding for mobile */
+        padding: 36px 0; 
+        min-height: auto; /* Reset for mobile */
     }
 
     .stat-item {
-        padding: 36px; /* Uniform padding for mobile view */
+        padding: 36px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .stat-item:not(:last-child)::after {
-        display: none; /* Remove divider for mobile */
+        display: none;
     }
 }

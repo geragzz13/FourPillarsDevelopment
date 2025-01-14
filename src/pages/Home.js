@@ -1,54 +1,38 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import '../assets/styles/Home.css';
-import aboutImage from '../assets/images/aboutImage.jpg'; // Your image path
+import aboutImage from '../assets/images/aboutImage.jpg';
+import FeaturedProperties from '../components/FeaturedProperties';
 
 const Home = () => {
-    const containerVariants = {
-        hidden: { opacity: 0, y: 60 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 1.8,
-                ease: [0.42, 0, 0.58, 1],
-                staggerChildren: 0.2,
-            },
-        },
-    };
-
-    const itemVariants = {
-        hidden: { opacity: 0, y: 30 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 1.4,
-                ease: [0.42, 0, 0.58, 1],
-            },
-        },
-    };
-
     return (
         <div className="home-container">
-            {/* Introduction section */}
+            {/* Main Title Section */}
+            <h2 className="home-title">Developer & Contractor of Award-Winning Multi-Family Properties</h2>
+
+            {/* Introduction Section with Image and Text */}
             <motion.section
                 className="introduction-section"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.6 }}
-                variants={containerVariants}
+                initial={{ opacity: 0, y: 60 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.5 }}
             >
-                <motion.div className="introduction-content" variants={itemVariants}>
-                    <h2>Developer & Contractor of Award-Winning Multi-Family Properties</h2>
+                {/* Left Image Container */}
+                <div className="image-container">
+                    <img src={aboutImage} alt="About the Company" />
+                </div>
+
+                {/* Right Text Content */}
+                <div className="introduction-content">
+                    <h2>Four Pillars Development</h2>
                     <p>
-                        Four Pillars Development is a leading multi-family construction, development, and property management company headquartered in Edinburg. Since 2005, the Company has contracted and developed over $2.56 billion in residential developments throughout Texas and the Southeast, consisting of over 20,341 units throughout 125 developments.
+                        Four Pillars Development is a leading multi-family construction, development, and property management company headquartered in Edinburg with offices in several locations.
                     </p>
-                </motion.div>
-                <motion.div className="image-container" variants={itemVariants}>
-                    <img src={aboutImage} alt="About the Brownstone Group" />
-                </motion.div>
+                </div>
             </motion.section>
+
+            {/* Featured Properties Section - Now Visible */}
+            <FeaturedProperties />
         </div>
     );
 };
