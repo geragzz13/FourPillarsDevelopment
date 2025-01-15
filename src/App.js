@@ -19,7 +19,7 @@ import UnderConstruction from './pages/UnderConstruction';
 import FeaturedPropsPage from './pages/FeaturedPropsPage';
 import BidOurWork from './pages/BidOurWork';
 import OfficeLocations from './pages/OfficeLocations';
-import UnderMaintenance from './components/UnderMaintenance'; // Import UnderMaintenance component
+import UnderMaintenance from './components/UnderMaintenence'; // Import UnderMaintenance component
 import './assets/styles/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'slick-carousel/slick/slick.css';
