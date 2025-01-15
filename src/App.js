@@ -1,7 +1,7 @@
 // App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import UnderMaintenance from './components/UnderMaintenance'; // Import the maintenance page
+import UnderMaintenance from './components/UnderMaintenence'; // Import the maintenance page src/components/UnderMaintenence.js
 import Navbar from './components/Navbar'; // Navigation bar component
 import Footer from './components/Footer'; // Footer component
 import Home from './pages/Home';
