@@ -1,7 +1,6 @@
-// App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import UnderMaintenance from './components/UnderMaintenence'; // Import the maintenance page src/components/UnderMaintenence.js
+import UnderMaintenance from './components/UnderMaintenence'; // Import the maintenance page
 import Navbar from './components/navbar'; // Navigation bar component
 import Footer from './components/Footer'; // Footer component
 import Home from './pages/Home';
@@ -58,14 +57,21 @@ function App() {
     );
 }
 
-const Layout = ({ children }) => (
-    <div className="App">
-        <header className="App-header">
-            <Navbar />
-        </header>
-        <main className="content">{children}</main>
-        <Footer />
-    </div>
-);
+const Layout = ({ children }) => {
+    if (!children) {
+        console.error('Layout component expects children, but none were provided.');
+        return null;
+    }
+
+    return (
+        <div className="App">
+            <header className="App-header">
+                <Navbar />
+            </header>
+            <main className="content">{children}</main>
+            <Footer />
+        </div>
+    );
+};
 
 export default App;
