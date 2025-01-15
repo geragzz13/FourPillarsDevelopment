@@ -63,4 +63,9 @@ const Layout = ({ children }) => (
         <header className="App-header">
             <Navbar />
         </header>
-        <main className="content">{children}</
+        <main className="content">{children}</main>
+        <Footer />
+    </div>
+);
+
+export default App;
