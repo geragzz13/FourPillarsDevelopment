@@ -5,7 +5,7 @@ import '../assets/styles/Home.css';
 import aboutImage from '../assets/images/aboutImage.jpg';
 import FeaturedProperties from '../components/FeaturedProperties';
 import Capabilities from '../components/Capabilities';  // Importing the Capabilities component correctly
-import Statistics from '../components/statistics'; // Import Statistics component here
+//import Statistics from '../components/statistics'; // Import Statistics component here
 
 const Home = () => {
     return (
