@@ -1,0 +1,222 @@
+/* Base Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif; /* Match the font family from Home */
+    font-size: 1rem;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+/* Banner Section */
+.banner-section {
+    background-color: #000000; /* Set background color to black */
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.banner-section h1 {
+    font-size: 2.8rem; /* Match the font size and style from Home */
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 0.05em; /* Add slight spacing between letters */
+}
+
+.banner-section p {
+    font-size: 1.2rem; /* Slightly larger for consistency with Home */
+    margin: 0;
+    letter-spacing: 0.03em; /* Slight spacing for subtitle */
+}
+
+/* Title Section */
+.company-stats-title {
+    text-align: center;
+    margin: 60px 20px; /* Increased margin for more spacing */
+    padding: 40px 20px; /* Increased top padding for extra space */
+    background-color: #ffffff; /* Ensure the background is plain white */
+}
+
+.company-stats-title h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #222222;
+    line-height: 1.6;
+    letter-spacing: 0.05em; /* Slight spacing for emphasis */
+}
+
+/* Culture Section */
+.mission-section {
+    background-color: white;
+    padding: 50px 20px;
+    text-align: left;
+    display: block;
+    margin-bottom: -50px;
+}
+
+.mission-content {
+    max-width: 1200px;
+    margin-left: 400px;
+    margin-right: auto;
+    color: #333333;
+}
+
+.mission-content h2 {
+    font-size: 2rem; /* Match font size from Home */
+    color: #222222;
+    font-weight: bold;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    letter-spacing: 0.05em; /* Add slight spacing */
+}
+
+.mission-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555555;
+}
+
+/* History Section */
+.history-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: white;
+    padding: 50px 20px;
+    text-align: left;
+    margin-top: 0px;
+}
+
+.history-content {
+    flex: 2;
+    padding-right: 20px;
+    max-width: 700px;
+    margin-left: 400px;
+    color: #333333;
+}
+
+.history-content h2 {
+    font-size: 2rem; /* Match font size from Home */
+    color: #222222;
+    font-weight: bold;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    letter-spacing: 0.05em; /* Add slight spacing */
+}
+
+.history-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555555;
+    margin-bottom: 10px;
+}
+
+/* Culture Image */
+.history-image {
+    flex: 1;
+    max-width: 400px;
+    margin-left: 100px;
+    animation: fadeInLeft 2s ease-out;
+}
+
+.history-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Company Growth Section */
+.growth-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    padding: 50px 20px;
+    margin-left: 0;
+}
+
+.growth-image {
+    flex: 1;
+    max-width: 400px;
+    margin-left: 400px;
+    animation: fadeInRight 2s ease-out;
+}
+
+.growth-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.growth-content {
+    flex: 2;
+    padding-left: 40px;
+    margin-left: 0;
+    max-width: 800px;
+    text-align: justify;
+    color: #333333;
+}
+
+.growth-content h2 {
+    font-size: 2rem; /* Match font size from Home */
+    color: #222222;
+    font-weight: bold;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    letter-spacing: 0.05em; /* Add slight spacing */
+}
+
+.growth-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555555;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mission-section,
+    .history-section,
+    .growth-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mission-content,
+    .history-content,
+    .growth-content {
+        max-width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .history-image,
+    .growth-image {
+        max-width: 100%;
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
+}

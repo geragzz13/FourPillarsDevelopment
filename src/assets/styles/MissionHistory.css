@@ -1,70 +1,167 @@
-/* MissionHistory.css */
-
-/* Container Styles */
-.mission-history-container {
-    margin-top: 0; /* Removed extra margin to push the content up */
-    padding: 30px;
-    width: 100vw; /* Ensure full width of the viewport */
-    margin-left: 0; /* Ensure no margin on the left */
-    padding-left: 0; /* Ensure no padding on the left */
+/* Base Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif; /* Match the font family from Home */
+    font-size: 1rem;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #333333;
 }
 
-/* About Section Styling */
-.about-section {
-    padding: 0; /* Removed padding */
-    background-color: #f4f4f4;  /* Light background for contrast */
+/* Banner Section */
+.banner-section {
+    background-color: #000000; /* Set background color to black */
+    color: white;
     text-align: center;
-    margin-top: -30px;  /* Reduced margin to move it up */
-    margin-bottom: 50px;
-    opacity: 0;
-    transform: translateY(50px);
-    animation: fadeInFromBottom 2s forwards; /* Slowed down the animation */
-    width: 100vw; /* Make it full width of the viewport */
-    position: relative;
-    left: 0; /* Ensure it stretches across from the left */
-    right: 0; /* Ensure it stretches across to the right */
-    height: 120px; /* Increased the height of the about section to extend the gray area */
+    padding: 30px 20px;
 }
 
-/* About Section Animation */
-@keyframes fadeInFromBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.banner-section h1 {
+    font-size: 2.8rem; /* Match the font size and style from Home */
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 0.05em; /* Add slight spacing between letters */
+}
+
+.banner-section p {
+    font-size: 1.2rem; /* Slightly larger for consistency with Home */
+    margin: 0;
+    letter-spacing: 0.03em; /* Slight spacing for subtitle */
 }
 
 /* Mission Section */
-.mission-section, .history-section, .growth-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    opacity: 0;
-    transform: translateX(-100%);
-    animation: fadeInFromLeft 2s forwards; /* Slowed down the animation */
+.mission-section {
+    background-color: white;
+    padding: 50px 20px;
+    text-align: left;
+    display: block;
+    margin-bottom: -50px;
 }
 
-/* Mission Section Title and Paragraph */
-.mission-section h2, .history-section h2, .growth-section h2 {
-    font-size: 32px;
+.mission-content {
+    max-width: 1200px;
+    margin-left: 400px;
+    margin-right: auto;
+    color: #333333;
+}
+
+.mission-content h2 {
+    font-size: 2rem; /* Match font size from Home */
+    color: #222222;
+    font-weight: bold;
     margin-bottom: 15px;
+    line-height: 1.4;
+    letter-spacing: 0.05em; /* Add slight spacing */
 }
 
-.mission-section p, .history-section p, .growth-section p {
-    font-size: 16px;
-    line-height: 1.6;
+.mission-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555555;
 }
 
-/* History Section Animation */
-@keyframes fadeInFromLeft {
+/* History Section */
+.history-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: white;
+    padding: 50px 20px;
+    text-align: left;
+    margin-top: 0px;
+}
+
+.history-content {
+    flex: 2;
+    padding-right: 20px;
+    max-width: 700px;
+    margin-left: 400px;
+    color: #333333;
+}
+
+.history-content h2 {
+    font-size: 2rem; /* Match font size from Home */
+    color: #222222;
+    font-weight: bold;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    letter-spacing: 0.05em; /* Add slight spacing */
+}
+
+.history-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555555;
+    margin-bottom: 10px;
+}
+
+/* FourplexInterior Image */
+.history-image {
+    flex: 1;
+    max-width: 400px;
+    margin-left: 100px;
+    animation: fadeInLeft 2s ease-out;
+}
+
+.history-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Steady Growth Section */
+.growth-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    padding: 50px 20px;
+    margin-left: 0;
+}
+
+.growth-image {
+    flex: 1;
+    max-width: 400px;
+    margin-left: 400px;
+    animation: fadeInRight 2s ease-out;
+}
+
+.growth-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.growth-content {
+    flex: 2;
+    padding-left: 40px;
+    margin-left: 0;
+    max-width: 800px;
+    text-align: justify;
+    color: #333333;
+}
+
+.growth-content h2 {
+    font-size: 2rem; /* Match font size from Home */
+    color: #222222;
+    font-weight: bold;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    letter-spacing: 0.05em; /* Add slight spacing */
+}
+
+.growth-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555555;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100%);
+        transform: translateX(-100px);
     }
     100% {
         opacity: 1;
@@ -72,46 +169,49 @@
     }
 }
 
-/* Scroll Animation for Visibility */
-.fadeInOnScroll {
-    opacity: 0;
-    transform: translateY(100px);
-    transition: opacity 2s ease-out, transform 2s ease-out; /* Slowed down */
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-.fadeInOnScrollVisible {
-    opacity: 1;
-    transform: translateY(0);
+@keyframes fadeInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Image Styles */
-.mission-image, .history-image, .growth-image {
-    width: 45%;
-}
-
-.mission-image img, .history-image img, .growth-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-/* Mobile Optimization */
+/* Responsive Design */
 @media (max-width: 768px) {
-    .mission-history-container {
-        padding: 20px;
-    }
-
-    .mission-section h2, .history-section h2, .growth-section h2 {
-        font-size: 24px;
-    }
-
-    .mission-section, .history-section, .growth-section {
+    .mission-section,
+    .history-section,
+    .growth-section {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
-    .mission-image, .history-image, .growth-image {
-        width: 100%;
+    .mission-content,
+    .history-content,
+    .growth-content {
+        max-width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .history-image,
+    .growth-image {
+        max-width: 100%;
         margin-bottom: 20px;
+        margin-left: 0;
     }
 }

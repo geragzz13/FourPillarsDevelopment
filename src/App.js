@@ -13,7 +13,7 @@ import UpcomingProperties from './pages/UpcomingProperties';
 import CompanyCulture from './pages/CompanyCulture';
 import UnderConstruction from './pages/UnderConstruction';
 import FeaturedPropsPage from './pages/FeaturedPropsPage';
-import BidOurWork from './pages/BidOurWork';
+import BidOurWork from './pages/BidOurWork';  {/* BidOurWork Page */}
 import OfficeLocations from './pages/OfficeLocations';
 import UnderMaintenance from './components/UnderMaintenence'; // Import UnderMaintenance component
 import MissionPage from './pages/MissionPage';  // Import the MissionPage (test page)
@@ -26,7 +26,7 @@ import './assets/styles/Fonts.css';
 import videoSource from './assets/videos/FourPillarsBackgroundVideo.mp4';
 
 // Toggle this variable to enable/disable maintenance mode
-const isUnderMaintenance = true;
+const isUnderMaintenance = false;
 
 const Layout = ({ children }) => {
     const location = useLocation();
@@ -80,10 +80,10 @@ function App() {
                 <Route path="/company-culture" element={<Layout><CompanyCulture /></Layout>} />
                 <Route path="/under-construction" element={<Layout><UnderConstruction /></Layout>} />
                 <Route path="/featured-properties" element={<Layout><FeaturedPropsPage /></Layout>} />
-                <Route path="/bid-our-work" element={<Layout><BidOurWork /></Layout>} />
+                <Route path="/bid-our-work" element={<Layout><BidOurWork /></Layout>} /> {/* Correct BidOurWork Page */}
                 <Route path="/office-locations" element={<Layout><OfficeLocations /></Layout>} />
                 <Route path="/our-mission" element={<Layout><MissionPage /></Layout>} /> {/* New Test Page route */}
-                <Route path="/executive-team" element={<Layout><ExecutiveTeam /></Layout>} /> {/* Route for Executive Team */}
+                {/* <Route path="/executive-team" element={<Layout><ExecutiveTeam /></Layout>} /> Route for Executive Team */} 
             </Routes>
         </Router>
     );

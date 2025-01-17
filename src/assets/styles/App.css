@@ -107,7 +107,171 @@
 
 .App-link:hover {
   color: var(--primary-black);
-  background-color: var(--teal-color);
+  background-color: var(--teal-color);/* Global Styles */
+  body {
+      font-family: 'Roboto', sans-serif !important; /* Default Font */
+      margin: 0 !important;
+      padding: 0 !important;
+      line-height: 1.6 !important;
+  }
+  
+  /* Overall Container */
+  .mission-history-container {
+      font-family: 'Roboto', sans-serif !important; /* Ensure container uses global font */
+      margin: 0 !important;
+      padding: 0 !important;
+      line-height: 1.6 !important;
+      color: #333 !important; /* Standard text color */
+  }
+  
+  /* Banner Section */
+  .banner-section {
+      background-color: #333 !important;
+      color: white !important;
+      text-align: center !important;
+      padding: 30px 20px !important;
+  }
+  
+  .banner-section h1 {
+      font-size: 36px !important;
+      margin-bottom: 10px !important;
+      font-weight: 700 !important; /* Bold for titles */
+      letter-spacing: 1px !important; /* Slight spacing for better readability */
+      text-transform: uppercase !important; /* Capitalized banner title */
+  }
+  
+  .banner-section p {
+      font-size: 18px !important;
+      margin: 0 !important;
+      font-weight: 400 !important; /* Regular weight */
+  }
+  
+  /* Mission Section */
+  .mission-section {
+      background-color: white !important;
+      padding: 50px 20px !important;
+      text-align: left !important;
+      display: block !important;
+      margin-bottom: -50px !important;
+  }
+  
+  .mission-content {
+      max-width: 1200px !important;
+      margin-left: 400px !important;
+      margin-right: auto !important;
+  }
+  
+  .mission-content h2 {
+      font-size: 28px !important; /* Larger for section headers */
+      margin-bottom: 15px !important;
+      font-weight: 600 !important; /* Semi-bold for emphasis */
+      color: #111 !important; /* Darker color for emphasis */
+  }
+  
+  .mission-content p {
+      font-size: 16px !important;
+      line-height: 1.8 !important; /* Slightly more spacing for readability */
+      font-weight: 300 !important; /* Lighter weight for paragraph text */
+  }
+  
+  /* History Section */
+  .history-section {
+      display: flex !important;
+      justify-content: flex-start !important;
+      align-items: flex-start !important;
+      background-color: white !important;
+      padding: 50px 20px !important;
+      text-align: left !important;
+      margin-top: 0px !important;
+  }
+  
+  .history-content {
+      flex: 2 !important;
+      padding-right: 20px !important;
+      max-width: 700px !important;
+      margin-left: 400px !important;
+  }
+  
+  .history-content h2 {
+      font-size: 28px !important; /* Larger for section headers */
+      margin-bottom: 15px !important;
+      font-weight: 600 !important; /* Semi-bold for emphasis */
+      color: #111 !important; /* Darker color for emphasis */
+  }
+  
+  .history-content p {
+      font-size: 16px !important;
+      line-height: 1.8 !important; /* Slightly more spacing for readability */
+      font-weight: 300 !important; /* Lighter weight for paragraph text */
+      margin-bottom: 10px !important;
+  }
+  
+  .history-image img {
+      width: 100% !important;
+      border-radius: 8px !important;
+  }
+  
+  /* Steady Growth Section */
+  .growth-section {
+      display: flex !important;
+      justify-content: flex-start !important;
+      align-items: center !important;
+      background-color: white !important;
+      padding: 50px 20px !important;
+      margin-left: 0 !important;
+  }
+  
+  .growth-image img {
+      width: 100% !important;
+      border-radius: 8px !important;
+  }
+  
+  .growth-content {
+      flex: 2 !important;
+      padding-left: 40px !important;
+      margin-left: 0 !important;
+      max-width: 800px !important;
+      text-align: justify !important;
+  }
+  
+  .growth-content h2 {
+      font-size: 28px !important; /* Larger for section headers */
+      margin-bottom: 15px !important;
+      font-weight: 600 !important; /* Semi-bold for emphasis */
+      color: #111 !important; /* Darker color for emphasis */
+  }
+  
+  .growth-content p {
+      font-size: 16px !important;
+      line-height: 1.8 !important; /* Slightly more spacing for readability */
+      font-weight: 300 !important; /* Lighter weight for paragraph text */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+      .mission-section,
+      .history-section,
+      .growth-section {
+          flex-direction: column !important;
+          align-items: center !important;
+      }
+  
+      .mission-content,
+      .history-content,
+      .growth-content {
+          max-width: 100% !important;
+          margin-left: 0 !important;
+          text-align: center !important;
+      }
+  
+      .history-image,
+      .growth-image {
+          max-width: 100% !important;
+          margin-bottom: 20px !important;
+          margin-left: 0 !important;
+      }
+  }
+  
 }
 
 /* Global Reset */

@@ -60,7 +60,7 @@ const CustomNavbar = () => {
                         >
                             <NavDropdown.Item as={Link} to="/our-mission">OUR MISSION & HISTORY</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to="/company-culture">COMPANY CULTURE</NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/executive-team">EXECUTIVE TEAM</NavDropdown.Item>
+                          {/*   <NavDropdown.Item as={Link} to="/executive-team">EXECUTIVE TEAM</NavDropdown.Item> */}
                         </NavDropdown>
 
                         {/* Developments Dropdown */}
