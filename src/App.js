@@ -17,7 +17,7 @@ import BidOurWork from './pages/BidOurWork';  {/* BidOurWork Page */}
 import OfficeLocations from './pages/OfficeLocations';
 import UnderMaintenance from './components/UnderMaintenence'; // Import UnderMaintenance component
 import MissionPage from './pages/MissionPage';  // Import the MissionPage (test page)
-import ExecutiveTeam from './pages/ExecutiveTeam';
+// import ExecutiveTeam from './pages/ExecutiveTeam';
 import './assets/styles/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'slick-carousel/slick/slick.css';
