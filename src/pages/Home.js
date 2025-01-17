@@ -1,9 +1,11 @@
+// src/pages/Home.js
 import React from 'react';
 import { motion } from 'framer-motion';
 import '../assets/styles/Home.css';
 import aboutImage from '../assets/images/aboutImage.jpg';
 import FeaturedProperties from '../components/FeaturedProperties';
 import Capabilities from '../components/Capabilities';  // Importing the Capabilities component correctly
+import Statistics from '../components/statistics'; // Import Statistics component here
 
 const Home = () => {
     return (
@@ -37,6 +39,9 @@ const Home = () => {
 
             {/* Capabilities Section - Properly Imported Component */}
             <Capabilities />
+
+            {/* Statistics Section - Only rendered on Home page */}
+            
         </div>
     );
 };

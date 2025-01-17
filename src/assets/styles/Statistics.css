@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-around;
     align-items: flex-end; /* Align items at the bottom */
-    padding: 18px 0 28px; /* Hardcoded extra bottom padding */
+    padding: 18px 0 22px; /* Reduced bottom padding from 28px to 22px */
     background: black; 
     color: white;
     text-align: center;

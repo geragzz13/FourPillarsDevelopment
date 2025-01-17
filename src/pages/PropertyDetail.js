@@ -28,6 +28,7 @@ import TheHeights6 from '../assets/images/TheHeights6.png';
 import TheHeights7 from '../assets/images/TheHeights7.png';
 import TheHeights8 from '../assets/images/TheHeights8.png';
 import TheHeights9 from '../assets/images/TheHeights9.png';
+
 // Contact Information (shared for all properties)
 const contactInfo = [
     'Contact: Emiliano Perez: +1 (956) 777-9579',
@@ -157,8 +158,8 @@ const PropertyDetail = () => {
                                 {contactInfo.map((contact, index) => (
                                     <p key={index} className="property-contact">{contact}</p>
                                 ))}
-                                <Button variant="primary" as={Link} to="/portfolio" className="mt-3">
-                                    Back to Portfolio
+                                <Button variant="primary" as={Link} to="/featured-properties" className="mt-3">
+                                    Back to Featured Properties
                                 </Button>
                             </Card.Body>
                         </Card>

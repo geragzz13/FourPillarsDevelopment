@@ -1,11 +1,15 @@
-/* footer.css */
+/* Make sure the body and html take full height */
+body, html {
+  height: 100%;
+  margin: 0;
+}
 
+/* Footer styling */
 .footer {
-  position: fixed;
+  position: fixed; /* Ensure the footer stays fixed at the bottom */
   left: 0;
   bottom: 0;
   width: 100%;
-  /* background-color: #C4A484; */
   background-color: #000000;
   color: white;
   padding: 10px 0;
@@ -40,7 +44,6 @@
   text-decoration: none;
   color: inherit;
   font-size: 1rem;
- /* font-family: 'Titillium Web', sans-serif !important;  old font*/
 }
 
 .footer .social-icons {
@@ -58,4 +61,32 @@
   margin: 0;
 }
 
-/* Additional styles as per your design */
+/* Additional styles to ensure footer stays at the bottom */
+footer {
+  position: fixed; /* Keeps footer fixed at bottom */
+  bottom: 0;
+  width: 100%;
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 1000;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.footer.show {
+  transform: translateY(0);
+}
+
+/* If the footer does not stay at the bottom when content overflows, use below */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main {
+  flex-grow: 1; /* Pushes footer to the bottom */
+}
+
