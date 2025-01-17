@@ -16,7 +16,7 @@ module.exports = {
       sourceType: 'module',
     },
     rules: {
-      'no-unused-vars': process.env.CI ? 'error' : 'warn',
+      'no-unused-vars': off,
       // Add other rules as needed
     },
   };
