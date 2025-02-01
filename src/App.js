@@ -26,7 +26,7 @@ import './assets/styles/Fonts.css';
 import videoSource from './assets/videos/FourPillarsBackgroundVideo.mp4';
 
 // Toggle this variable to enable/disable maintenance mode
-const isUnderMaintenance = false;
+const isUnderMaintenance = true;
 
 const Layout = ({ children }) => {
     const location = useLocation();
