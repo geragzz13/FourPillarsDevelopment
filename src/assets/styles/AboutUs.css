@@ -5,7 +5,7 @@
 }
 
 .about-us-container {
-    min-height: calc(100vh - 250px); /* Adjust based on your footer height */
+    min-height: calc(100vh - 250px); 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,7 +20,7 @@
     margin: 0;
     padding-bottom: 200px; /* Additional padding below content */
     font-family: var(--font-montserrat); /* Apply Montserrat font */
-    text-align: center; /* Center align all text content */
+    text-align: center; 
 }
 
 .about-us-container h2 {
@@ -63,13 +63,13 @@
     border-radius: 5px; /* Rounded corners */
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
-    margin-bottom: 20px; /* Adjust margin bottom as needed */
-    width: 100%; /* Ensure cards take full width of container */
+    margin-bottom: 20px; 
+    width: 100%; 
     font-family: var(--font-montserrat); /* Apply Montserrat font */
 }
 
 .team-member-card:hover {
-    transform: scale(1.05); /* Example: Scale up on hover */
+    transform: scale(1.05); 
 }
 
 .team-member-card .card-img-top {
