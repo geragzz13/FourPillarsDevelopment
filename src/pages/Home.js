@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import '../assets/styles/Home.css';
 import aboutImage from '../assets/images/aboutImage.jpg';
 import FeaturedProperties from '../components/FeaturedProperties';
-import Capabilities from '../components/Capabilities';  // Importing the Capabilities component correctly
+import Capabilities from '../components/Capabilities'; 
 
 const Home = () => {
     return (

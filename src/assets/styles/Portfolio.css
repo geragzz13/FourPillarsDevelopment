@@ -31,7 +31,7 @@
     background-color: #000000; /* Add background color */
     padding: 20px; /* Add padding for spacing */
     display: inline-block;
-    border-radius: 5px; /* Optional: rounded corners */
+    border-radius: 5px; /*rounded corners */
 }
 
 .portfolio-title h2 {
@@ -120,7 +120,7 @@
 .property-card .btn-primary:hover {
     background-color: #FFFFFF; /* Green background on hover */
     color: #ffffff; /* White text on hover */
-    border-color: #000000; /* Keep the same border color */
+    border-color: #000000; 
 }
 
 /* Tabs for switching between available and upcoming properties */

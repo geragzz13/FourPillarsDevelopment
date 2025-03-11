@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-import emailjs from 'emailjs-com'; // Import EmailJS library
-import '../assets/styles/BidOurWork.css'; // Import the CSS file
-
+import emailjs from 'emailjs-com'; 
+import '../assets/styles/BidOurWork.css'; 
 const BidOurWork = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -22,10 +21,10 @@ const BidOurWork = () => {
 
     // Send form data via EmailJS
     emailjs.sendForm(
-      'your_service_id', // Replace with your EmailJS service ID
-      'your_template_id', // Replace with your EmailJS template ID
+      'your_service_id', // Replace with EmailJS service ID
+      'your_template_id', // Replace with EmailJS template ID
       e.target,
-      'your_user_id' // Replace with your EmailJS user ID (API key)
+      'your_user_id' // Replace with EmailJS user ID (API key)
     )
     .then((result) => {
       console.log('EmailJS Success:', result.text);

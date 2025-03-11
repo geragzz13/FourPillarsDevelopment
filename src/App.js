@@ -13,11 +13,10 @@ import UpcomingProperties from './pages/UpcomingProperties';
 import CompanyCulture from './pages/CompanyCulture';
 import UnderConstruction from './pages/UnderConstruction';
 import FeaturedPropsPage from './pages/FeaturedPropsPage';
-import BidOurWork from './pages/BidOurWork';  {/* BidOurWork Page */}
+import BidOurWork from './pages/BidOurWork'; 
 import OfficeLocations from './pages/OfficeLocations';
-import UnderMaintenance from './components/UnderMaintenence'; // Import UnderMaintenance component
-import MissionPage from './pages/MissionPage';  // Import the MissionPage (test page)
-// import ExecutiveTeam from './pages/ExecutiveTeam';
+import UnderMaintenance from './components/UnderMaintenence'; 
+import MissionPage from './pages/MissionPage';  
 import './assets/styles/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'slick-carousel/slick/slick.css';
@@ -80,9 +79,9 @@ function App() {
                 <Route path="/company-culture" element={<Layout><CompanyCulture /></Layout>} />
                 <Route path="/under-construction" element={<Layout><UnderConstruction /></Layout>} />
                 <Route path="/featured-properties" element={<Layout><FeaturedPropsPage /></Layout>} />
-                <Route path="/bid-our-work" element={<Layout><BidOurWork /></Layout>} /> {/* Correct BidOurWork Page */}
+                <Route path="/bid-our-work" element={<Layout><BidOurWork /></Layout>} /> 
                 <Route path="/office-locations" element={<Layout><OfficeLocations /></Layout>} />
-                <Route path="/our-mission" element={<Layout><MissionPage /></Layout>} /> {/* New Test Page route */}
+                <Route path="/our-mission" element={<Layout><MissionPage /></Layout>} /> 
                 {/* <Route path="/executive-team" element={<Layout><ExecutiveTeam /></Layout>} /> Route for Executive Team */} 
             </Routes>
         </Router>

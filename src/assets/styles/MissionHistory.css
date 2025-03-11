@@ -23,13 +23,11 @@ html, body {
     font-size: 2.8rem; /* Match the font size and style from Home */
     font-weight: bold;
     margin-bottom: 10px;
-    letter-spacing: 0.05em; /* Add slight spacing between letters */
 }
 
 .banner-section p {
     font-size: 1.2rem; /* Slightly larger for consistency with Home */
     margin: 0;
-    letter-spacing: 0.03em; /* Slight spacing for subtitle */
 }
 
 /* Mission Section */
@@ -54,7 +52,6 @@ html, body {
     font-weight: bold;
     margin-bottom: 15px;
     line-height: 1.4;
-    letter-spacing: 0.05em; /* Add slight spacing */
 }
 
 .mission-content p {
@@ -88,7 +85,6 @@ html, body {
     font-weight: bold;
     margin-bottom: 15px;
     line-height: 1.4;
-    letter-spacing: 0.05em; /* Add slight spacing */
 }
 
 .history-content p {
@@ -148,7 +144,6 @@ html, body {
     font-weight: bold;
     margin-bottom: 15px;
     line-height: 1.4;
-    letter-spacing: 0.05em; /* Add slight spacing */
 }
 
 .growth-content p {

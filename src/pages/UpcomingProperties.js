@@ -52,7 +52,7 @@ const UpcomingProperties = () => {
         // Scroll to the portfolio section on load with an offset
         if (UpcomingPropertiesRef.current) {
             const topPosition = UpcomingPropertiesRef.current.getBoundingClientRect().top + window.scrollY;
-            const offset = 150; // Adjust this value for less or more scroll
+            const offset = 150; 
             window.scrollTo({ top: topPosition - offset, behavior: 'smooth' });
         }
     }, []);

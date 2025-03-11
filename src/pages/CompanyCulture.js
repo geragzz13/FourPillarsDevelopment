@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import '../assets/styles/CompanyCulture.css';
-//import westwoodImage from '../assets/images/westwood4.png'; // For Steady Growth
-import FourplexInterior from '../assets/images/FourplexInterior.png'; // For History
+import FourplexInterior from '../assets/images/FourplexInterior.png'; 
 
 const CompanyCulture = () => {
     const sectionVariants = {

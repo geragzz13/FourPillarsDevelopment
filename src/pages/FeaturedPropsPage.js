@@ -89,7 +89,7 @@ const Portfolio = () => {
         // Scroll to the portfolio section on load with an offset
         if (portfolioRef.current) {
             const topPosition = portfolioRef.current.getBoundingClientRect().top + window.scrollY;
-            const offset = 150; // Adjust this value for less or more scroll
+            const offset = 150; 
             window.scrollTo({ top: topPosition - offset, behavior: 'smooth' });
         }
     }, []);

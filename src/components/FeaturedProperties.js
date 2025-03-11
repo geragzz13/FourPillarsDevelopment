@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import { Container, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import '../assets/styles/FeaturedProperties.css'; // Now using its own CSS file
+import '../assets/styles/FeaturedProperties.css'; 
 import TheHeights1 from '../assets/images/TheHeights1.png';
 import ElDoradoThumbnail from '../assets/images/ElDoradoThumbnail.png';
 import SugarMillsThumbnail from '../assets/images/SugarMillsThumbnail.png';

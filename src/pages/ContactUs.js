@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-import emailjs from 'emailjs-com'; // Import EmailJS library
-import '../assets/styles/ContactUs.css'; // Import the CSS file
+import emailjs from 'emailjs-com'; 
+import '../assets/styles/ContactUs.css'; 
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -11,8 +11,7 @@ const ContactUs = () => {
     propertyInterest: '',
     message: ''
   });
-  const fadeInRef = useRef(null); // Ref for the fade-in element
-
+  const fadeInRef = useRef(null); 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -22,10 +21,10 @@ const ContactUs = () => {
 
     // Send form data via EmailJS
     emailjs.sendForm(
-      'outlooktest_service', // Replace with your EmailJS service ID
-      'template_b7q1m9a', // Replace with your EmailJS template ID
+      'outlooktest_service', // Replace with EmailJS service ID
+      'template_b7q1m9a', // Replace with EmailJS template ID
       e.target,
-      'qsS7UuJAhUcQ48mov' // Replace with your EmailJS user ID (API key)
+      'qsS7UuJAhUcQ48mov' // Replace with EmailJS user ID (API key)
     )
     .then((result) => {
       console.log('EmailJS Success:', result.text);
@@ -39,7 +38,7 @@ const ContactUs = () => {
       });
     }, (error) => {
       console.error('EmailJS Error:', error.text);
-      // Optionally show an error message to the user
+      //show an error message to the user
       alert('Error sending message. Please try again later.');
     });
   };
@@ -48,7 +47,7 @@ const ContactUs = () => {
     // Scroll to the contact section with an offset when the component mounts
     if (fadeInRef.current) {
       const topPosition = fadeInRef.current.getBoundingClientRect().top + window.scrollY;
-      const offset = 150; // Adjust this value for less or more scroll
+      const offset = 150; 
       window.scrollTo({ top: topPosition - offset, behavior: 'smooth' });
     }
 

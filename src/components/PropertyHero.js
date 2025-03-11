@@ -10,7 +10,6 @@ const PropertyHero = () => {
         <source src={videoSource} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      {/* Add any specific content for PropertyHero here */}
     </section>
   );
 };

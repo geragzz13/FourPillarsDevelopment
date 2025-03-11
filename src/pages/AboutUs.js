@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import '../assets/styles/AboutUs.css'; // Import your custom CSS for AboutUs page
+import '../assets/styles/AboutUs.css'; 
 
 const AboutUs = () => {
     // Dummy data for team members (replace with actual data)
